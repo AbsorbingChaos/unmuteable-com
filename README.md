@@ -1,2 +1,3 @@
-# unmuteable
-Future home of UN*MUTE*ABLE
+# UN•MUTE•ABLE
+
+Future home of the publication. 
