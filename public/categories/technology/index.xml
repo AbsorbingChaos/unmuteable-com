@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>UNMUTEABLE</title>
-    <link>/</link>
-    <description>Recent content on UNMUTEABLE</description>
+    <title>Technology on UNMUTEABLE</title>
+    <link>/categories/technology/</link>
+    <description>Recent content in Technology on UNMUTEABLE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©2020 UN•MUTE•ABLE</copyright>
     <lastBuildDate>Thu, 13 Aug 2020 15:21:00 +0000</lastBuildDate>
     
-        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/categories/technology/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
