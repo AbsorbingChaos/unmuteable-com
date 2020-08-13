@@ -7,37 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©2020 UN•MUTE•ABLE</copyright>
-    <lastBuildDate>Thu, 13 Aug 2020 15:21:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Cloudflare</title>
-      <link>/tags/cloudflare/</link>
-      <pubDate>Thu, 13 Aug 2020 15:21:00 +0000</pubDate>
+      <title>css</title>
+      <link>/tags/css/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/cloudflare/</guid>
+      <guid>/tags/css/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Hugo</title>
-      <link>/tags/hugo/</link>
-      <pubDate>Thu, 13 Aug 2020 15:21:00 +0000</pubDate>
+      <title>html</title>
+      <link>/tags/html/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/hugo/</guid>
+      <guid>/tags/html/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Testing</title>
-      <link>/tags/testing/</link>
-      <pubDate>Thu, 13 Aug 2020 15:21:00 +0000</pubDate>
+      <title>markdown</title>
+      <link>/tags/markdown/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/testing/</guid>
+      <guid>/tags/markdown/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>themes</title>
+      <link>/tags/themes/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/themes/</guid>
       <description></description>
       
     </item>

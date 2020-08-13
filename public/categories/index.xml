@@ -7,27 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©2020 UN•MUTE•ABLE</copyright>
-    <lastBuildDate>Thu, 13 Aug 2020 15:21:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Blockchain</title>
-      <link>/categories/blockchain/</link>
-      <pubDate>Thu, 13 Aug 2020 15:21:00 +0000</pubDate>
+      <title>syntax</title>
+      <link>/categories/syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/categories/blockchain/</guid>
+      <guid>/categories/syntax/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Technology</title>
-      <link>/categories/technology/</link>
-      <pubDate>Thu, 13 Aug 2020 15:21:00 +0000</pubDate>
+      <title>themes</title>
+      <link>/categories/themes/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/categories/technology/</guid>
+      <guid>/categories/themes/</guid>
       <description></description>
       
     </item>
