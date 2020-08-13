@@ -1,3 +1,3 @@
 # UN•MUTE•ABLE
 
-Future home of the publication. 
+Future home of the publication.

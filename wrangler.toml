@@ -1,0 +1,12 @@
+name = "um-test"
+type = "webpack"
+account_id = "facd0b9aedd4b9af51005dd616beb16c"
+workers_dev = true
+
+[site]
+bucket = "./public"
+
+[env.production]
+name="um-prod"
+zone_id = "3596ec3a67cf9c98775c5a42d575cb23"
+route = "unmuteable.com/*"
