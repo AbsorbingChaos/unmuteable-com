@@ -5,6 +5,7 @@ workers_dev = true
 
 [site]
 bucket = "./public"
+entry-point = "workers-site"
 
 [env.production]
 name="um-prod"
