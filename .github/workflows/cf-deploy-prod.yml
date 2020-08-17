@@ -1,28 +1,19 @@
-name: cloudflare-deploy
+name: cf-deploy-prod
 
 on:
   push:
-    branches-ignore: [master] #ignore push to master branch
-  pull_request:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
   deploy:
-    name: Deploy to Cloudflare
     runs-on: ubuntu-latest
+    name: Deploy
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Lint Code
-        uses: github/super-linter@v3
-        env:
-          VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: master
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -30,7 +21,7 @@ jobs:
           hugo-version: '0.74.3'
 
       - name: Build Site
-        run: hugo # Minify done by Cloudflare
+        run: hugo
 
       - name: Publish CF
         uses: cloudflare/wrangler-action@1.2.0
