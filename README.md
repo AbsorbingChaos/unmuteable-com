@@ -1,6 +1,15 @@
-# UN•MUTE•ABLE
+![Unmuteable Logo](/branding/Unmuteable_Primary.png)
 
-Future home of the publication.
+Home of https://unmuteable.com
+
+## Color Palette
+
+| Color | Hex |
+| --- | --- |
+| Blockchain Black | #191D26 |
+| Unmuteable Mint | #00CCCC |
+| Security Silver | #808080 |
+| White | #FFFFFF |
 
 ## Current Workflow
 
