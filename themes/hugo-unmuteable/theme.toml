@@ -1,0 +1,24 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Hugo Unmuteable"
+license = "MIT"
+# licenselink points to main repo and themes folder until both are separated
+licenselink = "https://github.com/AbsorbingChaos/unmuteable-com/blob/master/themes/hugo-unmuteable/LICENSE"
+description = "A design based on HTML5/CSS3 standards, minimal javascript, and microformats that aheres to IndieWeb principles."
+homepage = "https://unmuteable.com/"
+tags = []
+features = []
+# may be able to back this down, but was built with 0.75.1
+min_version = "0.75.1"
+
+[author]
+  name = "Absorbing Chaos"
+  homepage = "https://absorbingchaos.com"
+  repo = "https://github.com/AbsorbingChaos/absorbingchaos-com"
+
+# If porting an existing theme
+# [original]
+#  name = ""
+#  homepage = ""
+#  repo = ""
