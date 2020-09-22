@@ -9,8 +9,7 @@ description = "A design based on HTML5/CSS3 standards, minimal javascript, and m
 homepage = "https://unmuteable.com/"
 tags = []
 features = []
-# may be able to back this down, but was built with 0.75.1
-min_version = "0.75.1"
+min_version = "0.70.0"
 
 [author]
   name = "Absorbing Chaos"
