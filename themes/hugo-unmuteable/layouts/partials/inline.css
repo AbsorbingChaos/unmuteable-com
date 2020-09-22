@@ -1,0 +1,39 @@
+/* START CSS RESET */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1;border-radius:25px}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:none}table{border-collapse:collapse;border-spacing:0}
+/* END CSS RESET */
+
+:root {
+
+  /* BEGIN LIGHT COLOR SCHEME */
+  --ux-primary: "{{ .Site.Params.Palette.primary }}";
+  --ux-primary-lt: "{{ .Site.Params.Palette.primary_lt }}";
+  --ux-primary-dk: "{{ .Site.Params.Palette.primary_dk }}";
+  --ux-on-primary: "{{ .Site.Params.Palette.on_primary }}";
+
+  --ux-secondary: "{{ .Site.Params.Palette.secondary }}";
+  --ux-secondary-lt: "{{ .Site.Params.Palette.secondary_lt }}";
+  --ux-secondary-dk: "{{ .Site.Params.Palette.secondary_dk }}";
+  --ux-on-secondary: "{{ .Site.Params.Palette.on_secondary }}";
+
+  --ux-background: "{{ .Site.Params.Palette.background }}";
+  --ux-on-background: "{{ .Site.Params.Palette.on_background }}";
+  --ux-surface: "{{ .Site.Params.Palette.surface }}";
+  --ux-on-surface: "{{ .Site.Params.Palette.on_surface }}";
+  --ux-error: "{{ .Site.Params.Palette.error }}";
+  --ux-on-error: "{{ .Site.Params.Palette.on_error }}";
+  /* END LIGHT COLOR SCHEME */
+
+}
+
+:root.darkness {
+
+  /* BEGIN DARK COLOR SCHEME */
+  --ux-background: "{{ .Site.Params.Palette.Darkmode.background }}";
+  --ux-on-background: "{{ .Site.Params.Palette.Darkmode.on_background }}";
+  --ux-surface: "{{ .Site.Params.Palette.Darkmode.surface }}";
+  --ux-on-surface: "{{ .Site.Params.Palette.Darkmode.on_surface }}";
+  --ux-error: "{{ .Site.Params.Palette.Darkmode.error }}";
+  --ux-on-error: "{{ .Site.Params.Palette.Darkmode.on_error }}";
+  /* END DARK COLOR SCHEME */
+
+}
