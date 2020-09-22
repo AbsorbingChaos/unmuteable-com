@@ -5,7 +5,7 @@ languageCode = "en-us"
 [params]
   company = "Unmuteable"
   title = "UN✕MUTE✕ABLE"
-  description = "Technology services inspired by and based on freedom, collaboration, transparency, integrity, and community."
+  description = "A publication centered around crypto, privacy, decentralization, and the people making it happen."
   copyright = "©2020 UN✕MUTE✕ABLE"
 
 [params.logo]
@@ -16,7 +16,7 @@ languageCode = "en-us"
   alt = "Logo with the letter U and a superscript letter X that represent a shortened version of Unmuteable."
 
 [params.palette]
-  black = "#191D26"
-  mint = "#00CCCC"
-  silver = "#808080"
-  white = "#FFFFFF"
+  primary = "#00CCCC"
+  secondary = "#808080"
+  dark = "#191D26"
+  light = "#FFFFFF"
