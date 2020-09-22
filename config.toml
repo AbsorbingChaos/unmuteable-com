@@ -1,61 +1,22 @@
 baseURL = "https://unmuteable.com"
-title = "UN•MUTE•ABLE"
-theme = "hugo-notepadium"
-copyright = "©2020 UN•MUTE•ABLE"
+theme = "hugo-unmuteable"
 languageCode = "en-us"
-enableRobotsTXT = true
-
-# Enable Disqus
-#disqusShortname = "XXX"
-
-[markup.highlight]
-codeFences = true
-noClasses = false
-
-[markup.goldmark.renderer]
-unsafe = true  # enable raw HTML in Markdown
 
 [params]
-style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
-dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"
-logo = ""  # if you have a logo png
-slogan = "100% JavaScript-free"
-license = ""  # CC License
-fullRss = false # Puts entire HTML post into rss 'description' tag. If unset, default is false.
+  company = "Unmuteable"
+  title = "UN✕MUTE✕ABLE"
+  description = "Technology services inspired by and based on freedom, collaboration, transparency, integrity, and community."
+  copyright = "©2020 UN✕MUTE✕ABLE"
 
-[params.comments]
-enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
+[params.logo]
+  img = "img/Unmutable-150x150.png"
+  type = "image/png"
+  width = "150"
+  height = "150"
+  alt = "Logo with the letter U and a superscript letter X that represent a shortened version of Unmuteable."
 
-[params.math]
-enable = false  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
-use = "katex"  # option: "katex", "mathjax". default: "katex"
-
-[params.syntax]
-use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
-theme = "xcode"
-darkTheme = "xcode-dark"  # apply this theme in dark mode
-
-[params.share]
-enable = false
-addThisId = ""
-inlineToolId = ""
-
-[params.nav]
-showCategories = true       # /categories/
-showTags = true             # /tags/
-
-# custom navigation items
-
-[[params.nav.custom]]
-title = "About"
-url = "/about"
-
-[[params.nav.custom]]
-title = "Hugo"
-url = "https://gohugo.io/"
-
-# for chinese
-#[params.beian]
-#  icp = ""     # example: 粤ICP备20056596号-1
-#  gongan = ""  # example: 粤公网安备 44030502005645号
-#  code = ""    # example: 44030502005645
+[params.palette]
+  black = "#191D26"
+  mint = "#00CCCC"
+  silver = "#808080"
+  white = "#FFFFFF"
