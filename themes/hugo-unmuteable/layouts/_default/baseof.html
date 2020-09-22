@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    {{- partial "head.html" . -}}
-    <style>
-      {{- partial "inline.css" . -}}
-    </style>
+    <head>
+      {{- partial "head.html" . -}}
+      {{- partial "inline-style.html" . -}}
+    </head>
     <body>
         {{- partial "header.html" . -}}
         <div id="content">

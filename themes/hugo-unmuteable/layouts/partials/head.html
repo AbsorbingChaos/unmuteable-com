@@ -57,13 +57,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="ALL_ALL" />
 
-<!-- Twitter Cards
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@site_account">
-<meta name="twitter:creator" content="@individual_account">
-<meta name="twitter:url" content="https://example.com/page.html">
-<meta name="twitter:title" content="Content Title">
-<meta name="twitter:description" content="Content description less than 200 characters">
-<meta name="twitter:image" content="https://example.com/image.jpg">
-<meta name="twitter:image:alt" content="A text description of the image conveying the essential nature of an image to users who are visually impaired. Maximum 420 characters.">
--->
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="{{ .Site.Params.Title }}">
+<!-- <meta name="twitter:site" content="@site_account">
+<meta name="twitter:creator" content="@individual_account"> -->
+<meta name="twitter:url" content="{{ .Permalink }}">
+<meta name="twitter:title" content="{{ .Site.Params.Title }}">
+<meta name="twitter:description" content="{{ .Site.Params.Description }}">
+<meta name="twitter:image" content="{{ .Site.Params.Logo.img | absURL }}">
+<meta name="twitter:image:alt" content="{{ .Site.Params.Logo.alt }}">
