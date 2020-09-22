@@ -9,7 +9,7 @@ languageCode = "en-us"
   copyright = "©2020 UN✕MUTE✕ABLE"
 
 [params.logo]
-  img = "img/Unmutable-150x150.png"
+  img = "img/Unmuteable-150x150.png"
   type = "image/png"
   width = "150"
   height = "150"
