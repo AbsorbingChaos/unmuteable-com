@@ -4,7 +4,9 @@
     <body>
         {{- partial "header.html" . -}}
         <div id="content">
-        {{- block "main" . }}{{- end }}
+        {{- block "main" . }}
+          This is the main block from the baseof template.
+        {{- end }}
         </div>
         {{- partial "footer.html" . -}}
     </body>
