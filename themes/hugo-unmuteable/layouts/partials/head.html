@@ -2,6 +2,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+<meta name="generator" content="Hugo">
 <title>{{ .Site.Params.Title }}</title>
 
 <!-- FAVICONS -->
@@ -22,10 +23,9 @@
 <!-- APP SETTINGS -->
 <link rel="manifest" href="/manifest.json">
 <meta name="application-name" content="{{ .Site.Params.Company }}">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="msapplication-TileColor" content="{{ .Site.Params.Palette.Primary }}" />
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="apple-mobile-web-app-title" content="{{ .Site.Params.Company }}">
+<meta name="apple-mobile-web-app-title" content="{{ .Site.Params.Title }}">
 <meta name="theme-color" content="{{ .Site.Params.Palette.Primary }}" />
 
 <!-- SEARCH -->
@@ -67,6 +67,3 @@
 <meta name="twitter:image" content="https://example.com/image.jpg">
 <meta name="twitter:image:alt" content="A text description of the image conveying the essential nature of an image to users who are visually impaired. Maximum 420 characters.">
 -->
-
-<!-- EXTRA -->
-<meta name="generator" content="Hugo">
