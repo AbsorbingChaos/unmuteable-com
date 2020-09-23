@@ -40,4 +40,54 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 }
 
+/****************************************/
+/* General Styles - Mobile First Design */
+/****************************************/
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  background-color: var(--ux-background);
+  color: var(--ux-on-background);
+  /* font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; */
+  font-size: 1.6em; /* 1em = 16px */
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--ux-on-background);
+  font-weight: bold;
+}
+
+h1 { font-size: 200%; }
+h2 { font-size: 150%; }
+h3 { font-size: 125%; }
+h4 { font-size: 115%; }
+
+blockquote {
+  font-style: italic;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-left: 3px solid var(--ux-primary);
+  color: var(--ux-secondary-lt);
+}
+
+a,
+a:active,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--ux-primary-dk);
+  cursor: pointer;
+}
+
+a:hover,
+a:focus {
+  color: var(--ux-primary);
+}
+
 </style>
