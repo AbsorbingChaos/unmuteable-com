@@ -2,9 +2,9 @@
 <html lang="en">
     <head>
       {{- partial "head.html" . -}}
-      {{- partial "inline-style.html" . -}}
     </head>
     <body>
+      <main>
         {{- partial "header.html" . -}}
         <div id="content">
         {{- block "main" . }}
@@ -13,6 +13,7 @@
         </div>
         {{- partial "footer.html" . -}}
         {{- partial "scripts.html" . -}}
+      </main>
     </body>
 </html>
 

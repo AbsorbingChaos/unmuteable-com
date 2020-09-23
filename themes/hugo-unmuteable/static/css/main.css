@@ -1,5 +1,3 @@
-<style>
-
 /* START CSS RESET */
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1;border-radius:25px}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:none}table{border-collapse:collapse;border-spacing:0}
 /* END CSS RESET */
@@ -7,22 +5,22 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 :root {
 
   /* BEGIN LIGHT COLOR SCHEME */
-  --ux-primary: "{{ .Site.Params.Palette.primary }}";
-  --ux-primary-lt: "{{ .Site.Params.Palette.primary_lt }}";
-  --ux-primary-dk: "{{ .Site.Params.Palette.primary_dk }}";
-  --ux-on-primary: "{{ .Site.Params.Palette.on_primary }}";
+  --ux-primary: #00CCCC;
+  --ux-primary-lt: #64FFFF;
+  --ux-primary-dk: #009A9B;
+  --ux-on-primary: #000000;
 
-  --ux-secondary: "{{ .Site.Params.Palette.secondary }}";
-  --ux-secondary-lt: "{{ .Site.Params.Palette.secondary_lt }}";
-  --ux-secondary-dk: "{{ .Site.Params.Palette.secondary_dk }}";
-  --ux-on-secondary: "{{ .Site.Params.Palette.on_secondary }}";
+  --ux-secondary: #808080;
+  --ux-secondary-lt: #AFAFAF;
+  --ux-secondary-dk: #545454;
+  --ux-on-secondary: #000000;
 
-  --ux-background: "{{ .Site.Params.Palette.background }}";
-  --ux-on-background: "{{ .Site.Params.Palette.on_background }}";
-  --ux-surface: "{{ .Site.Params.Palette.surface }}";
-  --ux-on-surface: "{{ .Site.Params.Palette.on_surface }}";
-  --ux-error: "{{ .Site.Params.Palette.error }}";
-  --ux-on-error: "{{ .Site.Params.Palette.on_error }}";
+  --ux-background: #FFFFFF;
+  --ux-on-background: #191D26;
+  --ux-surface: #FFFFFF;
+  --ux-on-surface: #191D26;
+  --ux-error: #FFFFFF;
+  --ux-on-error: #CC0000;
   /* END LIGHT COLOR SCHEME */
 
 }
@@ -30,14 +28,23 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 :root.darkness {
 
   /* BEGIN DARK COLOR SCHEME */
-  --ux-background: "{{ .Site.Params.Palette.Darkmode.background }}";
-  --ux-on-background: "{{ .Site.Params.Palette.Darkmode.on_background }}";
-  --ux-surface: "{{ .Site.Params.Palette.Darkmode.surface }}";
-  --ux-on-surface: "{{ .Site.Params.Palette.Darkmode.on_surface }}";
-  --ux-error: "{{ .Site.Params.Palette.Darkmode.error }}";
-  --ux-on-error: "{{ .Site.Params.Palette.Darkmode.on_error }}";
-  /* END DARK COLOR SCHEME */
+  --ux-primary: #00CCCC;
+  --ux-primary-lt: #64FFFF;
+  --ux-primary-dk: #009A9B;
+  --ux-on-primary: #000000;
 
+  --ux-secondary: #808080;
+  --ux-secondary-lt: #AFAFAF;
+  --ux-secondary-dk: #545454;
+  --ux-on-secondary: #000000;
+
+  --ux-background: #191D26;
+  --ux-on-background: #AFAFAF;
+  --ux-surface: #191D26;
+  --ux-on-surface: #AFAFAF;
+  --ux-error: #CC0000;
+  --ux-on-error: #FFFFFF;
+  /* END DARK COLOR SCHEME */
 }
 
 /****************************************/
@@ -51,7 +58,7 @@ html {
 body {
   background-color: var(--ux-background);
   color: var(--ux-on-background);
-  /* font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; */
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   font-size: 1.6em; /* 1em = 16px */
 }
 
@@ -70,6 +77,7 @@ h4 { font-size: 115%; }
 
 blockquote {
   font-style: italic;
+  margin-left: 1rem;
   margin-bottom: 1rem;
   padding: 1rem;
   border-left: 3px solid var(--ux-primary);
@@ -81,13 +89,11 @@ a:active,
 a:link,
 a:visited {
   text-decoration: none;
-  color: var(--ux-primary-dk);
+  color: var(--ux-primary);
   cursor: pointer;
 }
 
 a:hover,
 a:focus {
-  color: var(--ux-primary);
+  color: var(--ux-primary-dk);
 }
-
-</style>
