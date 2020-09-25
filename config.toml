@@ -8,12 +8,29 @@ languageCode = "en-us"
   description = "A publication centered around crypto, privacy, decentralization, and the people making it happen."
   copyright = "©2020 UN ✕ MUTE ✕ ABLE"
 
-[params.logo]
-  img = "img/Unmuteable-150x150.png"
+[params.logo.primary]
+  img = "img/Unmuteable_Primary_Logo.png"
+  img_dk = "img/Unmuteable_Primary_Logo_DarkMode.png"
+  type = "image/png"
+  width = "1200"
+  height = "230"
+  alt = "A logo with the word unmuteable separated in three parts by an X symbol."
+
+[params.logo.secondary]
+  img = "img/Unmuteable_Secondary_Logo.png"
+  img_dk = "img/Unmuteable_Secondary_Logo_Darkmode.png"
   type = "image/png"
   width = "150"
   height = "150"
-  alt = "Logo with the letter U and a superscript letter X that represent a shortened version of Unmuteable."
+  alt = "A logo with the letter U and a superscript letter X that represent a shortened version of Unmuteable."
+
+[params.logo.tertiary]
+  img = "img/Unmuteable_Tertiary_Logo.png"
+  img_dk = "img/Unmuteable_Tertiary_Logo_Darkmode.png"
+  type = "image/png"
+  width = "150"
+  height = "150"
+  alt = "A logo with the word unmuteable over the top of an X symbol."
 
 [params.palette]
   primary = "#00CCCC"
