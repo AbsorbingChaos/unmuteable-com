@@ -2,6 +2,47 @@
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1;border-radius:25px}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:none}table{border-collapse:collapse;border-spacing:0}
 /* END CSS RESET */
 
+/* START CUSTOM FONTS */
+@font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 100;
+    src: url('Raleway-ThinItalic.eot');
+    src: url('Raleway-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('Raleway-ThinItalic.woff2') format('woff2'),
+        url('Raleway-ThinItalic.woff') format('woff'),
+        url('Raleway-ThinItalic.ttf') format('truetype'),
+        url('Raleway-ThinItalic.svg#Raleway-ThinItalic') format('svg');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 100;
+    src: url('Raleway-Thin.eot');
+    src: url('Raleway-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Raleway-Thin.woff2') format('woff2'),
+        url('Raleway-Thin.woff') format('woff'),
+        url('Raleway-Thin.ttf') format('truetype'),
+        url('Raleway-Thin.svg#Raleway-Thin') format('svg');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    src: url('Manrope-ExtraLight.eot');
+    src: url('Manrope-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('Manrope-ExtraLight.woff2') format('woff2'),
+        url('Manrope-ExtraLight.woff') format('woff'),
+        url('Manrope-ExtraLight.ttf') format('truetype'),
+        url('Manrope-ExtraLight.svg#Manrope-ExtraLight') format('svg');
+}
+/* END CUSTOM FONTS */
+
 :root {
 
   /* BEGIN LIGHT COLOR SCHEME */
@@ -58,7 +99,7 @@ html {
 body {
   background-color: var(--ux-background);
   color: var(--ux-on-background);
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-family: Manrope, sans-serif;
   font-size: 1.6em; /* 1em = 16px */
 }
 
@@ -68,6 +109,7 @@ h3,
 h4 {
   color: var(--ux-on-background);
   font-weight: bold;
+  font-family: Raleway, sans-serif;
 }
 
 h1 { font-size: 200%; }
