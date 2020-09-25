@@ -11,20 +11,14 @@ Home of https://unmuteable.com
 | Security Silver  | #808080 |
 | White            | #FFFFFF |
 
-## Material Design Palette
-
-![Unmuteable Material Design](/branding/Unmuteable_Material.png)
-
 ## Current Workflow
 
 On push to `develop` branch:
 
-- Setup Hugo
 - Build Site with Hugo
 - Publish CF to staging domain: https://um-test.unmuteable.workers.dev/
 
 On push to `master` branch:
 
-- Setup Hugo
 - Build Site with Hugo
 - Public CF to actual domain: https://unmuteable.com
