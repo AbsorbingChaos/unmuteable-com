@@ -2,6 +2,15 @@ baseURL = "https://unmuteable.com"
 theme = "hugo-unmuteable"
 languageCode = "en-us"
 
+[sitemap]
+    changefreq = "weekly"
+    filename = "sitemap.xml"
+    priority = 0.5
+
+[permalinks]
+    posts = "/:year/:month/:slug/"
+    page = "/:slug/"
+
 [params]
   company = "Unmuteable"
   title = "UN ✕ MUTE ✕ ABLE"
