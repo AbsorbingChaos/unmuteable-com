@@ -1,0 +1,2 @@
+# ignore hugo generated files since build happens after push
+public/
