@@ -1,10 +1,10 @@
-<header>
+<header class="ux__header">
   <h1>This is an H1 element in the header.</h1>
   <p>This is some header text.</p>
-  <nav class="sidebar-nav">
+  <nav class="ux__nav">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
-    <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    <a class="ux__nav--item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
     {{ end }}
 </nav>
 </header>
