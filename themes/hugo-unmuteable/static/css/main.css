@@ -157,9 +157,8 @@ kbd {
 }
 
 kbd {
-  border: 3px solid var(--ux-primary);
   border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.3rem 0.5rem;
 }
 
 /****************************************/
