@@ -1,6 +1,7 @@
 {{ define "main" }}
 
 <h1>{{ .Title }}</h1>
+{{ .Content }}
 {{ range .Pages.ByPublishDate.Reverse }}
 <p>
   <a class="ux__content--navitem" href="{{ .RelPermalink }}">{{ .Date.Format "2006/01/02" }} - {{ .Title }}</a>
