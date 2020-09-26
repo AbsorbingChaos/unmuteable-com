@@ -70,6 +70,8 @@ button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-he
 
   --ux-lightbulb: url(/img/Light_Bulb_On.svg);
   --ux-logo-primary: url(/img/Unmuteable_Primary_Logo.svg);
+  --ux-logo-secondary: url(/img/Unmuteable_Secondary_Logo.svg);
+  --ux-logo-tertiary: url(/img/Unmuteable_Tertiary_Logo.svg);
   /* END LIGHT COLOR SCHEME */
 
 }
@@ -96,6 +98,8 @@ button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-he
 
   --ux-lightbulb: url(/img/Light_Bulb_Off.svg);
   --ux-logo-primary: url(/img/Unmuteable_Primary_Logo_DarkMode.svg);
+  --ux-logo-secondary: url(/img/Unmuteable_Secondary_Logo_DarkMode.svg);
+  --ux-logo-tertiary: url(/img/Unmuteable_Tertiary_Logo_Darkmode.svg);
   /* END DARK COLOR SCHEME */
 
 }
@@ -238,7 +242,25 @@ a:focus {
 /****************************************/
 
 .ux__footer {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
 
+.ux__footer--item {
+  
+}
+
+.ux__footer--logo {
+  background-image: var(--ux-logo-tertiary);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 75px;
+  min-width: 75px;
 }
 
 /****************************************/

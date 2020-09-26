@@ -1,12 +1,20 @@
 <hr />
 <footer class="ux__footer">
-  <h1>This is the footer.</h1>
-  <p>This is some footer text.</p>
-  <nav class="ux__nav">
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-    <a class="ux__nav--item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
-    {{ end }}
-  </nav>
-  <p>{{ .Site.Params.Copyright }}</p>
+  <div class="ux__footer--item">
+    <h2>Navigation</h2>
+    <nav class="ux__nav">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      <a class="ux__nav--item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>  
+  </div>
+  <div class="ux__footer--item">
+    <p>{{ .Site.Params.Copyright }}</p>
+  </div>
+  <div class="ux__footer--item ux__footer--logo">
+    
+  </div>
+  
+  
 </footer>
