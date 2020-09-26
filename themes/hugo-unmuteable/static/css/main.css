@@ -1,6 +1,11 @@
-/* START CSS RESET */
+/* START MEYERWEB CSS RESET */
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1;border-radius:25px}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:none}table{border-collapse:collapse;border-spacing:0}
-/* END CSS RESET */
+/* END MEYERWEB CSS RESET */
+
+/* START NORMALIZE CSS RESET */
+/* Used for Buttons Only */
+button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.5;margin:0,padding:0;}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}
+/* END NORMALIZE CSS RESET */
 
 /* START CUSTOM FONTS */
 @font-face {
@@ -63,6 +68,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   --ux-error: #FFFFFF;
   --ux-on-error: #CC0000;
 
+  --ux-lightbulb: url(/img/Light_Bulb_On.svg);
   --ux-logo-primary: url(/img/Unmuteable_Primary_Logo.svg);
   /* END LIGHT COLOR SCHEME */
 
@@ -88,6 +94,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   --ux-error: #CC0000;
   --ux-on-error: #FFFFFF;
 
+  --ux-lightbulb: url(/img/Light_Bulb_Off.svg);
   --ux-logo-primary: url(/img/Unmuteable_Primary_Logo_DarkMode.svg);
   /* END DARK COLOR SCHEME */
 
@@ -125,9 +132,9 @@ h4 { font-size: 115%; }
 
 blockquote {
   font-style: italic;
-  margin-left: 1rem;
+  margin-left: 2rem;
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 2rem;
   border-left: 3px solid var(--ux-primary);
   color: var(--ux-on-background);
 }
@@ -139,11 +146,13 @@ a:visited {
   text-decoration: none;
   color: var(--ux-primary);
   cursor: pointer;
+  font-weight: bold;
 }
 
 a:hover,
 a:focus {
-  color: var(--ux-primary-dk);
+  background-color: var(--ux-on-background);
+  color: var(--ux-background);
 }
 
 /****************************************/
@@ -174,8 +183,29 @@ a:focus {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 7vh;
+  height: 10vh;
+  min-height: 75px;
   width: 100%;
+}
+
+.ux__header--toggle {
+  background-color: transparent;
+  border: none;
+  color: var(--ux-on-background);
+  background-image: var(--ux-lightbulb);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 30px;
+  min-width: 30px;
+  padding: 1rem;
+}
+
+.ux__header--toggle:active,
+.ux__header--toggle:hover,
+.ux__header--toggle:focus {
+  border: none;
+  outline: 0;
 }
 
 /****************************************/
@@ -183,11 +213,16 @@ a:focus {
 /****************************************/
 
 .ux__nav {
-
+  padding: 1rem;
 }
 
 .ux__nav--item {
+  padding: 1rem;
+}
 
+.ux__nav--item:hover,
+.ux__nav--item:active {
+  text-decoration: underline;
 }
 
 /****************************************/
