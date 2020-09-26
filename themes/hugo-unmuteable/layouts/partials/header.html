@@ -1,5 +1,7 @@
 <header class="ux__header">
-  <div class="ux__header--logo"></div>
+  <a class="ux__homelink" href="/">
+    <div class="ux__header--logo"></div>
+  </a>
   <nav class="ux__header--nav">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
