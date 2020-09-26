@@ -2,10 +2,10 @@
 <footer class="ux__footer">
   <div class="ux__footer--item">
     <h2>Navigation</h2>
-    <nav class="ux__nav">
+    <nav class="ux__footer--nav">
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
-      <a class="ux__nav--item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+      <a class="ux__footer--navitem{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
       {{ end }}
       <button class="ux__header--toggle"></button>
     </nav>  

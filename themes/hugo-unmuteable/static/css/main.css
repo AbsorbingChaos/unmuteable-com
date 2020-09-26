@@ -233,20 +233,16 @@ kbd {
   outline: 0;
 }
 
-/****************************************/
-/* NAVIGATION                           */
-/****************************************/
-
-.ux__nav {
+.ux__header--nav {
   padding: 1rem;
 }
 
-.ux__nav--item {
+.ux__header--navitem {
   padding: 1rem;
 }
 
-.ux__nav--item:hover,
-.ux__nav--item:active {
+.ux__header--navitem:hover,
+.ux__header--navitem:active {
   text-decoration: underline;
 }
 
@@ -282,6 +278,19 @@ kbd {
   background-size: contain;
   min-height: 75px;
   min-width: 75px;
+}
+
+.ux__footer--nav {
+  padding: 1rem;
+}
+
+.ux__footer--navitem {
+  padding: 1rem;
+}
+
+.ux__footer--navitem:hover,
+.ux__footer--navitem:active {
+  text-decoration: underline;
 }
 
 /****************************************/
