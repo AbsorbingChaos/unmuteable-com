@@ -250,7 +250,6 @@ kbd {
 .ux__content--navitem:active,
 .ux__content--navitem:link,
 .ux__content--navitem:visited {
-  padding: 1rem;
   text-decoration: none;
   color: var(--ux-primary);
   cursor: pointer;
@@ -259,7 +258,6 @@ kbd {
 
 .ux__content--navitem:hover,
 .ux__content--navitem:active {
-  text-decoration: underline;
   background-color: var(--ux-on-background);
   color: var(--ux-background);
 }
