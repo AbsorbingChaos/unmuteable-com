@@ -4,13 +4,13 @@ languageCode = "en-us"
 sectionPagesMenu = "main"
 
 [sitemap]
-    changefreq = "weekly"
-    filename = "sitemap.xml"
-    priority = 0.5
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
 
 [permalinks]
-    posts = "/:year/:month/:slug/"
-    page = "/:slug/"
+  posts = "/:year/:month/:slug/"
+  page = "/:slug/"
 
 [params]
   company = "Unmuteable"
