@@ -4,16 +4,16 @@
       {{- partial "head.html" . -}}
     </head>
     <body>
-      <main id="ux__wrap">
+      <div class="ux__wrap">
         {{- partial "header.html" . -}}
-        <div id="ux__content">
+        <main class="ux__content">
           {{- block "main" . }}
             This is the main block from the baseof template.
           {{- end }}
-        </div>
+        </main>
         {{- partial "footer.html" . -}}
         {{- partial "scripts.html" . -}}
-      </main>
+      </div>
     </body>
 </html>
 

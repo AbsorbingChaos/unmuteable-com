@@ -101,8 +101,8 @@ body {
   background-color: var(--ux-background);
   color: var(--ux-on-background);
   font-family: Manrope, sans-serif;
-  font-size: 1.6em; /* 1em = 16px */
-  line-height: 1.4;
+  font-size: 1.8em; /* 1em = 18px */
+  line-height: 1.5;
 }
 
 h1,
@@ -125,7 +125,7 @@ blockquote {
   margin-bottom: 1rem;
   padding: 1rem;
   border-left: 3px solid var(--ux-primary);
-  color: var(--ux-secondary-lt);
+  color: var(--ux-on-background);
 }
 
 a,
@@ -147,9 +147,9 @@ a:focus {
 /****************************************/
 
 .ux__wrap {
-  min-width: 350px;
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
+  min-width: 350px;
 }
 
 /****************************************/
