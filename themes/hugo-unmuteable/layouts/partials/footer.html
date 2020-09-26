@@ -7,6 +7,7 @@
       {{ range .Site.Menus.main }}
       <a class="ux__nav--item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
       {{ end }}
+      <button class="ux__header--toggle"></button>
     </nav>  
   </div>
   <div class="ux__footer--item">

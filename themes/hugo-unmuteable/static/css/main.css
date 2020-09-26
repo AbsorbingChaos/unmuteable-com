@@ -134,6 +134,10 @@ h2 { font-size: 150%; }
 h3 { font-size: 125%; }
 h4 { font-size: 115%; }
 
+p {
+  padding: 1rem;
+}
+
 blockquote {
   font-style: italic;
   margin-left: 2rem;
@@ -159,6 +163,21 @@ a:focus {
   color: var(--ux-background);
 }
 
+pre,
+code,
+kbd {
+  background-color: var(--ux-on-surface);
+  color: var(--ux-surface);
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+kbd {
+  border: 3px solid var(--ux-primary);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
 /****************************************/
 /* CONTAINERS - Mobile First Design     */
 /****************************************/
@@ -167,6 +186,7 @@ a:focus {
   margin: 0 auto;
   max-width: 1200px;
   min-width: 350px;
+  padding: 1rem 0;
 }
 
 /****************************************/
@@ -203,6 +223,7 @@ a:focus {
   min-height: 30px;
   min-width: 30px;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .ux__header--toggle:active,
