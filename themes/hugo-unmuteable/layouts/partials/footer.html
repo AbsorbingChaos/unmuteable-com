@@ -1,7 +1,7 @@
 <hr />
 <footer class="ux__footer">
   <div class="ux__footer--item">
-    <h2>Links</h2>
+    <h4>Links</h4>
     <nav class="ux__footer--nav">
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
@@ -13,7 +13,7 @@
     </nav>  
   </div>
   <div class="ux__footer--item">
-    <p>{{ .Site.Params.Copyright }}</p>
+    <h4>{{ .Site.Params.Copyright }}</h4>
   </div>
   
   

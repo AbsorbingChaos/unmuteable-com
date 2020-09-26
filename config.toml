@@ -16,7 +16,7 @@ sectionPagesMenu = "main"
   company = "Unmuteable"
   title = "UN ✕ MUTE ✕ ABLE"
   description = "A publication centered around crypto, privacy, decentralization, and the people making it happen."
-  copyright = "©2020 UN ✕ MUTE ✕ ABLE"
+  copyright = "© 2020 UNMUTEABLE"
 
 [params.logo.primary]
   img = "img/Unmuteable_Primary_Logo.png"

@@ -154,6 +154,7 @@ kbd {
   color: var(--ux-surface);
   margin: 1rem 0;
   font-weight: bold;
+  overflow-wrap: break-word; 
 }
 
 kbd {
@@ -168,7 +169,7 @@ kbd {
 .ux__wrap {
   margin: 0 auto;
   max-width: 1200px;
-  min-width: 350px;
+  /* min-width: 350px; */
   padding: 1rem 0;
 }
 
@@ -270,8 +271,8 @@ kbd {
   display: flex;
   flex-flow: row wrap;
   align-content: center;
-  align-items: center;
-  justify-content: space-between;
+  align-items: top;
+  justify-content: space-around;
   text-align: center;
 }
 
@@ -296,7 +297,7 @@ kbd {
 
 .ux__footer--nav {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   align-content: center;
   align-items: center;
   justify-content: space-evenly;
