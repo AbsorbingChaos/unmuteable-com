@@ -7,13 +7,13 @@
       {{ range .Site.Menus.main }}
       <a class="ux__footer--navitem{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
       {{ end }}
-      <a class="ux__footer--homelink" href="/">
-        <div class="ux__footer--item ux__footer--logo"></div>
-      </a>
     </nav>  
   </div>
   <div class="ux__footer--item">
     <h4>{{ .Site.Params.Copyright }}</h4>
+    <a class="ux__footer--homelink" href="/">
+      <div class="ux__footer--logo"></div>
+    </a>
   </div>
   
   
