@@ -8,12 +8,12 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     font-family: 'Raleway';
     font-style: italic;
     font-weight: 100;
-    src: url('Raleway-ThinItalic.eot');
-    src: url('Raleway-ThinItalic.eot?#iefix') format('embedded-opentype'),
-        url('Raleway-ThinItalic.woff2') format('woff2'),
-        url('Raleway-ThinItalic.woff') format('woff'),
-        url('Raleway-ThinItalic.ttf') format('truetype'),
-        url('Raleway-ThinItalic.svg#Raleway-ThinItalic') format('svg');
+    src: url('/fonts/Raleway-ThinItalic.eot');
+    src: url('/fonts/Raleway-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Raleway-ThinItalic.woff2') format('woff2'),
+        url('/fonts/Raleway-ThinItalic.woff') format('woff'),
+        url('/fonts/Raleway-ThinItalic.ttf') format('truetype'),
+        url('/fonts/Raleway-ThinItalic.svg#Raleway-ThinItalic') format('svg');
 }
 
 @font-face {
@@ -21,12 +21,12 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 100;
-    src: url('Raleway-Thin.eot');
-    src: url('Raleway-Thin.eot?#iefix') format('embedded-opentype'),
-        url('Raleway-Thin.woff2') format('woff2'),
-        url('Raleway-Thin.woff') format('woff'),
-        url('Raleway-Thin.ttf') format('truetype'),
-        url('Raleway-Thin.svg#Raleway-Thin') format('svg');
+    src: url('/fonts/Raleway-Thin.eot');
+    src: url('/fonts/Raleway-Thin.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Raleway-Thin.woff2') format('woff2'),
+        url('/fonts/Raleway-Thin.woff') format('woff'),
+        url('/fonts/Raleway-Thin.ttf') format('truetype'),
+        url('/fonts/Raleway-Thin.svg#Raleway-Thin') format('svg');
 }
 
 @font-face {
@@ -34,12 +34,12 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 200;
-    src: url('Manrope-ExtraLight.eot');
-    src: url('Manrope-ExtraLight.eot?#iefix') format('embedded-opentype'),
-        url('Manrope-ExtraLight.woff2') format('woff2'),
-        url('Manrope-ExtraLight.woff') format('woff'),
-        url('Manrope-ExtraLight.ttf') format('truetype'),
-        url('Manrope-ExtraLight.svg#Manrope-ExtraLight') format('svg');
+    src: url('/fonts/Manrope-ExtraLight.eot');
+    src: url('/fonts/Manrope-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Manrope-ExtraLight.woff2') format('woff2'),
+        url('/fonts/Manrope-ExtraLight.woff') format('woff'),
+        url('/fonts/Manrope-ExtraLight.ttf') format('truetype'),
+        url('/fonts/Manrope-ExtraLight.svg#Manrope-ExtraLight') format('svg');
 }
 /* END CUSTOM FONTS */
 
@@ -86,6 +86,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   --ux-error: #CC0000;
   --ux-on-error: #FFFFFF;
   /* END DARK COLOR SCHEME */
+
 }
 
 /****************************************/
@@ -101,6 +102,7 @@ body {
   color: var(--ux-on-background);
   font-family: Manrope, sans-serif;
   font-size: 1.6em; /* 1em = 16px */
+  line-height: 1.4;
 }
 
 h1,
