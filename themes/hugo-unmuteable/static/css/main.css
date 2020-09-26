@@ -207,7 +207,7 @@ kbd {
   background-size: contain;
   height: 10vh;
   min-height: 75px;
-  width: 100%;
+  width: 100vw;
 }
 
 .ux__header--toggle {
