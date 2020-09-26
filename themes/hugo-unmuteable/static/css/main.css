@@ -280,8 +280,19 @@ kbd {
   min-width: 75px;
 }
 
+.ux__footer--homelink {
+  text-decoration: none;
+  background-color: transparent;
+  color: transparent;
+}
+
 .ux__footer--nav {
-  padding: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
 }
 
 .ux__footer--navitem {
