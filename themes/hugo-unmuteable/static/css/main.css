@@ -174,6 +174,20 @@ kbd {
 }
 
 /****************************************/
+/* GENERAL ELEMENTS                     */
+/****************************************/
+
+.ux__homelink {
+  text-decoration: none;
+  background-color: transparent;
+  color: transparent;
+}
+
+.ux__bold {
+  font-weight: bold;
+}
+
+/****************************************/
 /* HEADER                               */
 /****************************************/
 
@@ -287,12 +301,6 @@ kbd {
   background-size: contain;
   min-height: 75px;
   min-width: 75px;
-}
-
-.ux__footer--homelink {
-  text-decoration: none;
-  background-color: transparent;
-  color: transparent;
 }
 
 .ux__footer--nav {
