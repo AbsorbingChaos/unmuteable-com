@@ -302,7 +302,7 @@ kbd {
   flex-flow: row wrap;
   align-content: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
 }
 
