@@ -277,7 +277,7 @@ kbd {
 }
 
 .ux__footer--item {
-  
+  /* not used quite yet */
 }
 
 .ux__footer--logo {
@@ -320,12 +320,4 @@ kbd {
   text-decoration: underline;
   background-color: var(--ux-on-background);
   color: var(--ux-background);
-}
-
-/****************************************/
-/* LARGE SCREENS                        */
-/****************************************/
-
-@media (min-width: 1035px) {
-
 }
