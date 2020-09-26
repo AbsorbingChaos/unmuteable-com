@@ -2,5 +2,11 @@
 <footer class="ux__footer">
   <h1>This is the footer.</h1>
   <p>This is some footer text.</p>
+  <nav class="ux__nav">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    <a class="ux__nav--item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    {{ end }}
+  </nav>
   <p>{{ .Site.Params.Copyright }}</p>
 </footer>

@@ -62,6 +62,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   --ux-on-surface: #191D26;
   --ux-error: #FFFFFF;
   --ux-on-error: #CC0000;
+
+  --ux-logo-primary: url(/img/Unmuteable_Primary_Logo.svg);
   /* END LIGHT COLOR SCHEME */
 
 }
@@ -85,6 +87,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   --ux-on-surface: #AFAFAF;
   --ux-error: #CC0000;
   --ux-on-error: #FFFFFF;
+
+  --ux-logo-primary: url(/img/Unmuteable_Primary_Logo_DarkMode.svg);
   /* END DARK COLOR SCHEME */
 
 }
@@ -157,7 +161,21 @@ a:focus {
 /****************************************/
 
 .ux__header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
 
+.ux__header--logo {
+  background-image: var(--ux-logo-primary);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 7vh;
+  width: 100%;
 }
 
 /****************************************/

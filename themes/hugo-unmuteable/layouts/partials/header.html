@@ -1,11 +1,10 @@
 <header class="ux__header">
-  <h1>This is an H1 element in the header.</h1>
-  <p>This is some header text.</p>
+  <div class="ux__header--logo"></div>
   <nav class="ux__nav">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
     <a class="ux__nav--item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
     {{ end }}
-</nav>
+  </nav>
 </header>
 <hr />
