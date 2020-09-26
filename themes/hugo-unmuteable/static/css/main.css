@@ -147,22 +147,6 @@ blockquote {
   color: var(--ux-on-background);
 }
 
-a,
-a:active,
-a:link,
-a:visited {
-  text-decoration: none;
-  color: var(--ux-primary);
-  cursor: pointer;
-  font-weight: bold;
-}
-
-a:hover,
-a:focus {
-  background-color: var(--ux-on-background);
-  color: var(--ux-background);
-}
-
 pre,
 code,
 kbd {
@@ -237,13 +221,22 @@ kbd {
   padding: 1rem;
 }
 
-.ux__header--navitem {
+.ux__header--navitem,
+.ux__header--navitem:active,
+.ux__header--navitem:link,
+.ux__header--navitem:visited {
   padding: 1rem;
+  text-decoration: none;
+  color: var(--ux-primary);
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .ux__header--navitem:hover,
 .ux__header--navitem:active {
   text-decoration: underline;
+  background-color: var(--ux-on-background);
+  color: var(--ux-background);
 }
 
 /****************************************/
@@ -252,6 +245,24 @@ kbd {
 
 .ux__content {
 
+}
+
+.ux__content--navitem,
+.ux__content--navitem:active,
+.ux__content--navitem:link,
+.ux__content--navitem:visited {
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--ux-primary);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.ux__content--navitem:hover,
+.ux__content--navitem:active {
+  text-decoration: underline;
+  background-color: var(--ux-on-background);
+  color: var(--ux-background);
 }
 
 /****************************************/
@@ -295,13 +306,22 @@ kbd {
   text-align: center;
 }
 
-.ux__footer--navitem {
+.ux__footer--navitem,
+.ux__footer--navitem:active,
+.ux__footer--navitem:link,
+.ux__footer--navitem:visited {
   padding: 1rem;
+  text-decoration: none;
+  color: var(--ux-primary);
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .ux__footer--navitem:hover,
 .ux__footer--navitem:active {
   text-decoration: underline;
+  background-color: var(--ux-on-background);
+  color: var(--ux-background);
 }
 
 /****************************************/
