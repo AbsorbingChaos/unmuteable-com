@@ -1,11 +1,9 @@
 {{ define "main" }}
-<h1>Syntax Testing (H1)</h1>
-<p>Let's see how things look as we go along.</p>
-<h2>Defining the data (H2)</h2>
-<p>This is the "main" block from the index.html page, which overwrites the baseof.html block.</p>
-<p>Pretty cool, right? <a class="ux__content--navitem" href="#">Don't forget to test a link!</a></p>
-<h3>Quoting somebody (H3)</h3>
-<blockquote>Someone once said something profound.<br /><br />- Anonymous, 2020</blockquote>
-<h4>The miniature paragraph heading (H4)</h4>
-<p>Also you can instruct people to use keyboard commands, like <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd></p>
+<h1>Let's talk about it.</h1>
+<p>Blockchains and cryptocurrencies are a complex subject, but to some, they enable a technical revolution whose value is underrealized, underutilized, and somewhat undefined in terms of potential.</p>
+<h2>Recent Posts</h2>
+{{ range .Pages.ByPublishDate.Reverse }}
+<p>
+  <a class="ux__content--navitem" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Date.Format "2006/01/02" }} - {{ .Title }}</a>
+</p>
 {{ end }}
