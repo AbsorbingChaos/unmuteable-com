@@ -2,7 +2,7 @@
 <h1>Let's talk about it.</h1>
 <p>Blockchains and cryptocurrencies are a complex subject, but to some, they enable a technical revolution whose value is underrealized, underutilized, and somewhat undefined in terms of potential.</p>
 <h2>Recent Posts</h2>
-{{ range .Pages.ByPublishDate.Reverse }}
+{{ range ( first 3 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
 <p>
   <a class="ux__content--navitem" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Date.Format "2006/01/02" }} - {{ .Title }}</a>
 </p>
