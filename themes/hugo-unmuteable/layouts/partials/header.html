@@ -7,7 +7,7 @@
     {{ range .Site.Menus.main }}
     <a class="ux__header--navitem{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
     {{ end }}
-    <button class="ux__header--toggle"></button>
+    <button class="ux__header--toggle" aria-label="Toggle light and dark mode"></button>
   </nav>
 </header>
 <hr />
