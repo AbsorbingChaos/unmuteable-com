@@ -239,18 +239,22 @@ kbd {
 .ux__header--navitem:active,
 .ux__header--navitem:link,
 .ux__header--navitem:visited {
-  padding: 1rem;
+  padding: 0.5rem;
   text-decoration: none;
   color: var(--ux-primary);
   cursor: pointer;
   font-weight: bold;
+  transition: 300ms ease;
 }
 
-.ux__header--navitem:hover,
-.ux__header--navitem:active {
-  text-decoration: underline;
+.ux__header--navitem:hover {
   background-color: var(--ux-on-background);
   color: var(--ux-background);
+  border-bottom: 1px solid var(--ux-background);
+}
+
+.ux__header--navitem.active {
+  border-bottom: 1px solid var(--ux-primary);
 }
 
 /****************************************/
