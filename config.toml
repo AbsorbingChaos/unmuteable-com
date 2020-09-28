@@ -65,3 +65,10 @@ sectionPagesMenu = "main"
   on_surface = "#AFAFAF"
   error = "#CC0000"
   on_error = "#FFFFFF"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    identifier = "home"
+    url = "/"
+    weight = 10
