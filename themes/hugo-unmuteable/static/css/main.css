@@ -116,7 +116,7 @@ body {
   background-color: var(--ux-background);
   color: var(--ux-on-background);
   font-family: Manrope, sans-serif;
-  font-size: 1.8em; /* 1em = 18px */
+  font-size: 2em; /* 1em = 18px */
   line-height: 1.5;
 }
 
@@ -277,6 +277,21 @@ kbd {
 
 .ux__content {
   padding: 0 1rem;
+}
+
+.ux__content--navitem,
+.ux__content--navitem:link,
+.ux__content--navitem:visited {
+  text-decoration: none;
+  color: var(--ux-primary);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.ux__content--navitem:active,
+.ux__content--navitem:hover {
+  background-color: var(--ux-on-background);
+  color: var(--ux-background);
 }
 
 /****************************************/
