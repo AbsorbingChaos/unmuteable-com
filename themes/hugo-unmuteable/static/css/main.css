@@ -258,19 +258,16 @@ kbd {
   color: var(--ux-primary);
   cursor: pointer;
   font-weight: bold;
+  background-color: transparent;
 }
 
 .ux__header--navitem:active,
 .ux__header--navitem:hover {
-  text-decoration: underline;
-  background-color: var(--ux-on-background);
-  color: var(--ux-background);
-  border-top: 1px solid var(--ux-background);
-  border-bottom: 1px solid var(--ux-background);
+  color: var(--ux-on-background);
+  border-top: 1px solid var(--ux-primary);
 }
 
 .ux__header--navitem.active {
-  border-top: 1px solid var(--ux-primary);
   border-bottom: 1px solid var(--ux-primary);
 }
 
