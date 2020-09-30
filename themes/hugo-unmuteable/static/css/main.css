@@ -192,7 +192,8 @@ kbd {
 /* GENERAL ELEMENTS                     */
 /****************************************/
 
-.ux__homelink {
+.ux__homelink,
+.ux__homelink:hover {
   text-decoration: none;
   background-color: transparent;
   color: transparent;
@@ -236,6 +237,7 @@ kbd {
   min-height: 30px;
   min-width: 30px;
   padding: 1rem;
+  padding-left: 1.5rem;
   cursor: pointer;
 }
 
