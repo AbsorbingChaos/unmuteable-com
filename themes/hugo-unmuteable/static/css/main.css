@@ -115,7 +115,7 @@ html {
 body {
   background-color: var(--ux-background);
   color: var(--ux-on-background);
-  font-family: Manrope, sans-serif;
+  font-family: Manrope, Arial, sans-serif;
   font-size: 2em; /* 1em = 18px */
   line-height: 1.5;
 }
@@ -126,7 +126,7 @@ h3,
 h4 {
   color: var(--ux-on-background);
   font-weight: bold;
-  font-family: Raleway, sans-serif;
+  font-family: Raleway, Arial, sans-serif;
 }
 
 h1 { font-size: 200%; }
