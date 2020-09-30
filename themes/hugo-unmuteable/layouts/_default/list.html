@@ -2,10 +2,27 @@
 
 <h1>{{ .Title }}</h1>
 {{ .Content }}
+
 {{ range .Pages.ByPublishDate.Reverse }}
 <p>
   <a class="ux__content--navitem" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Date.Format "2006/01/02" }} - {{ .Title }}</a>
 </p>
 {{ end }}
 
+<!--
+20200930: future code for categories/tags
+<section class="ux__content--flex">
+  <ul>
+    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+      <li><a class="ux__content--navitem" href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a>
+        <ul>
+          {{ range $key, $value := $taxonomy }}
+          <li> {{ $key }} </li>
+          {{ end }}
+        </ul>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+-->
 {{ end }}

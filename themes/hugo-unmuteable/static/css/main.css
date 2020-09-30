@@ -199,6 +199,10 @@ kbd {
   color: transparent;
 }
 
+.ux__content--flex {
+  /* TBD */
+}
+
 .ux__bold {
   font-weight: bold;
 }
