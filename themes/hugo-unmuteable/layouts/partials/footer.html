@@ -1,0 +1,18 @@
+<hr />
+<footer class="ux__footer">
+  <div class="ux__footer--item">
+    <h4>Links</h4>
+    <nav class="ux__footer--nav">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      <a class="ux__footer--navitem{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>  
+  </div>
+  <div class="ux__footer--item">
+    <h4>{{ .Site.Params.Copyright }}</h4>
+    <a class="ux__homelink" href="/">
+      <div class="ux__footer--logo"></div>
+    </a>
+  </div>
+</footer>

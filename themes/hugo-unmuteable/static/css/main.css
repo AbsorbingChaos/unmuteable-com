@@ -1,0 +1,353 @@
+/* START MEYERWEB CSS RESET */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1;border-radius:25px}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:none}table{border-collapse:collapse;border-spacing:0}
+/* END MEYERWEB CSS RESET */
+
+/* START NORMALIZE CSS RESET */
+/* Used for Buttons Only */
+button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.5;margin:0,padding:0;}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}
+/* END NORMALIZE CSS RESET */
+
+/* START CUSTOM FONTS */
+@font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 100;
+    src: url('/fonts/Raleway-ThinItalic.eot');
+    src: url('/fonts/Raleway-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Raleway-ThinItalic.woff2') format('woff2'),
+        url('/fonts/Raleway-ThinItalic.woff') format('woff'),
+        url('/fonts/Raleway-ThinItalic.ttf') format('truetype'),
+        url('/fonts/Raleway-ThinItalic.svg#Raleway-ThinItalic') format('svg');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 100;
+    src: url('/fonts/Raleway-Thin.eot');
+    src: url('/fonts/Raleway-Thin.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Raleway-Thin.woff2') format('woff2'),
+        url('/fonts/Raleway-Thin.woff') format('woff'),
+        url('/fonts/Raleway-Thin.ttf') format('truetype'),
+        url('/fonts/Raleway-Thin.svg#Raleway-Thin') format('svg');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    src: url('/fonts/Manrope-ExtraLight.eot');
+    src: url('/fonts/Manrope-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Manrope-ExtraLight.woff2') format('woff2'),
+        url('/fonts/Manrope-ExtraLight.woff') format('woff'),
+        url('/fonts/Manrope-ExtraLight.ttf') format('truetype'),
+        url('/fonts/Manrope-ExtraLight.svg#Manrope-ExtraLight') format('svg');
+}
+/* END CUSTOM FONTS */
+
+:root {
+
+  /* BEGIN LIGHT COLOR SCHEME */
+  --ux-primary: #00CCCC;
+  --ux-primary-lt: #64FFFF;
+  --ux-primary-dk: #009A9B;
+  --ux-on-primary: #000000;
+
+  --ux-secondary: #808080;
+  --ux-secondary-lt: #AFAFAF;
+  --ux-secondary-dk: #545454;
+  --ux-on-secondary: #000000;
+
+  --ux-background: #FFFFFF;
+  --ux-on-background: #191D26;
+  --ux-surface: #FFFFFF;
+  --ux-on-surface: #191D26;
+  --ux-error: #FFFFFF;
+  --ux-on-error: #CC0000;
+
+  --ux-lightbulb: url(/img/Light_Bulb_On.svg);
+  --ux-logo-primary: url(/img/Unmuteable_Primary_Logo.svg);
+  --ux-logo-secondary: url(/img/Unmuteable_Secondary_Logo.svg);
+  --ux-logo-tertiary: url(/img/Unmuteable_Tertiary_Logo.svg);
+  /* END LIGHT COLOR SCHEME */
+
+}
+
+:root.darkness {
+
+  /* BEGIN DARK COLOR SCHEME */
+  --ux-primary: #00CCCC;
+  --ux-primary-lt: #64FFFF;
+  --ux-primary-dk: #009A9B;
+  --ux-on-primary: #000000;
+
+  --ux-secondary: #808080;
+  --ux-secondary-lt: #AFAFAF;
+  --ux-secondary-dk: #545454;
+  --ux-on-secondary: #000000;
+
+  --ux-background: #191D26;
+  --ux-on-background: #AFAFAF;
+  --ux-surface: #191D26;
+  --ux-on-surface: #AFAFAF;
+  --ux-error: #CC0000;
+  --ux-on-error: #FFFFFF;
+
+  --ux-lightbulb: url(/img/Light_Bulb_Off.svg);
+  --ux-logo-primary: url(/img/Unmuteable_Primary_Logo_DarkMode.svg);
+  --ux-logo-secondary: url(/img/Unmuteable_Secondary_Logo_DarkMode.svg);
+  --ux-logo-tertiary: url(/img/Unmuteable_Tertiary_Logo_Darkmode.svg);
+  /* END DARK COLOR SCHEME */
+
+}
+
+/****************************************/
+/* General Styles - Mobile First Design */
+/****************************************/
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  background-color: var(--ux-background);
+  color: var(--ux-on-background);
+  font-family: Manrope, sans-serif;
+  font-size: 2em; /* 1em = 18px */
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--ux-on-background);
+  font-weight: bold;
+  font-family: Raleway, sans-serif;
+}
+
+h1 { font-size: 200%; }
+h2 { font-size: 150%; }
+h3 { font-size: 125%; }
+h4 { font-size: 115%; }
+
+p {
+  padding: 1rem 0;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--ux-primary);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+a:hover,
+a:active {
+  background-color: var(--ux-on-background);
+  color: var(--ux-background);
+}
+
+blockquote {
+  font-style: italic;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  border-left: 3px solid var(--ux-primary);
+  color: var(--ux-on-background);
+}
+
+pre,
+code,
+kbd {
+  background-color: var(--ux-on-surface);
+  color: var(--ux-surface);
+  margin: 1rem 0;
+  font-weight: bold;
+  overflow-wrap: break-word; 
+}
+
+kbd {
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.5rem;
+}
+
+/****************************************/
+/* CONTAINERS - Mobile First Design     */
+/****************************************/
+
+.ux__wrap {
+  margin: 0 auto;
+  max-width: 1200px;
+  /* min-width: 350px; */
+  padding: 1rem 0;
+}
+
+/****************************************/
+/* GENERAL ELEMENTS                     */
+/****************************************/
+
+.ux__homelink,
+.ux__homelink:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: transparent;
+}
+
+.ux__content--flex {
+  /* TBD */
+}
+
+.ux__bold {
+  font-weight: bold;
+}
+
+/****************************************/
+/* HEADER                               */
+/****************************************/
+
+.ux__header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.ux__header--logo {
+  background-image: var(--ux-logo-primary);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 10vh;
+  min-height: 75px;
+  width: 100vw;
+}
+
+.ux__header--toggle {
+  background-color: transparent;
+  border: none;
+  color: var(--ux-on-background);
+  background-image: var(--ux-lightbulb);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 30px;
+  min-width: 30px;
+  padding: 1rem;
+  padding-left: 3rem;
+  cursor: pointer;
+}
+
+.ux__header--toggle:active,
+.ux__header--toggle:hover,
+.ux__header--toggle:focus {
+  border: none;
+  outline: 0;
+}
+
+.ux__header--nav {
+  padding: 1rem;
+}
+
+.ux__header--navitem,
+.ux__header--navitem:link,
+.ux__header--navitem:visited {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: var(--ux-primary);
+  cursor: pointer;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.ux__header--navitem:active,
+.ux__header--navitem:hover {
+  color: var(--ux-on-background);
+  border-top: 1px solid var(--ux-primary);
+}
+
+.ux__header--navitem.active {
+  border-bottom: 1px solid var(--ux-primary);
+}
+
+/****************************************/
+/* CONTENT                              */
+/****************************************/
+
+.ux__content {
+  padding: 0 1rem;
+}
+
+.ux__content--navitem,
+.ux__content--navitem:link,
+.ux__content--navitem:visited {
+  text-decoration: none;
+  color: var(--ux-primary);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.ux__content--navitem:active,
+.ux__content--navitem:hover {
+  background-color: var(--ux-on-background);
+  color: var(--ux-background);
+}
+
+/****************************************/
+/* FOOTER                               */
+/****************************************/
+
+.ux__footer {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: top;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.ux__footer--item {
+  /* not used quite yet */
+}
+
+.ux__footer--logo {
+  background-image: var(--ux-logo-tertiary);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 75px;
+  min-width: 75px;
+}
+
+.ux__footer--nav {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.ux__footer--navitem,
+.ux__footer--navitem:link,
+.ux__footer--navitem:visited {
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--ux-primary);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.ux__footer--navitem:hover,
+.ux__footer--navitem:active {
+  text-decoration: underline;
+  background-color: var(--ux-on-background);
+  color: var(--ux-background);
+}
