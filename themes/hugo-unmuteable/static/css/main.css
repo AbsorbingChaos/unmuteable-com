@@ -251,7 +251,6 @@ kbd {
 }
 
 .ux__header--navitem,
-.ux__header--navitem:active,
 .ux__header--navitem:link,
 .ux__header--navitem:visited {
   padding: 0.5rem;
@@ -261,6 +260,7 @@ kbd {
   font-weight: bold;
 }
 
+.ux__header--navitem:active,
 .ux__header--navitem:hover {
   text-decoration: underline;
   background-color: var(--ux-on-background);
@@ -318,7 +318,6 @@ kbd {
 }
 
 .ux__footer--navitem,
-.ux__footer--navitem:active,
 .ux__footer--navitem:link,
 .ux__footer--navitem:visited {
   padding: 1rem;
