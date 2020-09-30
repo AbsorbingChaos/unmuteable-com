@@ -138,6 +138,21 @@ p {
   padding: 1rem 0;
 }
 
+a
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--ux-primary);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+a:hover,
+a:active {
+  background-color: var(--ux-on-background);
+  color: var(--ux-background);
+}
+
 blockquote {
   font-style: italic;
   margin-left: 2rem;
@@ -244,16 +259,18 @@ kbd {
   color: var(--ux-primary);
   cursor: pointer;
   font-weight: bold;
-  transition: 300ms ease;
 }
 
 .ux__header--navitem:hover {
+  text-decoration: underline;
   background-color: var(--ux-on-background);
   color: var(--ux-background);
+  border-top: 1px solid var(--ux-background);
   border-bottom: 1px solid var(--ux-background);
 }
 
 .ux__header--navitem.active {
+  border-top: 1px solid var(--ux-primary);
   border-bottom: 1px solid var(--ux-primary);
 }
 
@@ -263,22 +280,6 @@ kbd {
 
 .ux__content {
   padding: 0 1rem;
-}
-
-.ux__content--navitem,
-.ux__content--navitem:active,
-.ux__content--navitem:link,
-.ux__content--navitem:visited {
-  text-decoration: none;
-  color: var(--ux-primary);
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.ux__content--navitem:hover,
-.ux__content--navitem:active {
-  background-color: var(--ux-on-background);
-  color: var(--ux-background);
 }
 
 /****************************************/
