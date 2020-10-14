@@ -199,14 +199,6 @@ kbd {
   color: transparent;
 }
 
-.ux__content--flex {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: center;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
 .ux__bold {
   font-weight: bold;
 }
@@ -302,6 +294,38 @@ kbd {
 .ux__content--navitem:hover {
   background-color: var(--ux-on-background);
   color: var(--ux-background);
+}
+
+/****************************************/
+/* POSTS                                */
+/****************************************/
+
+.ux__post {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+.ux__post__item {
+  flex: 0 0 30%;
+  border: 1px solid var(--ux-secondary);
+  border-radius: 1rem;
+  padding: 1rem;
+  /* box-shadow: 0.5rem 0.5rem 0.25rem 0px var(--ux-secondary); */
+}
+
+.ux__post__list {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.ux__post__listitem {
+
 }
 
 /****************************************/

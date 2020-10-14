@@ -2,6 +2,7 @@ baseURL = "https://unmuteable.com"
 theme = "hugo-unmuteable"
 languageCode = "en-us"
 sectionPagesMenu = "main"
+summaryLength = "30"
 
 [sitemap]
   changefreq = "weekly"
