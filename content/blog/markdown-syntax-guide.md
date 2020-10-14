@@ -1,7 +1,7 @@
 ---
 author: "Jason Schrader"
 title: "Markdown Syntax Guide"
-date: "2020-09-20"
+date: "2020-05-21"
 draft: false
 description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
 tags:
