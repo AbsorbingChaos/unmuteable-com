@@ -5,18 +5,7 @@
 
 <section class="ux__post">
 {{ range .Pages.ByPublishDate.Reverse }}
-  <article class="ux__post__item">
-    <p><a class="ux__content--navitem" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a> - {{ .Date.Format "2006/01/02" }}</p>
-    <p>{{ .Summary }}</p>
-    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-      <h3>{{ $taxonomyname }}:</h3>
-      <ul class="ux__post__list">
-      {{ range $key, $value := $taxonomy }}
-        <li class="ux__post__listitem">{{ $key }}</li>
-      {{ end }}
-      </ul>
-    {{ end }}
-  </article>
+  {{- partial "posts.html" . -}}
 {{ end }}
 </section>
 {{ end }}
