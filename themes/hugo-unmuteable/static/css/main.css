@@ -90,7 +90,7 @@ button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-he
   --ux-on-secondary: #000000;
 
   --ux-background: #191D26;
-  --ux-on-background: #AFAFAF;
+  --ux-on-background: #F6F6F6;
   --ux-surface: #212632;
   --ux-on-surface: #F6F6F6;
   --ux-error: #CC0000;
