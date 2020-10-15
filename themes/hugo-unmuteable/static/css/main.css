@@ -117,6 +117,7 @@ body {
   color: var(--ux-on-background);
   font-family: Manrope, Arial, sans-serif;
   font-size: 2em; /* 1em = 18px */
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -308,12 +309,12 @@ kbd {
 }
 
 .ux__post__item {
-  flex: 0 0 350px;
+  flex: 0 0 300px;
   border: 1px solid var(--ux-secondary);
   border-radius: 1rem;
   padding: 1rem;
   margin: 1rem;
-  background-color: var(--ux-surface);
+  background-color: var(--ux-background);
   color: var(--ux-on-surface);
   display: flex;
   flex-flow: column nowrap;
@@ -328,6 +329,7 @@ kbd {
 
 .ux__post__date {
   font-size: 80%;
+  font-weight: bold;
 }
 
 .ux__post__list {
