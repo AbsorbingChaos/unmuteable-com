@@ -150,8 +150,7 @@ a:visited {
 
 a:hover,
 a:active {
-  background-color: var(--ux-on-background);
-  color: var(--ux-background);
+  color: var(--ux-on-background);
 }
 
 blockquote {
@@ -293,8 +292,7 @@ kbd {
 
 .ux__content--navitem:active,
 .ux__content--navitem:hover {
-  background-color: var(--ux-on-background);
-  color: var(--ux-background);
+  color: var(--ux-on-background);
 }
 
 /****************************************/
@@ -417,6 +415,5 @@ kbd {
 .ux__footer--navitem:hover,
 .ux__footer--navitem:active {
   text-decoration: underline;
-  background-color: var(--ux-on-background);
-  color: var(--ux-background);
+  color: var(--ux-on-background);
 }
