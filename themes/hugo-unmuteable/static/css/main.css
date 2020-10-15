@@ -63,8 +63,8 @@ button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-he
 
   --ux-background: #FFFFFF;
   --ux-on-background: #191D26;
-  --ux-surface: #FFFFFF;
-  --ux-on-surface: #191D26;
+  --ux-surface: #F6F6F6;
+  --ux-on-surface: #212632;
   --ux-error: #FFFFFF;
   --ux-on-error: #CC0000;
 
@@ -91,8 +91,8 @@ button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-he
 
   --ux-background: #191D26;
   --ux-on-background: #AFAFAF;
-  --ux-surface: #191D26;
-  --ux-on-surface: #AFAFAF;
+  --ux-surface: #212632;
+  --ux-on-surface: #F6F6F6;
   --ux-error: #CC0000;
   --ux-on-error: #FFFFFF;
 
@@ -303,18 +303,31 @@ kbd {
 .ux__post {
   display: flex;
   flex-flow: row wrap;
-  align-content: center;
   align-items: stretch;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
 .ux__post__item {
-  flex: 1 0 350px;
+  flex: 0 0 350px;
   border: 1px solid var(--ux-secondary);
   border-radius: 1rem;
   padding: 1rem;
   margin: 1rem;
-  /* box-shadow: 0.5rem 0.5rem 0.25rem 0px var(--ux-secondary); */
+  background-color: var(--ux-surface);
+  color: var(--ux-on-surface);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.ux__post__item__image {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.ux__post__date {
+  font-size: 80%;
 }
 
 .ux__post__list {

@@ -1,12 +1,25 @@
 <article class="ux__post__item">
-  <p><a class="ux__content--navitem" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a> - {{ .Date.Format "2006/01/02" }}</p>
-  <p>{{ .Summary | truncate 120 }}<br /><a href="{{ .RelPermalink }}">Read More…</a></p>
-  {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-    <ul class="ux__post__list" aria-label="{{ $taxonomyname }}">
-    {{ range $key, $value := $taxonomy }}
-      <li class="ux__post__listitem">
-        <a class="ux__post__listitem__link" href="" title="">{{ $key }}</a></li>
+  <div>
+    <img src="https://placeimg.com/350/225/tech"
+      alt="Placeholder tech image for layout purposes"
+      srcset="https://placeimg.com/350/225/tech 350w,
+              https://placeimg.com/600/450/tech 600w,
+              https://placeimg.com/900/675/tech 900w,
+              https://placeimg.com/1200/900/tech 1200w"
+      sizes="100vw"
+      class="ux__post__item__image" />
+    <p><a class="ux__content--navitem" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></p>
+    <p class="ux__post__date">{{ .Date.Format "January 6, 2006" }}</p>
+    <p>{{ .Summary | truncate 120 }}</p>
+  </div>
+  <div>
+    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+      <ul class="ux__post__list" aria-label="{{ $taxonomyname }}">
+      {{ range $key, $value := $taxonomy }}
+        <li class="ux__post__listitem">
+          <a class="ux__post__listitem__link" href="" title="">{{ $key }}</a></li>
+      {{ end }}
+      </ul>
     {{ end }}
-    </ul>
-  {{ end }}
+  <div>
 </article>
