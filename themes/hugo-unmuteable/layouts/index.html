@@ -1,10 +1,13 @@
 {{ define "main" }}
+
 <h1>Let's talk about it.</h1>
 <p>Blockchains and cryptocurrencies are a complex subject, but to some, they enable a technical revolution whose value is underrealized, underutilized, and somewhat undefined in terms of potential.</p>
+
 <h2>Recent Posts</h2>
 <section class="ux__post">
 {{ range ( first 3 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
   {{- partial "posts.html" . -}}
 {{ end }}
 </section>
+
 {{ end }}
