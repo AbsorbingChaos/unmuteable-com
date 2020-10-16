@@ -1,11 +1,11 @@
 <article class="ux__postitem">
   <div>
-    <img src="https://placeimg.com/350/225/tech"
+    <img src="https://via.placeholder.com/350/225.png?text=Unmuteable"
       alt="Placeholder tech image for layout purposes"
-      srcset="https://placeimg.com/350/225/tech 350w,
-              https://placeimg.com/600/450/tech 600w,
-              https://placeimg.com/900/675/tech 900w,
-              https://placeimg.com/1200/900/tech 1200w"
+      srcset="https://via.placeholder.com/350/225.png?text=Unmuteable 350w,
+              https://via.placeholder.com/600/450.png?text=Unmuteable 600w,
+              https://via.placeholder.com/900/675.png?text=Unmuteable 900w,
+              https://via.placeholder.com/1200/900.png?text=Unmuteable 1200w"
       sizes="100vw"
       class="ux__postitem__image" />
     <h3><a class="ux__content__navitem" href="{{ .RelPermalink }}" title="{{ .Description }}">{{ .Title }}</a></h3>
@@ -13,15 +13,6 @@
     <p>{{ .Summary | truncate 120 }}</p>
   </div>
   <div>
-    <!-- {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-      <ul class="ux__postitem__list" aria-label="{{ $taxonomyname }}">
-      {{ range $key, $value := $taxonomy }}
-        <li class="ux__postitem__listitem">
-          <a class="ux__postitem__listitem__nav" href="" title="">{{ $key }}</a>
-        </li>
-      {{ end }}
-      </ul>
-    {{ end }} -->
     <ul class="ux__postitem__list" aria-label="categories">
       {{ range .Params.categories }}
         <li class="ux__postitem__listitem">

@@ -299,6 +299,13 @@ kbd {
 /* POSTS                                */
 /****************************************/
 
+.ux__featuredpost {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
 .ux__post {
   display: flex;
   flex-flow: row wrap;
@@ -363,6 +370,10 @@ kbd {
   color: var(--ux-background) !important;
   background-color: var(--ux-on-background);
 }
+
+/****************************************/
+/*                                      */
+/****************************************/
 
 /****************************************/
 /* FOOTER                               */

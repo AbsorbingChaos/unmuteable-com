@@ -1,13 +1,29 @@
 {{ define "main" }}
 
-<h1>Let's talk about it.</h1>
-<p>Blockchains and cryptocurrencies are a complex subject, but to some, they enable a technical revolution whose value is underrealized, underutilized, and somewhat undefined in terms of potential.</p>
-
-<h2>Recent Posts</h2>
+<section class="ux__featuredpost">
+  {{ range ( first 5 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
+    {{- partial "posts.html" . -}}
+  {{ end }}
+</section>
+<section class="ux__callout">
+  <!-- code for an email signup form -->
+</section>
 <section class="ux__post">
-{{ range ( first 3 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
-  {{- partial "posts.html" . -}}
-{{ end }}
+  <!-- code for remaining posts -->
+</section>
+<section class="ux__callout">
+  <!-- code to display a category list
+
+  {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+    <ul class="ux__postitem__list" aria-label="{{ $taxonomyname }}">
+    {{ range $key, $value := $taxonomy }}
+      <li class="ux__postitem__listitem">
+        <a class="ux__postitem__listitem__nav" href="" title="">{{ $key }}</a>
+      </li>
+    {{ end }}
+    </ul>
+  {{ end }} -->
+
 </section>
 
 {{ end }}
