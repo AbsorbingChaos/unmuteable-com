@@ -3,12 +3,12 @@ author: "Jason Schrader"
 title: "Blockstack: How to -git- Involved"
 date: 2020-03-09
 draft: false
-description: "An early post outlining a mix of Blockstack information and basic instructions on how to work within the context of GitHub."
+description: "Working with Blockstack and GitHub"
 tags:
 - git
 - GitHub
 categories:
-- Blockstack
+- Stacks
 ---
 
 Git can be a little overwhelming, but in this article, I cover resources for git and an example of the full project flow including forking a repo, making changes, submitting a pull request, and updating against a remote respository.

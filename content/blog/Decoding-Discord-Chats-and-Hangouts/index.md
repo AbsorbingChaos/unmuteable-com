@@ -3,13 +3,15 @@ author: "Jason Schrader"
 title: "Decoding Discord Chats and Hangouts"
 date: "2020-09-09"
 draft: false
-description: "An early post outlining a mix of Blockstack information and basic instructions on how to work within the context of GitHub."
+description: "Discord Tips and Tricks"
 tags:
 - Discord
 categories:
 - Training
 ---
 
-Git can be a little overwhelming, but in this article, I cover resources for git and an example of the full project flow including forking a repo, making changes, submitting a pull request, and updating against a remote respository.
+Trying new things is hard, and learning them on the fly during a presentation in front of an audience is even harder.
 
-The original content is hosted on Sigle, [read more here!](https://app.sigle.io/whoabuddy.id.blockstack/s0zMy6UW3cTOfR-Lm9dCg)
+Below is a comprehensive walkthrough of some basic Discord chat functions, tailored specifically toward the Stacks hangouts that happen in the community channel.
+
+The original content is hosted on Sigle, [read more here!](https://app.sigle.io/whoabuddy.id.blockstack/IFT64oGIRG6yvFF4LB0UW)

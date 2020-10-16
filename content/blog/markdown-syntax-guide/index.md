@@ -3,7 +3,7 @@ author: "Jason Schrader"
 title: "Markdown Syntax Guide"
 date: "2020-05-01"
 draft: false
-description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+description: "Markdown syntax examples"
 tags:
 - markdown 
 - css 
