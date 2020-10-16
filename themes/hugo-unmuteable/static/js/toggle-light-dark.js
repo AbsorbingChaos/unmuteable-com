@@ -1,4 +1,4 @@
-const btn = document.querySelector(".ux__header--toggle");
+const btn = document.querySelector(".ux__header__toggle");
 const currentTheme = localStorage.getItem("theme")
 
 if (currentTheme == "dark") {
