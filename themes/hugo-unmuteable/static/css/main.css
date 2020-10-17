@@ -259,26 +259,6 @@ kbd {
   background-size: contain;
 }
 
-.ux__header__lightswitch {
-  /* on mobile, space-evenly 2nd item, 2nd row */
-  /* on desktop, space-between first row */
-}
-
-.ux__header__lightswitch__icon {
-  background-color: transparent;
-  border: none;
-  color: var(--ux-on-background);
-  
-  cursor: pointer;
-}
-
-.ux__header__lightswitch__icon:active,
-.ux__header__lightswitch__icon:hover,
-.ux__header__lightswitch__icon:focus {
-  border: none;
-  outline: 0;
-}
-
 .ux__header__nav {
   text-align:center;
   visibility: hidden;
