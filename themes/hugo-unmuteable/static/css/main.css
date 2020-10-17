@@ -328,67 +328,35 @@ kbd {
 }
 
 /****************************************/
-/* FEATURED POSTS                       */
+/* FULL SIZED POSTS                     */
 /****************************************/
 
-.ux__post--featured {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: stretch;
-  justify-content: flex-start;
+.ux__post--full,
+.ux__post--thirds {
+  width: 100%;
 }
 
-.ux__postitem--featured {
-  flex: 1 0 30%;
-  border: 1px solid var(--ux-secondary);
-  border-radius: 1rem;
+.ux__postitem--full,
+.ux__postitem--thirds {
   padding: 1rem;
   margin: 1rem;
   background-color: var(--ux-background);
-  color: var(--ux-on-surface);
+  color: var(--ux-on-background);
 
   display: flex;
   flex-flow: column nowrap;
-  align-items: stretch;
-  justify-content: space-between;
-}
-
-.ux__postitem--featured:first-child {
-  flex: 2 0 60%;
-}
-
-/****************************************/
-/* POSTS                                */
-/****************************************/
-
-.ux__post {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: stretch;
   justify-content: flex-start;
-}
+  align-items: flex-start;
+} 
 
-.ux__postitem {
-  flex: 1 1 350px;
-  min-width: 250px;
-  max-width: 350px;
-  border: 1px solid var(--ux-secondary);
+.ux__postitem--full {
+  border: 3px solid var(--ux-secondary);
   border-radius: 1rem;
-  padding: 1rem;
-  margin: 1rem;
-  background-color: var(--ux-background);
-  color: var(--ux-on-surface);
-
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: stretch;
-  justify-content: space-between;
 }
 
-/*
-.ux__positem--1of3 for 1/3 3 post layout
-.ux__postitem--full for full width posts (in containers)
-*/
+/****************************************/
+/* POST CONTENTS                        */
+/****************************************/
 
 .ux__postitem__image {
   width: 100%;
@@ -403,19 +371,13 @@ kbd {
 .ux__postitem__list {
   display: flex;
   flex-flow: row wrap;
+  justify-content: flex-start;
   align-content: center;
   align-items: stretch;
-  justify-content: flex-start;
-}
-
-.ux__postitem__list::before {
-    content: attr(aria-label);
-    font-weight: bold;
 }
 
 .ux__postitem__listitem {
-  margin: 0.25rem;
-  padding: 0 0.25rem;
+  padding: 0.5rem;
 }
 
 .ux__postitem__listitem__nav {
@@ -505,4 +467,24 @@ kbd {
 .ux__footer__navitem:active {
   text-decoration: underline;
   color: var(--ux-on-background);
+}
+
+/* Media Queries */
+
+@media (min-width: 650px) {
+  .ux__postitem--full {
+    flex-flow: row nowrap;
+  }
+  .ux__postitem--full > :first-child {
+    padding-right: 2rem;
+    max-width: 25vw;
+  }
+  .ux__post--thirds {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+  }
+  .ux__postitem--thirds {
+    
+  }
 }

@@ -1,4 +1,4 @@
-<article class="ux__postitem--featured">
+<article class="ux__postitem--full">
   <div>
     <img src="https://via.placeholder.com/350/225/fff/000.png?text=Unmuteable_350x225"
       alt="Placeholder image for layout purposes - replace with post cover photo"
@@ -12,20 +12,11 @@
   <div>
     <h3><a class="ux__content__navitem" href="{{ .RelPermalink }}" title="{{ .Description }}">{{ .Title }}</a></h3>
     <p class="ux__postitem__date">{{ .Date.Format "January 6, 2006" }}</p>
-    <p>{{ .Summary | truncate 120 }}</p>
-  </div>
-  <div>
-    <ul class="ux__postitem__list" aria-label="categories">
+    <p>{{ .Summary | truncate 150 }}</p>
+    <ul class="ux__postitem__list">
       {{ range .Params.categories }}
         <li class="ux__postitem__listitem">
           <a class="ux__postitem__listitem__nav" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
-        </li>
-      {{ end }}
-    </ul>
-    <ul class="ux__postitem__list" aria-label="tags">
-      {{ range .Params.tags }}
-        <li class="ux__postitem__listitem">
-          <a class="ux__postitem__listitem__nav" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
         </li>
       {{ end }}
     </ul>

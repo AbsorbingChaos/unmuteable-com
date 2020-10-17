@@ -1,21 +1,33 @@
 {{ define "main" }}
 
+<section class="ux__post--full">
+  {{ range ( first 1 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
+    {{- partial "post-fullsize.html" . -}}
+  {{ end }}
+</section>
+
+<section class="ux__post--thirds">
+  {{ range ( first 3 (after 1 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
+    {{- partial "post-thirds.html" . -}}
+  {{ end }}
+</section>
+
+<!--
 <section class="ux__post--featured">
   {{ range ( first 3 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
-    {{- partial "posts-featured.html" . -}}
+    {{- partial "post-fullsize.html" . -}}
   {{ end }}
 </section>
 <section class="ux__callout">
   {{- partial "sendinblue.html" . -}}
 </section>
 <section class="ux__post">
-  <!-- code for remaining posts -->
   {{ range ( after 3 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
     {{- partial "posts.html" . -}}
   {{ end }}
 </section>
 <section class="ux__callout">
-<!--
+
   {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
     <ul class="ux__postitem__list" aria-label="{{ $taxonomyname }}">
     {{ range $key, $value := $taxonomy }}
@@ -25,7 +37,7 @@
     {{ end }}
     </ul>
   {{ end }}
--->
 </section>
+-->
 
 {{ end }}
