@@ -3,9 +3,9 @@
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 
-<section class="ux__post">
+<section class="ux__post--full">
 {{ range .Pages.ByPublishDate.Reverse }}
-  {{- partial "posts.html" . -}}
+  {{- partial "post-fullsize.html" . -}}
 {{ end }}
 </section>
 
