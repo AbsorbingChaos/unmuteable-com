@@ -12,9 +12,10 @@
   {{ end }}
 </section>
 
-
-
 <!--
+<section class="ux__callout">
+  {{- partial "sendinblue.html" . -}}
+</section>
 <section class="ux__post--featured">
   {{ range ( first 3 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
     {{- partial "post-fullsize.html" . -}}
@@ -22,11 +23,6 @@
 </section>
 <section class="ux__callout">
   {{- partial "sendinblue.html" . -}}
-</section>
-<section class="ux__post">
-  {{ range ( after 3 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
-    {{- partial "posts.html" . -}}
-  {{ end }}
 </section>
 <section class="ux__callout">
 
