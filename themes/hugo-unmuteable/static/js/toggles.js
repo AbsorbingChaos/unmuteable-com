@@ -1,4 +1,4 @@
-const btn = document.querySelector(".ux__header__toggle");
+const btn = document.querySelector(".ux__header__lightswitch__icon");
 const currentTheme = localStorage.getItem("theme")
 
 if (currentTheme == "dark") {

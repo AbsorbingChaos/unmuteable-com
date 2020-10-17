@@ -1,0 +1,33 @@
+<article class="ux__postitem--featured">
+  <div>
+    <img src="https://via.placeholder.com/350/225/fff/000.png?text=Unmuteable_350x225"
+      alt="Placeholder image for layout purposes - replace with post cover photo"
+      srcset="https://via.placeholder.com/350/225/fff/000.png?text=Unmuteable_350x225 350w,
+              https://via.placeholder.com/600/450/fff/000.png?text=Unmuteable_600x450 600w,
+              https://via.placeholder.com/900/675/fff/000.png?text=Unmuteable_900x675 900w,
+              https://via.placeholder.com/1200/900/fff/000.png?text=Unmuteable_1200x900 1200w"
+      sizes="100vw"
+      class="ux__postitem__image" />
+  </div>
+  <div>
+    <h3><a class="ux__content__navitem" href="{{ .RelPermalink }}" title="{{ .Description }}">{{ .Title }}</a></h3>
+    <p class="ux__postitem__date">{{ .Date.Format "January 6, 2006" }}</p>
+    <p>{{ .Summary | truncate 120 }}</p>
+  </div>
+  <div>
+    <ul class="ux__postitem__list" aria-label="categories">
+      {{ range .Params.categories }}
+        <li class="ux__postitem__listitem">
+          <a class="ux__postitem__listitem__nav" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+        </li>
+      {{ end }}
+    </ul>
+    <ul class="ux__postitem__list" aria-label="tags">
+      {{ range .Params.tags }}
+        <li class="ux__postitem__listitem">
+          <a class="ux__postitem__listitem__nav" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</article>

@@ -1,19 +1,21 @@
 {{ define "main" }}
 
-<section class="ux__featuredpost">
-  {{ range ( first 5 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
+<section class="ux__post--featured">
+  {{ range ( first 3 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
+    {{- partial "posts-featured.html" . -}}
+  {{ end }}
+</section>
+<section class="ux__callout">
+  {{- partial "sendinblue.html" . -}}
+</section>
+<section class="ux__post">
+  <!-- code for remaining posts -->
+  {{ range ( after 3 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
     {{- partial "posts.html" . -}}
   {{ end }}
 </section>
 <section class="ux__callout">
-  <!-- code for an email signup form -->
-</section>
-<section class="ux__post">
-  <!-- code for remaining posts -->
-</section>
-<section class="ux__callout">
-  <!-- code to display a category list
-
+<!--
   {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
     <ul class="ux__postitem__list" aria-label="{{ $taxonomyname }}">
     {{ range $key, $value := $taxonomy }}
@@ -22,8 +24,8 @@
       </li>
     {{ end }}
     </ul>
-  {{ end }} -->
-
+  {{ end }}
+-->
 </section>
 
 {{ end }}
