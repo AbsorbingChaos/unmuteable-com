@@ -69,7 +69,7 @@ button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-he
   --ux-on-error: #CC0000;
 
   --ux-lightbulb: url(/img/Light_Bulb_On.svg);
-  --ux-menu: url(/img/Menu.svg);
+  --ux-menu: url(/img/Menu_Black.svg);
   --ux-logo-primary: url(/img/Unmuteable_Primary_Logo.svg);
   --ux-logo-secondary: url(/img/Unmuteable_Secondary_Logo.svg);
   --ux-logo-tertiary: url(/img/Unmuteable_Tertiary_Logo.svg);
@@ -98,6 +98,7 @@ button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-he
   --ux-on-error: #FFFFFF;
 
   --ux-lightbulb: url(/img/Light_Bulb_Off.svg);
+  --ux-menu: url(/img/Menu_White.svg);
   --ux-logo-primary: url(/img/Unmuteable_Primary_Logo_DarkMode.svg);
   --ux-logo-secondary: url(/img/Unmuteable_Secondary_Logo_DarkMode.svg);
   --ux-logo-tertiary: url(/img/Unmuteable_Tertiary_Logo_Darkmode.svg);
@@ -210,13 +211,13 @@ kbd {
 /****************************************/
 
 .ux__header {
-
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
 }
 
 .ux__header__logo {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
+  width: 50vw;
 }
 
 .ux__header__logo__img {
@@ -224,53 +225,34 @@ kbd {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  min-height: 10vw;
-  width: 100vw;
+  min-height: 15vh;
 }
 
-.ux__header__top {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  min-height: 75px;
-  height: 10vw;
-}
-
-.ux__header__menu {
-  /* on mobile, space-evenly 1st item, 2nd row */
-  /* on desktop, space-between first row */
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.ux__header__menu__icon {
+.ux__header__icon {
   background-color: transparent;
   border: none;
   color: var(--ux-on-background);
   cursor: pointer;
-  min-height: 50px;
-  min-width: 50px;
+  max-width: 30px;
+  flex: 1 0 20px;
 }
 
-.ux__header__menu__icon:active,
-.ux__header__menu__icon:hover,
-.ux__header__menu__icon:focus {
+.ux__header__icon:active,
+.ux__header__icon:hover,
+.ux__header__icon:focus {
   border: none;
   outline: 0;
 }
 
-.ux__header__menu__icon--menu {
+.ux__header__icon--menu {
   background-image: var(--ux-menu);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  max-width: 20px;
 }
 
-.ux__header__menu__icon--lightswitch {
+.ux__header__icon--lightswitch {
   background-image: var(--ux-lightbulb);
   background-position: center;
   background-repeat: no-repeat;

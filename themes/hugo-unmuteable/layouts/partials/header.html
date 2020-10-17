@@ -1,30 +1,24 @@
 <header class="ux__header">
+  <button class="ux__header__icon ux__header__icon--menu"></button>  
   <div class="ux__header__logo">
     <a class="ux__homelink" href="/">
       <div class="ux__header__logo__img"></div>
     </a>
   </div>
-  <div class="ux__header__menu">
-    <div class="ux__header__menu__icon ux__header__menu__icon--menu">
-      
-    </div>
-    <div class="ux__header__menu__icon ux__header__menu__icon--lightswitch">
-      
-    </div>
-  </div>
-  <div class="ux__header__nav">
-    <nav>
-      {{ $currentPage := . }}
-      {{ range .Site.Menus.main }}
-      <a class="ux__header__navitem{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
-      {{ end }}
-    </nav>
-  </div>
+  <button class="ux__header__icon ux__header__icon--lightswitch"></button>
 </header>
+<div class="ux__header__nav">
+  <nav>
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    <a class="ux__header__navitem{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    {{ end }}
+  </nav>
+</div>
 <!--
   <div class="ux__header__top">
     <div class="ux__header__menu">
-      <button class="ux__header__menu__icon" aria-label="Toggle menu open and closed"></button>
+      <button class="ux__header__icon" aria-label="Toggle menu open and closed"></button>
     </div>
     <div class="ux__header__lightswith">
       <button class="ux__header__lightswitch__icon" aria-label="Toggle light and dark mode"></button>
