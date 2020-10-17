@@ -281,6 +281,16 @@ kbd {
 
 .ux__header__nav {
   text-align:center;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: visibility 0s, opacity 1s linear;
+}
+
+.ux__header__nav.show {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
 }
 
 .ux__header__navitem,
