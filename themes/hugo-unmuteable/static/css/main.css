@@ -99,6 +99,7 @@ button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-he
 
   --ux-lightbulb: url(/img/Light_Bulb_Off.svg);
   --ux-menu: url(/img/Menu_White.svg);
+  --ux-circle: url(/img/Circle.svg);
   --ux-logo-primary: url(/img/Unmuteable_Primary_Logo_DarkMode.svg);
   --ux-logo-secondary: url(/img/Unmuteable_Secondary_Logo_DarkMode.svg);
   --ux-logo-tertiary: url(/img/Unmuteable_Tertiary_Logo_Darkmode.svg);
@@ -442,10 +443,6 @@ kbd {
   transition: box-shadow 0.3s;
 }
 
-.ux__form__input[type='checkbox'] {
-  outline: none;
-}
-
 .ux__form__input[type='text'] {
   padding-left: 0.5rem;
   border: none;
@@ -455,7 +452,6 @@ kbd {
   box-shadow: 0px 0px 3px 3px var(--ux-primary);
   outline: none;
 }
-
 
 .ux__form__icon {
   max-height: 75px;
@@ -469,30 +465,109 @@ kbd {
   color: var(--ux-on-secondary);
 }
 
-/* use SWITCH example instead for a toggle vs checkbox?
-https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
-
-.switch {
-  width: 38px;
-  border-radius: 11px;
+.ux__form__button:hover {
+  background-color: var(--ux-primary);
 }
 
-.switch::after {
-  left: 2px;
-  top: 2px;
+/* Checkbox Toggles */
+
+.toggles [disabled] + label,
+.toggles [disabled]:hover + label {
+  color: #999;
+}
+
+.toggles [type="checkbox"] {
+  position: absolute;
+  top: auto;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+}
+
+.toggles [type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding: 0.5em;
+  padding-left: 4em;
+  max-width: calc(100% - 2em);
+  cursor: pointer;
+}
+
+.toggles [type="checkbox"]:hover + label::after {
+  background-image: var(--ux-circle);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.toggles [type="checkbox"] + label::before,
+.toggles [type="checkbox"] + label::after {
+  content: "";
+  position: absolute;
+  height: 1.5em;
+  transition: all 0.5s ease;
+}
+
+.toggles [type="checkbox"] + label::before {
+  left: 0;
+  top: 0.25em;
+  width: 3em;
+  border: 0.2em solid #767676;
+  background: #767676;
+  border-radius: 1.1em;
+}
+
+.toggles [type="checkbox"] + label::after {
+  left: 0;
+  top: 0.25em;
+  background-color: #fff;
+  background-position: center center;
   border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  background: var(--ab, var(--border));
-  transform: translateX(var(--x, 0));
+  width: 1.5em;
+  border: 0.15em solid #767676;
 }
 
-.switch:checked {
-  --ab: var(--active-inner);
-  --x: 17px;
+.toggles [type="checkbox"]:checked + label::after {
+  left: 1.6em;
+  border-color: var(--ux-primary);
+  color: var(--ux-primary);
 }
 
-*/
+.toggles [type="checkbox"]:indeterminate + label::after {
+  left: 0.8em;
+}
+
+.toggles [type="checkbox"]:indeterminate + label::before {
+  background-color: #ddd;
+}
+
+.toggles [type="checkbox"]:checked + label::before {
+  background-color: var(--ux-secondary-lt);
+  border-color: var(--ux-primary);
+}
+
+.toggles [type="checkbox"][disabled] + label::before {
+  background-color: transparent;
+  border-color: #ddd;
+}
+
+.toggles [type="checkbox"][disabled] + label::after {
+  border-color: #ddd;
+}
+
+.toggles [disabled]:hover + label {
+  color: #999; /* case for CSS custom property if not supporting IE/Edge */
+}
+
+.toggles [type="checkbox"][disabled]:hover + label::before {
+  box-shadow: none;
+}
+
+.toggles [type="checkbox"][disabled]:hover + label::after {
+  background-image: none;
+}
 
 /****************************************/
 /* FOOTER                               */
