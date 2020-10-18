@@ -425,7 +425,7 @@ kbd {
 
 .ux__form__items {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
   padding: 0.5rem 1rem;
@@ -570,5 +570,8 @@ https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
     border-right: 3px solid var(--ux-on-background);
     padding-bottom: 0;
     margin-bottom: 0;
+  }
+  .ux__form__items {
+    flex-flow: row nowrap;
   }
 }
