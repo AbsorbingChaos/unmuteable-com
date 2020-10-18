@@ -323,8 +323,8 @@ kbd {
 
 .ux__callout {
   min-height: 100px;
-  background-color: var(--ux-surface);
-  color: var(--ux-on-surface);
+  background-color: var(--ux-secondary);
+  color: var(--ux-on-secondary);
 }
 
 /****************************************/
@@ -400,24 +400,99 @@ kbd {
 /****************************************/
 
 .ux__form {
-  text-align: center;
-  background-color: #808080;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  padding: 5rem;
 }
 
-.ux__form__container {
-  
+.ux__form__text {
+  flex: 1 1 auto;
+  border-bottom: 3px solid var(--ux-on-background);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
-.ux__form__msgpanel {
-  text-align:left;
-  color: var(--ux-on-error);
-  background-color: var(--ux-error);
-  border-radius:3px;
-  border-color: var(--ux-on-error);
-  max-width: 540px;
+.ux__form__text--sm {
+  font-size: 80%;
+}
+
+.ux__form__content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.ux__form__items {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.ux__form__label {
+  padding-right: 1rem;
+}
+
+.ux__form__input {
+  flex-grow: 1;
+  border-radius: 1rem;
+  padding-right: 1rem;
+  transition: box-shadow 0.3s;
+}
+
+.ux__form__input[type='checkbox'] {
+  outline: none;
+}
+
+.ux__form__input[type='text'] {
+  padding-left: 0.5rem;
+  border: none;
+}
+
+.ux__form__input[type='text']:focus {
+  box-shadow: 0px 0px 3px 3px var(--ux-primary);
+  outline: none;
 }
 
 
+.ux__form__icon {
+  max-height: 75px;
+  max-width: 75px;
+  padding-right: 2rem;
+}
+
+.ux__form__button {
+  border-radius: 1rem;
+  background-color: var(--ux-secondary-lt);
+  color: var(--ux-on-secondary);
+}
+
+/* use SWITCH example instead for a toggle vs checkbox?
+https://css-tricks.com/custom-styling-form-inputs-with-modern-css-features/
+
+.switch {
+  width: 38px;
+  border-radius: 11px;
+}
+
+.switch::after {
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: var(--ab, var(--border));
+  transform: translateX(var(--x, 0));
+}
+
+.switch:checked {
+  --ab: var(--active-inner);
+  --x: 17px;
+}
+
+*/
 
 /****************************************/
 /* FOOTER                               */
@@ -485,6 +560,15 @@ kbd {
     flex-flow: row nowrap;
     justify-content: space-evenly;
   }
-  .ux__postitem--thirds {
+  .ux__form {
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  .ux__form__text {
+    flex: 1 1 auto;
+    border-bottom: none;
+    border-right: 3px solid var(--ux-on-background);
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }

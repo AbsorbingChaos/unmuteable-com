@@ -12,10 +12,18 @@
   {{ end }}
 </section>
 
-<!--
 <section class="ux__callout">
   {{- partial "sendinblue.html" . -}}
 </section>
+
+<section class="ux__post--thirds">
+  {{ range ( first 3 (after 4 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
+    {{- partial "post-thirds.html" . -}}
+  {{ end }}
+</section>
+
+<!--
+
 <section class="ux__post--featured">
   {{ range ( first 3 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
     {{- partial "post-fullsize.html" . -}}
