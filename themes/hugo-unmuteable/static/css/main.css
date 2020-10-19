@@ -396,9 +396,36 @@ kbd {
   background-color: var(--ux-on-background);
 }
 
+/* Sendinblue Styles */
+
+#sib-container input:-ms-input-placeholder {
+  text-align: left;
+  font-family: Manrope, Arial, sans-serif;
+  color: #c0ccda;
+}
+
+#sib-container input::placeholder {
+  text-align: left;
+  font-family: Manrope, Arial, sans-serif;
+  color: #c0ccda;
+}
+
+#sib-container textarea::placeholder {
+  text-align: left;
+  font-family: Manrope, Arial, sans-serif;
+  color: #c0ccda;
+}
+
 /****************************************/
 /* Email Form                           */
 /****************************************/
+
+.ux__sib__iframe {
+/* 10/19 cop out option from custom form */
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
 
 .ux__form {
   display: flex;

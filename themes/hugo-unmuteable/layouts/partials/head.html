@@ -1,12 +1,16 @@
 <!-- HEAD -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://via.placeholder.com/;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://via.placeholder.com/; style-src 'self' https://sibforms.com/; script-src-elem 'self' https://sibforms.com/">
 <meta name="generator" content="Hugo">
 <title>{{ .Site.Params.Title }}</title>
 
 <!-- LIGHT THEME (default) -->
-<link href="/css/main.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- Sendinblue styles, should be limited to email sign-up form locations -->
+<link rel="stylesheet" href="/css/sib-styles.css">
+
 
 <!-- FAVICONS -->
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
