@@ -75,6 +75,9 @@ button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-he
   --ux-logo-tertiary: url(/img/Unmuteable_Tertiary_Logo.svg);
   /* END LIGHT COLOR SCHEME */
 
+  --ux-bg-banknote: url(/img/bg_banknote.svg);
+  --ux-bg-hideout: url(/img/bg_hideout.svg);
+
 }
 
 :root.darkness {
@@ -400,11 +403,11 @@ kbd {
 
 #sib-container {
   text-align:center; 
-  background-color:rgba(255,255,255,1); 
+  background-color: var(--ux-surface); 
   max-width:640px; 
   border-radius:10px; 
   border-width:3px; 
-  border-color:#00cccc; 
+  border-color: var(--ux-primary); 
   border-style:solid;
 }
 
@@ -428,7 +431,8 @@ kbd {
 
 .sib-form {
   text-align: center;
-  background-color: #808080;
+  background-color: var(--ux-surface);
+  background-image: var(--ux-bg-hideout);
 }
 
 .sib-form-message-panel {
@@ -438,10 +442,10 @@ kbd {
 }
 
 #error-message {
-  color:#661d1d;
-  background-color:#ffeded; 
+  color: var(--ux-on-error);
+  background-color: var(--ux-error); 
   border-radius:3px; 
-  border-color:#ff4949;
+  border-color: var(--ux-on-error);
   max-width:640px;
 }
 
@@ -486,8 +490,8 @@ kbd {
 .sib-form-block__button {
   text-align:left; 
   font-weight:700; 
-  color:#FFFFFF; 
-  background-color:#191d26; 
+  color: var(--ux-surface); 
+  background-color: var(--ux-on-surface); 
   border-radius:10px; 
   border-width:0px;
 }
