@@ -398,6 +398,16 @@ kbd {
 
 /* Sendinblue Styles */
 
+#sib-container {
+  text-align:center; 
+  background-color:rgba(255,255,255,1); 
+  max-width:640px; 
+  border-radius:10px; 
+  border-width:3px; 
+  border-color:#00cccc; 
+  border-style:solid;
+}
+
 #sib-container input:-ms-input-placeholder {
   text-align: left;
   font-family: Manrope, Arial, sans-serif;
@@ -415,6 +425,77 @@ kbd {
   font-family: Manrope, Arial, sans-serif;
   color: #c0ccda;
 }
+
+.sib-form {
+  text-align: center;
+  background-color: #808080;
+}
+
+.sib-form-message-panel {
+  font-size:16px;
+  text-align:left; 
+  font-family: Manrope, Arial, sans-serif;
+}
+
+#error-message {
+  color:#661d1d;
+  background-color:#ffeded; 
+  border-radius:3px; 
+  border-color:#ff4949;
+  max-width:640px;
+}
+
+#success-message {
+  color:#085229; 
+  background-color:#e7faf0; 
+  border-radius:3px; 
+  border-color:#13ce66;
+  max-width:640px;
+}
+
+.sib-padding-8px {
+  padding: 8px 0;
+}
+
+.sib-form-block {
+  background-color:transparent;
+}
+
+.entry__label {
+  text-align:left; 
+  font-weight:700; 
+  color:#3c4858;
+}
+
+.entry__error {
+  color:#661d1d; 
+  background-color:#ffeded; 
+  border-radius:3px; 
+  border-color:#ff4949;
+}
+
+.entry__specification {
+  font-size:80%;
+  color:#8390A4;
+}
+
+.entry__label--inline {
+  display: inline !important;
+}
+
+.sib-form-block__button {
+  text-align:left; 
+  font-weight:700; 
+  color:#FFFFFF; 
+  background-color:#191d26; 
+  border-radius:10px; 
+  border-width:0px;
+}
+
+.sib-form-block__button:hover {
+  background-color: var(--ux-primary);
+}
+
 
 /****************************************/
 /* Email Form                           */
