@@ -2,7 +2,7 @@
 author: "Jason Schrader"
 title: "Markdown Syntax Guide"
 date: "2020-05-01"
-draft: false
+draft: true
 description: "Markdown syntax examples" 
 categories:
 - syntax 

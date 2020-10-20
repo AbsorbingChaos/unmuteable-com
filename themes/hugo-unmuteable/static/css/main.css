@@ -788,12 +788,17 @@ kbd {
     padding-bottom: 0;
     margin-bottom: 0;
   }
-  .ux__form__items,
+  .ux__form__items {
+    flex-flow: row nowrap;
+  }
   .ux__content__2col {
     flex-flow: row nowrap;
+    align-items: center;
   }
   .ux__content__aside {
     padding: 1rem;
     width: 25vw;
+    border: 1px solid var(--ux-surface);
+    border-radius: 1rem;
   }
 }
