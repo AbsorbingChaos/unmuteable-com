@@ -435,6 +435,10 @@ kbd {
   background-image: var(--ux-bg-hideout);
 }
 
+.sib-text-form-block {
+  color: var(--ux-on-surface);
+}
+
 .sib-form-message-panel {
   font-size:16px;
   text-align:left; 
@@ -468,7 +472,7 @@ kbd {
 .entry__label {
   text-align:left; 
   font-weight:700; 
-  color:#3c4858;
+  color: var(--ux-on-surface);
 }
 
 .entry__error {
@@ -479,8 +483,14 @@ kbd {
 }
 
 .entry__specification {
+  
+  
+}
+
+.sib-form .entry__specification {
   font-size:80%;
-  color:#8390A4;
+  color: var(--ux-on-surface);
+  margin: 0
 }
 
 .entry__label--inline {

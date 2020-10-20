@@ -2959,11 +2959,6 @@ textarea.input {
   line-height: 1rem
 }
 
-.sib-form .entry__specification {
-  color: #687484;
-  margin: 0
-}
-
 .sib-form .entry__choice {
   padding-left: 1.5em;
   text-indent: -1.5em
