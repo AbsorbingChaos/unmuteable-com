@@ -6,11 +6,12 @@
     <body>
       <div class="ux__wrap">
         {{- partial "header.html" . -}}
-        <main class="ux__content">
-          {{- block "main" . }}
-            This is the main block from the baseof template.
-          {{- end }}
-        </main>
+        {{- block "main" . }}
+          <main class="ux__content">
+            This is the main block from the baseof template.<br />
+            You should not be seeing this!
+          </main>
+        {{- end }}
         {{- partial "footer.html" . -}}
         {{- partial "scripts.html" . -}}
       </div>

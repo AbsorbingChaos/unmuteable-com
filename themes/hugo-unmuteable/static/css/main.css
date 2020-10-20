@@ -307,6 +307,11 @@ kbd {
   
 }
 
+.ux__content--offset {
+  padding: 0 1rem;
+  margin: 0 1rem;
+}
+
 .ux__content__navitem,
 .ux__content__navitem:link,
 .ux__content__navitem:visited {
