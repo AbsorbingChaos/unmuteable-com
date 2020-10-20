@@ -18,10 +18,26 @@
     {{- partial "sendinblue.html" . -}}
   </section>
 
-  <section class="ux__post--thirds">
-    {{ range ( first 3 (after 4 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
-      {{- partial "post-thirds.html" . -}}
-    {{ end }}
+
+  <section class="ux__content__2col">
+
+    <section class="ux__post--thirds">
+      {{ range ( first 3 (after 4 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
+        {{- partial "post-thirds.html" . -}}
+      {{ end }}
+    </section>
+    
+    <aside class="ux__content__aside">
+      <h3>Category List</h3>
+      <ul class="ux__postitem__list">
+      {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+        <li class="ux__postitem__listitem">
+          <a class="ux__postitem__listitem__nav" href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}</a>
+        </li>
+      {{ end }}
+      </ul>
+    </aside>
+
   </section>
 
 </main>

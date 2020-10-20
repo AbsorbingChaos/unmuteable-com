@@ -326,6 +326,18 @@ kbd {
   color: var(--ux-on-background);
 }
 
+.ux__content__2col {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.ux__content__aside {
+  background-color: var(--ux-surface);
+  color: var(--ux-on-surface);
+  padding: 0 2rem;
+}
+
 /****************************************/
 /* CALLOUT                              */
 /****************************************/
@@ -707,6 +719,9 @@ kbd {
   align-items: top;
   justify-content: space-around;
   text-align: center;
+  background-color: var(--ux-surface);
+  padding-top: 1rem;
+  border-top: 3px solid var(--ux-secondary);
 }
 
 .ux__footer__item {
@@ -773,7 +788,12 @@ kbd {
     padding-bottom: 0;
     margin-bottom: 0;
   }
-  .ux__form__items {
+  .ux__form__items,
+  .ux__content__2col {
     flex-flow: row nowrap;
+  }
+  .ux__content__aside {
+    padding: 1rem;
+    width: 25vw;
   }
 }
