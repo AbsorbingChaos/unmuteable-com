@@ -3,16 +3,11 @@ author: "Jason Schrader"
 title: "Markdown Syntax Guide"
 date: "2020-05-01"
 draft: false
-description: "Markdown syntax examples"
-tags:
-- markdown 
-- css 
-- html 
-- themes 
+description: "Markdown syntax examples" 
 categories:
-- themes 
 - syntax 
-series: "Themes Guide"
+- markdown
+- html
 ---
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.

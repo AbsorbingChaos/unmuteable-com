@@ -4,10 +4,10 @@ title: "Zero to Testnet: Step 2"
 date: "2020-05-19"
 draft: false
 description: "Step 2: Miner Node"
-tags:
-- Zero-to-Testnet 
 categories:
+- Zero-to-Testnet
 - Stacks
+- Training
 series: "Zero to Testnet"
 ---
 
