@@ -1,5 +1,7 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-<h3>{{ .Description }}</h3>
-{{ .Content }}
+<main class="ux__content ux__content--offset">
+  <h1>{{ .Title }}</h1>
+  <h3>{{ .Description }}</h3>
+  {{ .Content }}
+</main>
 {{ end }}

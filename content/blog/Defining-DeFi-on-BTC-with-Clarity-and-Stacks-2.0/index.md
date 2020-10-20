@@ -4,11 +4,10 @@ title: "Defining DeFi on BTC with Clarity and Stacks 2.0"
 date: "2020-10-10"
 draft: false
 description: "DeFi backed by Bitcoin"
-tags:
-- DeFi
 categories:
 - Freehold
 - Stacks
+- DeFi
 ---
 
 Decentralized finance, or DeFi, is taking off right now. While most projects live on the Ethereum blockchain, Stacks 2.0 offers the opportunity to explore similar models backed by the security of the Bitcoin blockchain.

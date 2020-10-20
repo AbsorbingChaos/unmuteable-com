@@ -1,11 +1,10 @@
-<hr />
 <footer class="ux__footer">
   <div class="ux__footer__item">
     <h4>Links</h4>
     <nav class="ux__footer__nav">
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
-      <a class="ux__footer__navitem{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+      <a class="ux__footer__navitem{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
       {{ end }}
     </nav>  
   </div>

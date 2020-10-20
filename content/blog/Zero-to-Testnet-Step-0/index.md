@@ -3,11 +3,11 @@ author: "Jason Schrader"
 title: "Zero to Testnet: Step 0"
 date: "2020-05-05"
 draft: false
-description: "Step 0: Virtualbox and Ubuntu"
-tags:
-- Zero-to-Testnet 
+description: "Step 0: Virtualbox and Ubuntu" 
 categories:
+- Zero-to-Testnet
 - Stacks
+- Training
 series: "Zero to Testnet"
 ---
 

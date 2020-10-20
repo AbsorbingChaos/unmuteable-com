@@ -1,13 +1,17 @@
 <header class="ux__header">
-  <a class="ux__homelink" href="/">
-    <div class="ux__header__logo"></div>
-  </a>
-  <nav class="ux__header__nav">
+  <button class="ux__header__icon ux__header__icon--menu"></button>  
+  <div class="ux__header__logo">
+    <a class="ux__homelink" href="/">
+      <div class="ux__header__logo__img"></div>
+    </a>
+  </div>
+  <button class="ux__header__icon ux__header__icon--lightswitch"></button>
+</header>
+<div class="ux__header__nav">
+  <nav>
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
     <a class="ux__header__navitem{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
     {{ end }}
-    <button class="ux__header__toggle" aria-label="Toggle light and dark mode"></button>
   </nav>
-</header>
-<hr />
+</div>

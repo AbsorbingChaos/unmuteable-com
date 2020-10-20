@@ -1,5 +1,4 @@
-{{ define "main" }}
-<main class="ux__content ux__content--offset">
+<article class="ux__postitem--full">
   <div>
     {{ with .Resources.Match "cover.png" }}
       {{ range . }}
@@ -16,10 +15,16 @@
       sizes="100vw"
     -->
   </div>
-  <h1>{{ .Title }}</h1>
-  <h3>{{ .Description }}</h3>
-  <h4>{{ .Date.Format "January 2, 2006" }}</h4>
-  <hr />
-  {{ .Content }}
-</main>
-{{ end }}
+  <div>
+    <h3><a class="ux__content__navitem" href="{{ .RelPermalink }}" title="{{ .Description }}">{{ .Title }}</a></h3>
+    <p class="ux__postitem__date">{{ .Date.Format "January 6, 2006" }}</p>
+    <p>{{ .Summary | truncate 150 }}</p>
+    <ul class="ux__postitem__list">
+      {{ range .Params.categories }}
+        <li class="ux__postitem__listitem">
+          <a class="ux__postitem__listitem__nav" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</article>

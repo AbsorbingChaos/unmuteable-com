@@ -4,9 +4,8 @@ title: "Decoding Discord Chats and Hangouts"
 date: "2020-09-09"
 draft: false
 description: "Discord Tips and Tricks"
-tags:
-- Discord
 categories:
+- Discord
 - Training
 ---
 

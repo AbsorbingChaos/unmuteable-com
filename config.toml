@@ -1,7 +1,6 @@
 baseURL = "https://unmuteable.com"
 theme = "hugo-unmuteable"
 languageCode = "en-us"
-sectionPagesMenu = "main"
 
 [sitemap]
   changefreq = "weekly"
@@ -72,3 +71,18 @@ sectionPagesMenu = "main"
     identifier = "home"
     url = "/"
     weight = 10
+  [[menu.main]]
+    name = "About"
+    identifier = "about"
+    url = "/about/"
+    weight = "20"
+  [[menu.main]]
+    name = "Articles"
+    identifier = "blog"
+    url = "/blog/"
+    weight = "30"
+  [[menu.main]]
+    name = "Login"
+    identifier = "admin"
+    url = "/admin"
+    weight = 50
