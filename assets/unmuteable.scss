@@ -1,4 +1,5 @@
 $primary: #00CCCC;
+$black: #191D26;
 $red: #CC0000;
 $yellow: #CCCC00;
 $green: #00CC00;
@@ -6,3 +7,7 @@ $family-primary: Raleway-ExtraBold, Arial, sans-serif;
 $family-secondary: Manrope-ExtraBold, Arial, sans-serif;
 @import "bulma/bulma-0.9.1.sass";
 @import "fonts";
+
+.hero-img {
+  max-width: 1200px;
+}

@@ -59,7 +59,7 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
                 <a class="tag is-primary" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
             {{ end }}
           </div>
-          <a class="is-link" href="{{ .RelPermalink }}" title="{{ .Description }}">{{ .Title }}</a>
+          <a class="is-link has-text-black" href="{{ .RelPermalink }}" title="{{ .Description }}">{{ .Title }}</a>
         </div>
       {{ end }}
     </div>
