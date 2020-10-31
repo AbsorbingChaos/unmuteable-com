@@ -1,17 +1,32 @@
-<footer class="ux__footer">
-  <div class="ux__footer__item">
-    <h4>Links</h4>
-    <nav class="ux__footer__nav">
+<footer class="footer">
+  <div class="columns">
+    <div class="column">
+      <h4>MENU</h4>
+    <div class="columns is-flex-direction-column">
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
-      <a class="ux__footer__navitem{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+      <div class="column">
+        <a class="is-link{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+      </div>
       {{ end }}
-    </nav>  
-  </div>
-  <div class="ux__footer__item">
-    <h4>{{ .Site.Params.Copyright }}</h4>
-    <a class="ux__homelink" href="/">
-      <div class="ux__footer__logo"></div>
-    </a>
+    </div> 
+    </div>
+    <div class="column">
+      <h4>LINKS</h4>
+      <div class="columns is-flex-direction-column">
+        <div class="column">
+          <a class="is-link" href="/index.xml" title="Unmuteable RSS Feed" target="_blank">RSS</a>
+        </div>
+        <div class="column">
+          <a class="is-link" href="https://twitter.com/theunmuteable" title="Unmuteable on Twitter" target="_blank">Twitter</a>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <h4>{{ .Site.Params.Copyright }}</h4>
+      <a href="/">
+        <img src="/img/Unmuteable_Logo_Sticker_Black.svg" alt="Unmuteable sticker logo" />
+      </a>
+    </div>
   </div>
 </footer>

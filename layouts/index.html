@@ -66,104 +66,96 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
   </div>
 </section>
 
-<!-- featured article + 2 with aside content -->
+<!-- featured article + 2 article + aside content -->
 <section class="section">
   <div class="container">
     <div class="columns">
       <div class="column is-four-fifths">
         <div class="columns">
-          <div class="column is-half">
-            Main article
+          <div class="column is-two-thirds">
+            {{ range ( first 1 (after 1 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
+              {{ with .Resources.Match "cover.png" }}
+                {{ range . }}
+                  <img src="{{ .RelPermalink }}"
+                    alt="Cover image for post, will need ALT TEXT eventually." />
+                {{ end }}
+              {{ end }}
+              <div class="tags">
+                {{ range .Params.categories }}
+                    <a class="tag is-primary" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+                {{ end }}
+              </div>
+              <h1 class="title is-2">{{ .Title }}</h1>
+              <h2 class="subtitle is-3">{{ .Date.Format "January 6, 2006" }}</h2>
+              <p class="subtitle">{{ .Summary | truncate 150 }}</p>
+            {{ end }}
           </div>
           <div class="column">
             <div class="columns is-flex-direction-column">
-              <div class="column">
-                Secondary article 1 
-              </div>
-              <div class="column">
-                Secondary article 2
-              </div>
+              {{ range ( first 2 (after 1 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
+                <div class="column">
+                  {{ with .Resources.Match "cover.png" }}
+                    {{ range . }}
+                      <img src="{{ .RelPermalink }}"
+                        alt="Cover image for post, will need ALT TEXT eventually." />
+                    {{ end }}
+                  {{ end }}
+                  <div class="tags">
+                    {{ range .Params.categories }}
+                        <a class="tag is-primary" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+                    {{ end }}
+                  </div>
+                  <h1 class="title">{{ .Title }}</h1>
+                  <h2 class="subtitle">{{ .Date.Format "January 6, 2006" }}</h2>
+                </div>
+              {{ end }}
             </div>
           </div>
         </div>
       </div>
       <div class="column has-background-white-ter">
-        Aside content
+        Aside content for a featured category, test with zero to testnet series.
       </div>
     </div>
   </div>
 </section>
 
-<!-- a few more sections to go, but so far, it's easy! -->
-
-<!-- old code
-
-<main class="ux__content">
-
-  <section class="ux__post--full">
-    {{ range ( first 1 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
-      {{- partial "post-fullsize.html" . -}}
-    {{ end }}
-  </section>
-
-  <section class="ux__post--thirds">
-    {{ range ( first 3 (after 1 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
-      {{- partial "post-thirds.html" . -}}
-    {{ end }}
-  </section>
-
-  <section class="ux__callout">
-    {{- partial "sendinblue.html" . -}}
-  </section>
-
-
-  <section class="ux__content__2col">
-
-    <section class="ux__post--thirds">
-      {{ range ( first 3 (after 4 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
-        {{- partial "post-thirds.html" . -}}
+<!-- 4x article section -->
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      {{ range ( first 3 (after 1 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
+        <div class="column">
+          {{ with .Resources.Match "cover.png" }}
+            {{ range . }}
+              <img src="{{ .RelPermalink }}"
+                alt="Cover image for post, will need ALT TEXT eventually." />
+            {{ end }}
+          {{ end }}
+          <div class="tags">
+            {{ range .Params.categories }}
+                <a class="tag is-primary" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+            {{ end }}
+          </div>
+          <a class="is-link" href="{{ .RelPermalink }}" title="{{ .Description }}">{{ .Title }}</a>
+        </div>
       {{ end }}
-    </section>
-    
-    <aside class="ux__content__aside">
-      <h3>Category List</h3>
-      <ul class="ux__postitem__list">
-      {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-        <li class="ux__postitem__listitem">
-          <a class="ux__postitem__listitem__nav" href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">{{ $name }}</a>
-        </li>
-      {{ end }}
-      </ul>
-    </aside>
-
-  </section>
-
-</main>
-
--->
-
-<!--
-
-<section class="ux__post--featured">
-  {{ range ( first 3 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
-    {{- partial "post-fullsize.html" . -}}
-  {{ end }}
+    </div>
+  </div>
 </section>
-<section class="ux__callout">
-  {{- partial "sendinblue.html" . -}}
-</section>
-<section class="ux__callout">
 
-  {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-    <ul class="ux__postitem__list" aria-label="{{ $taxonomyname }}">
-    {{ range $key, $value := $taxonomy }}
-      <li class="ux__postitem__listitem">
-        <a class="ux__postitem__listitem__nav" href="" title="">{{ $key }}</a>
-      </li>
-    {{ end }}
-    </ul>
-  {{ end }}
+<!-- section for remaining articles + aside -->
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-two-thirds">
+        Space for remaining articles, can be listed as full-row items that will fold above the aside content.
+      </div>
+      <div class="column has-background-white-ter">
+        Aside for prices and whatnot, have coinmarketcap api just need to use it!
+      </div>
+    </div>
+  </div>
 </section>
--->
 
 {{ end }}
