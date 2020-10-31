@@ -1,11 +1,11 @@
 <!-- HEAD -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://via.placeholder.com/; connect-src 'self' https://f03e03c1.sibforms.com/">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self';">
 <meta name="generator" content="Hugo">
 <title>{{ .Site.Params.Title }}</title>
 
-{{ $bulma := resources.Get "bulma-0.9.1.sass" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+{{ $bulma := resources.Get "bulma/bulma-0.9.1.sass" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
 <link rel="stylesheet" href="{{ $bulma.Permalink }}">
 
 <!-- original custom theme
