@@ -1,3 +1,5 @@
+
+// vanilla navbar js for bulma menu
 document.addEventListener('DOMContentLoaded', () => {
 
   // Get all "navbar-burger" elements
