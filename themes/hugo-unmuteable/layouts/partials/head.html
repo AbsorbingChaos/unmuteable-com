@@ -5,12 +5,14 @@
 <meta name="generator" content="Hugo">
 <title>{{ .Site.Params.Title }}</title>
 
-<!-- LIGHT THEME (default) -->
-<link rel="stylesheet" href="/css/main.css">
+{{ $bulma := resources.Get "bulma-0.9.1.sass" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+<link rel="stylesheet" href="{{ $bulma.Permalink }}">
 
-<!-- Sendinblue styles, should be limited to email sign-up form locations -->
-<link rel="stylesheet" href="/css/sib-styles.css">
+<!-- original custom theme
+<link rel="stylesheet" href="/css/main.css"> -->
 
+<!-- Sendinblue styles (some of them)
+<link rel="stylesheet" href="/css/sib-styles.css"> -->
 
 <!-- FAVICONS -->
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
