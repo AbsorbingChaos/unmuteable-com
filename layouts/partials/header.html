@@ -15,7 +15,8 @@
   </div>
 </header>
 
-<!-- responsive nav bar -->
+<!-- responsive nav bar 
+nesting of elements needs to be fixed to enable right side -->
 <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
   <div class="navbar-brand is-justify-content-flex-start">
     <a role="button" class="navbar-burger burger ml-0" aria-label="menu" aria-expanded="false" data-target="ux__navbar">
@@ -29,7 +30,7 @@
     <div class="navbar-start">
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
-      <a class="navbar-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+      <a class="is-uppercase navbar-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
       {{ end }}
       
       <!-- dropdown menu example 
