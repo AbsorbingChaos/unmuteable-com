@@ -1,3 +1,83 @@
+<header class="hero is-primary is-medium is-bold">
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h2 class="subtitle">
+        {{ .Site.Params.Tagline }}
+      </h2>
+    </div>
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <img src="/img/Unmuteable_Logo_Wide_Black.svg" alt="Unmuteable Wide Logo" />
+  </div>
+</header>
+
+<!-- responsive nav bar -->
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="ux__navbar">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="ux__navbar" class="navbar-menu">
+    <div class="navbar-start">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      <a class="navbar-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+      {{ end }}
+      
+      <!-- dropdown menu example 
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            About
+          </a>
+          <a class="navbar-item">
+            Jobs
+          </a>
+          <a class="navbar-item">
+            Contact
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      
+      -->
+      </div>
+    </div>
+
+    <!-- right side nav example
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+    -->
+  </div>
+</nav>
+
+
+<!-- old code
+
 <header class="ux__header">
   <button class="ux__header__icon ux__header__icon--menu"></button>  
   <div class="ux__header__logo">
@@ -15,3 +95,5 @@
     {{ end }}
   </nav>
 </div>
+
+-->
