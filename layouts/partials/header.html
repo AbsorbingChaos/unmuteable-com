@@ -3,7 +3,7 @@
   <!-- Hero content: will be in the middle -->
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h2 class="subtitle">
+      <h2 class="subtitle has-text-black">
         {{ .Site.Params.Tagline }}
       </h2>
     </div>
@@ -27,7 +27,7 @@ nesting of elements needs to be fixed to enable right side -->
   </div>
 
   <div id="ux__navbar" class="navbar-menu">
-    <div class="navbar-start">
+    <div class="navbar-start is-justify-content-center is-flex-grow-1">
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
       <a class="is-uppercase navbar-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
@@ -75,7 +75,6 @@ nesting of elements needs to be fixed to enable right side -->
     -->
   </div>
 </nav>
-
 
 <!-- old code
 
