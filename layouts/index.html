@@ -1,0 +1,161 @@
+{{ define "main" }}
+
+<!-- top bar headline, needs diff color background -->
+<section class="section has-background-white-ter">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        Breaking News
+      </div>
+      <div class="column is-two-thirds">
+        Article title: likely somewhat long bolder text, needs to be centered and take up two thirds of the space.
+      </div>
+      <div class="column">
+        Article Image
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- First front page article
+NEED TO REVERSE COLUMNS ON MOBILE !
+https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
+-->
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      {{ range ( first 1 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
+        <div class="column">
+          <h1 class="title is-2">{{ .Title }}</h1>
+          <h2 class="subtitle is-3">{{ .Date.Format "January 6, 2006" }}</h2>
+          <p class="subtitle">{{ .Summary | truncate 150 }}</p>
+          <div class="tags">
+          {{ range .Params.categories }}
+              <a class="tag is-primary" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+          {{ end }}
+          </div>
+        </div>
+        <div class="column">
+          {{ with .Resources.Match "cover.png" }}
+            {{ range . }}
+              <img src="{{ .RelPermalink }}"
+                alt="Cover image for post, will need ALT TEXT eventually." />
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>    
+  </div>
+</section>
+
+<!-- Featured article 4x columns -->
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      {{ range ( first 4 (after 1 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
+        <div class="column">
+          <div class="tags">
+            {{ range .Params.categories }}
+                <a class="tag is-primary" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+            {{ end }}
+          </div>
+          <a class="is-link has-text-black" href="{{ .RelPermalink }}" title="{{ .Description }}">{{ .Title }}</a>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- featured article + 2 article + aside content -->
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-four-fifths">
+        <div class="columns">
+          <div class="column is-two-thirds">
+            {{ range ( first 1 (after 1 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
+              {{ with .Resources.Match "cover.png" }}
+                {{ range . }}
+                  <img src="{{ .RelPermalink }}"
+                    alt="Cover image for post, will need ALT TEXT eventually." />
+                {{ end }}
+              {{ end }}
+              <div class="tags">
+                {{ range .Params.categories }}
+                    <a class="tag is-primary" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+                {{ end }}
+              </div>
+              <h1 class="title is-2">{{ .Title }}</h1>
+              <h2 class="subtitle is-3">{{ .Date.Format "January 6, 2006" }}</h2>
+              <p class="subtitle">{{ .Summary | truncate 150 }}</p>
+            {{ end }}
+          </div>
+          <div class="column">
+            <div class="columns is-flex-direction-column">
+              {{ range ( first 2 (after 1 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
+                <div class="column">
+                  {{ with .Resources.Match "cover.png" }}
+                    {{ range . }}
+                      <img src="{{ .RelPermalink }}"
+                        alt="Cover image for post, will need ALT TEXT eventually." />
+                    {{ end }}
+                  {{ end }}
+                  <div class="tags">
+                    {{ range .Params.categories }}
+                        <a class="tag is-primary" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+                    {{ end }}
+                  </div>
+                  <h1 class="title">{{ .Title }}</h1>
+                  <h2 class="subtitle">{{ .Date.Format "January 6, 2006" }}</h2>
+                </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column has-background-white-ter">
+        Aside content for a featured category, test with zero to testnet series.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4x article section -->
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      {{ range ( first 3 (after 1 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
+        <div class="column">
+          {{ with .Resources.Match "cover.png" }}
+            {{ range . }}
+              <img src="{{ .RelPermalink }}"
+                alt="Cover image for post, will need ALT TEXT eventually." />
+            {{ end }}
+          {{ end }}
+          <div class="tags">
+            {{ range .Params.categories }}
+                <a class="tag is-primary" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+            {{ end }}
+          </div>
+          <a class="is-link" href="{{ .RelPermalink }}" title="{{ .Description }}">{{ .Title }}</a>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- section for remaining articles + aside -->
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-two-thirds">
+        Space for remaining articles, can be listed as full-row items that will fold above the aside content.
+      </div>
+      <div class="column has-background-white-ter">
+        Aside for prices and whatnot, have coinmarketcap api just need to use it!
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

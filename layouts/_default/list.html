@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+<section class="hero has-background-white-ter">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        {{ .Title }}
+      </h1>
+      <h2 class="subtitle">
+        {{ .Content }}
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-flex-direction-column">
+      {{ range .Pages.ByPublishDate.Reverse }}
+        <div class="column">
+          <h1 class="title is-2">{{ .Title }}</h1>
+          <h2 class="subtitle is-3">{{ .Date.Format "January 6, 2006" }}</h2>
+          <p class="subtitle">{{ .Summary | truncate 150 }}</p>
+          <div class="tags">
+          {{ range .Params.categories }}
+              <a class="tag is-primary" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+          {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}

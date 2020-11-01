@@ -1,5 +1,4 @@
 baseURL = "https://unmuteable.com"
-theme = "hugo-unmuteable"
 languageCode = "en-us"
 
 [sitemap]
@@ -14,32 +13,17 @@ languageCode = "en-us"
 [params]
   company = "Unmuteable"
   title = "UN ✕ MUTE ✕ ABLE"
+  tagline = "Measuring the impact of blockchain and decentralization on society and culture"
   description = "A publication centered around crypto, privacy, decentralization, and the people making it happen."
   copyright = "© 2020 UNMUTEABLE"
 
-[params.logo.primary]
-  img = "img/Unmuteable_Primary_Logo.png"
-  img_dk = "img/Unmuteable_Primary_Logo_DarkMode.png"
-  type = "image/png"
-  width = "1200"
-  height = "230"
-  alt = "A logo with the word unmuteable separated in three parts by an X symbol."
-
-[params.logo.secondary]
-  img = "img/Unmuteable_Secondary_Logo.png"
-  img_dk = "img/Unmuteable_Secondary_Logo_Darkmode.png"
+# used for og:image tags in head
+[params.logo]
+  img = "img/Unmuteable_Logo_Square_Color.png"
   type = "image/png"
   width = "150"
   height = "150"
-  alt = "A logo with the letter U and a superscript letter X that represent a shortened version of Unmuteable."
-
-[params.logo.tertiary]
-  img = "img/Unmuteable_Tertiary_Logo.png"
-  img_dk = "img/Unmuteable_Tertiary_Logo_Darkmode.png"
-  type = "image/png"
-  width = "150"
-  height = "150"
-  alt = "A logo with the word unmuteable over the top of an X symbol."
+  alt = "The square unmuteable logo with a large letter U and a small letter X situated at the top-right corner of the letter U."
 
 [params.palette]
   primary = "#00CCCC"
@@ -75,14 +59,24 @@ languageCode = "en-us"
     name = "About"
     identifier = "about"
     url = "/about/"
-    weight = "20"
+    weight = 20
   [[menu.main]]
     name = "Articles"
     identifier = "blog"
     url = "/blog/"
-    weight = "30"
+    weight = 30
+  [[menu.main]]
+    name = "Categories"
+    identifier = "categories"
+    url = "/categories/"
+    weight = 40
+  [[menu.main]]
+    name = "Contact"
+    identifier = "contact"
+    url = "/contact/"
+    weight = 50
   [[menu.main]]
     name = "Login"
     identifier = "admin"
-    url = "/admin"
-    weight = 50
+    url = "/admin/"
+    weight = 60

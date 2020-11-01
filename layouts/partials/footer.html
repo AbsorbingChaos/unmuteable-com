@@ -1,0 +1,32 @@
+<footer class="footer">
+  <div class="columns has-text-centered">
+    <div class="column">
+      <h4 class="pb-4">MENU</h4>
+    <div class="columns is-flex-direction-column">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      <div class="column">
+        <a class="has-text-primary is-link{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+      </div>
+      {{ end }}
+    </div> 
+    </div>
+    <div class="column">
+      <h4 class="pb-4">LINKS</h4>
+      <div class="columns is-flex-direction-column">
+        <div class="column">
+          <a class="has-text-primary is-link" href="/index.xml" title="Unmuteable RSS Feed" target="_blank">RSS</a>
+        </div>
+        <div class="column">
+          <a class="has-text-primary is-link" href="https://twitter.com/theunmuteable" title="Unmuteable on Twitter" target="_blank">Twitter</a>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <h4>{{ .Site.Params.Copyright }}</h4>
+      <a href="/">
+        <img class="footer-img" src="/img/Unmuteable_Logo_Sticker_Black.svg" alt="Unmuteable sticker logo" />
+      </a>
+    </div>
+  </div>
+</footer>
