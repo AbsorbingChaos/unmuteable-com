@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <!-- top bar headline, needs diff color background -->
-<section class="section has-background-white-ter">
+<section class="section has-background-white-ter border-b-1">
   <div class="container">
     <div class="columns">
       <div class="column">
@@ -21,7 +21,7 @@
 NEED TO REVERSE COLUMNS ON MOBILE !
 https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
 -->
-<section class="section">
+<section class="section border-b-1">
   <div class="container">
     <div class="columns">
       {{ range ( first 1 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
@@ -49,7 +49,7 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
 </section>
 
 <!-- Featured article 4x columns -->
-<section class="section">
+<section class="section border-b-1">
   <div class="container">
     <div class="columns">
       {{ range ( first 4 (after 1 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
@@ -67,7 +67,7 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
 </section>
 
 <!-- featured article + 2 article + aside content -->
-<section class="section">
+<section class="section border-b-1">
   <div class="container">
     <div class="columns">
       <div class="column is-four-fifths">
@@ -120,8 +120,8 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
   </div>
 </section>
 
-<!-- 4x article section -->
-<section class="section">
+<!-- 3x article section -->
+<section class="section border-b-1">
   <div class="container">
     <div class="columns">
       {{ range ( first 3 (after 1 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
@@ -145,7 +145,7 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
 </section>
 
 <!-- section for remaining articles + aside -->
-<section class="section">
+<section class="section border-b-1">
   <div class="container">
     <div class="columns">
       <div class="column is-two-thirds">
