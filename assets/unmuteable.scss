@@ -1,3 +1,5 @@
+// Bulma customizations
+
 $primary: #00CCCC;
 $black: #191D26;
 $red: #CC0000;
@@ -8,8 +10,6 @@ $family-secondary: Manrope-ExtraBold, Arial, sans-serif;
 $navbar-item-hover-color: $primary !important;
 $navbar-dropdown-item-hover-color: $primary;
 $navbar-dropdown-item-hover-background-color: $black;
-@import "bulma/bulma-0.9.1.sass";
-@import "fonts";
 
 .hero-img {
   max-width: 90vw;
@@ -18,3 +18,12 @@ $navbar-dropdown-item-hover-background-color: $black;
 .footer-img {
   max-width: 100px;
 }
+
+// Import bulma files
+@import "bulma/bulma-0.9.1.sass";
+
+// Import custom font faces
+@import "fonts";
+
+// Import fork awesome files 
+@import "fork-awesome/fork-awesome.scss";
