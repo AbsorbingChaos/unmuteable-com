@@ -60,7 +60,7 @@ nesting of elements needs to be fixed to enable right side -->
             </div>
           </div>
         {{ else }}
-          <a class="navbar-item is-uppercase {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}is-active{{end}}"
+          <a class="navbar-item is-uppercase"
           href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
         {{ end }}         
       {{ end }}
