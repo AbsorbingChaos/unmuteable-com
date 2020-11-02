@@ -1,20 +1,28 @@
 {{ define "main" }}
 
 <!-- top bar headline, needs diff color background -->
-<section class="section has-background-white-ter border-b-1">
+<section class="section p-1 has-background-white-ter border-b-1">
   <div class="container">
-    <div class="columns">
-      <div class="column">
+    <div class="columns has-text-centered is-align-items-center">
+      <div class="column is-flex is-flex-direction-row is-justify-content-space-between is-align-items-center">
         <span class="icon is-large">
           <i class="fa fa-3x fa-newspaper-o"></i>
         </span>
+        <span>Breaking News</span>
       </div>
-      <div class="column is-two-thirds">
-        Article title: likely somewhat long bolder text, needs to be centered and take up two thirds of the space.
-      </div>
-      <div class="column">
-        Article Image
-      </div>
+      {{ range ( first 1 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
+        <div class="column is-two-thirds">
+          <h1>{{ .Title }}</h1>
+        </div>
+        <div class="column">
+          {{ with .Resources.Match "cover.png" }}
+            {{ range . }}
+              <img src="{{ .RelPermalink }}"
+                alt="Cover image for post, will need ALT TEXT eventually." />
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
     </div>
   </div>
 </section>
