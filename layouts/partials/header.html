@@ -1,6 +1,6 @@
-<header class="hero is-primary is-medium">
+<header class="hero is-primary is-medium pt-6">
 
-  <!-- Hero content: will be in the middle -->
+  <!-- Hero content: will be in the middle 
   <div class="hero-body">
     <div class="container has-text-centered">
       <h2 class="subtitle has-text-black">
@@ -8,10 +8,15 @@
       </h2>
     </div>
   </div>
+  -->
 
-  <!-- Hero footer: will stick at the bottom -->
-  <div class="hero-foot has-text-centered">
-    <img class="hero-img" src="/img/Unmuteable_Logo_Wide_Black.svg" alt="Unmuteable Wide Logo" />
+  <!-- Hero with Unmuteable logo -->
+  <div class="hero-body has-text-centered pt-6 pb-0">
+    <div class="columns">
+      <div class="column py-0">
+        <img class="hero-img" src="/img/Unmuteable_Logo_Wide_Black.svg" alt="Unmuteable wide logo" />
+      </div>
+    </div>
   </div>
 </header>
 
@@ -28,9 +33,36 @@ nesting of elements needs to be fixed to enable right side -->
 
   <div id="ux__navbar" class="navbar-menu">
     <div class="navbar-start is-justify-content-center is-flex-grow-1">
+      <!-- Pseudocode 
+        range menu 
+          if menuitem = categories
+            add navbar-link
+            add dropdown with subcategories
+          if menuitem = login or signup
+            add navbar-item as button
+          else 
+            if currentpage
+              add navbar-item is-active
+            else
+              add navbar-item
+      -->
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
-      <a class="is-uppercase navbar-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+        {{ if (in .Name "Categories") }}
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link is-uppercase" href="{{ .URL }}" title="{{ .Title }}">
+              {{ .Name }}
+            </a>
+            <div class="navbar-dropdown">
+              {{ range $key, $value := $.Site.Taxonomies.categories }}
+              <a class="navbar-item is-uppercase" href="/categories/{{ $key | urlize  }}" title="{{ $key | humanize }}">{{ $key | humanize }}</a>
+              {{ end }}
+            </div>
+          </div>
+        {{ else }}
+          <a class="navbar-item is-uppercase"
+          href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+        {{ end }}         
       {{ end }}
       
       <!-- dropdown menu example 
@@ -56,23 +88,26 @@ nesting of elements needs to be fixed to enable right side -->
         </div>
       
       -->
+
+      
       </div>
+      <!-- right side nav example 
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+              Log in
+            </a>
+          </div>
+        </div> -->
+      </div>
+      
     </div>
 
-    <!-- right side nav example
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
-        </div>
-      </div>
-    </div>
-    -->
+    
   </div>
 </nav>
 
