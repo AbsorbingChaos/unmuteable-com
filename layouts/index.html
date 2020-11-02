@@ -27,7 +27,7 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
       {{ range ( first 1 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
         <div class="column">
           <h1 class="title is-2">{{ .Title }}</h1>
-          <h2 class="subtitle is-3">{{ .Date.Format "January 6, 2006" }}</h2>
+          <h2 class="subtitle is-3">{{ .Date.Format "January 2, 2006" }}</h2>
           <p class="subtitle">{{ .Summary | truncate 150 }}</p>
           <div class="tags">
           {{ range .Params.categories }}
@@ -86,7 +86,7 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
                 {{ end }}
               </div>
               <h1 class="title is-2">{{ .Title }}</h1>
-              <h2 class="subtitle is-3">{{ .Date.Format "January 6, 2006" }}</h2>
+              <h2 class="subtitle is-3">{{ .Date.Format "January 2, 2006" }}</h2>
               <p class="subtitle">{{ .Summary | truncate 150 }}</p>
             {{ end }}
           </div>
@@ -106,7 +106,7 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
                     {{ end }}
                   </div>
                   <h1 class="title">{{ .Title }}</h1>
-                  <h2 class="subtitle">{{ .Date.Format "January 6, 2006" }}</h2>
+                  <h2 class="subtitle">{{ .Date.Format "January 2, 2006" }}</h2>
                 </div>
               {{ end }}
             </div>
