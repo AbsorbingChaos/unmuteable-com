@@ -1,5 +1,5 @@
 <footer class="footer">
-  <div class="columns has-text-centered">
+  <div class="columns has-text-centered is-mobile">
     <div class="column">
       <h4 class="pb-4">MENU</h4>
     <div class="columns is-flex-direction-column">
@@ -22,11 +22,11 @@
         </div>
       </div>
     </div>
-    <div class="column">
-      <h4>{{ .Site.Params.Copyright }}</h4>
+    <div class="column is-flex is-flex-direction-column is-justify-content-space-between">
       <a href="/">
         <img class="footer-img" src="/img/Unmuteable_Logo_Sticker_Black.svg" alt="Unmuteable sticker logo" />
       </a>
+      <h4>{{ .Site.Params.Copyright }}</h4>
     </div>
   </div>
 </footer>
