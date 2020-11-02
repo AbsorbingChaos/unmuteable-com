@@ -11,17 +11,17 @@
         <span>Breaking News</span>
       </div>
       {{ range ( first 1 ( where .Site.Pages "Type" "blog" ).ByPublishDate.Reverse ) }}
-        <div class="column is-two-thirds">
-          <h1>{{ .Title }}</h1>
-        </div>
-        <div class="column">
-          {{ with .Resources.Match "cover.png" }}
-            {{ range . }}
-              <img src="{{ .RelPermalink }}"
-                alt="Cover image for post, will need ALT TEXT eventually." />
-            {{ end }}
+      <div class="column is-two-thirds">
+        <h1>{{ .Title }}</h1>
+      </div>
+      <div class="column">
+        {{ with .Resources.Match "cover.png" }}
+          {{ range . }}
+            <img src="{{ .RelPermalink }}"
+              alt="Cover image for post, will need ALT TEXT eventually." />
           {{ end }}
-        </div>
+        {{ end }}
+      </div>
       {{ end }}
     </div>
   </div>

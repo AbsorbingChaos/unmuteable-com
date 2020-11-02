@@ -1,4 +1,4 @@
-<header class="hero is-primary is-medium pt-6">
+<header class="hero is-primary is-medium"> <!-- pt-6 -->
 
   <!-- Hero content: will be in the middle 
   <div class="hero-body">
@@ -9,20 +9,18 @@
     </div>
   </div>
   -->
+  <div class="hero-body">
+    <!-- empty on purpose, for spacing -->
+  </div>
 
   <!-- Hero with Unmuteable logo -->
-  <div class="hero-body has-text-centered pt-6 pb-0">
-    <div class="columns">
-      <div class="column py-0">
-        <img class="hero-img" src="/img/Unmuteable_Logo_Wide_Black.svg" alt="Unmuteable wide logo" />
-      </div>
-    </div>
+  <div class="hero-footer is-flex is-flex-direction-column is-justify-content-flex-end is-align-items-center"> <!-- pt-6 pb-0 -->
+    <img class="hero-img" src="/img/Unmuteable_Logo_Wide_Black.svg" alt="Unmuteable wide logo" />
   </div>
 </header>
 
-<!-- responsive nav bar 
-nesting of elements needs to be fixed to enable right side -->
-<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+<!-- responsive nav bar -->
+<nav class="navbar is-black" aria-label="main navigation">
   <div class="navbar-brand is-justify-content-flex-start">
     <a role="button" class="navbar-burger burger ml-0" aria-label="menu" aria-expanded="false" data-target="ux__navbar">
       <span aria-hidden="true"></span>
@@ -33,19 +31,6 @@ nesting of elements needs to be fixed to enable right side -->
 
   <div id="ux__navbar" class="navbar-menu">
     <div class="navbar-start is-justify-content-center is-flex-grow-1">
-      <!-- Pseudocode 
-        range menu 
-          if menuitem = categories
-            add navbar-link
-            add dropdown with subcategories
-          if menuitem = login or signup
-            add navbar-item as button
-          else 
-            if currentpage
-              add navbar-item is-active
-            else
-              add navbar-item
-      -->
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
         {{ if (in .Name "Categories") }}
@@ -64,71 +49,6 @@ nesting of elements needs to be fixed to enable right side -->
           href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
         {{ end }}         
       {{ end }}
-      
-      <!-- dropdown menu example 
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
-        </div>
-      
-      -->
-
-      
       </div>
-      <!-- right side nav example 
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light">
-              Log in
-            </a>
-          </div>
-        </div> -->
-      </div>
-      
     </div>
-
-    
-  </div>
 </nav>
-
-<!-- old code
-
-<header class="ux__header">
-  <button class="ux__header__icon ux__header__icon--menu"></button>  
-  <div class="ux__header__logo">
-    <a class="ux__homelink" href="/">
-      <div class="ux__header__logo__img"></div>
-    </a>
-  </div>
-  <button class="ux__header__icon ux__header__icon--lightswitch"></button>
-</header>
-<div class="ux__header__nav">
-  <nav>
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-    <a class="ux__header__navitem{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
-    {{ end }}
-  </nav>
-</div>
-
--->
