@@ -24,6 +24,10 @@ $navbar-dropdown-item-hover-background-color: $black;
   max-width: 100px;
 }
 
+.footer-link:hover {
+  color: white;
+}
+
 // Import bulma files
 @import "bulma/bulma-0.9.1.sass";
 
