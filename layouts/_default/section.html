@@ -1,7 +1,15 @@
 {{ define "main" }}
-<main class="ux__content ux__content--offset">
-  <h1>{{ .Title }}</h1>
-  <h3>{{ .Description }}</h3>
-  {{ .Content }}
-</main>
+
+<!-- The landing page of a given section
+ i.e. posts section (/posts/index.html) -->
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">{{ .Title }}</h1>
+    <h3 class="subtitle">{{ .Description }}</h3>
+    <hr />
+    {{ .Content }}
+  </div>
+</section>
+
 {{ end }}
