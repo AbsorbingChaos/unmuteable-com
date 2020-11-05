@@ -18,39 +18,9 @@ $navbar-dropdown-item-hover-background-color: $black;
 
 // Some slight CSS adjustments
 .hero-img { max-width: 90vw; }
+.hero-img-post { max-width: 50vw; }
 .footer-img { max-width: 100px; }
 .footer-link:hover { color: white; }
-
-/*
-
-.ux__content h1,
-.ux__content h2,
-.ux__content h3,
-.ux__content h4 {
-  
-}
-
-h1 { font-size: 200%; }
-h2 { font-size: 150%; }
-h3 { font-size: 125%; }
-h4 { font-size: 115%; }
-
-.ux__content p {
-
-}
-
-.ux__content a,
-.ux__content a:link,
-.ux__content a:visited {
-  
-}
-
-.ux__content a:active,
-.ux__content a:hover {
-
-} */
-
-
 
 // Import bulma files
 @import "bulma/bulma-0.9.1.sass";

@@ -5,6 +5,7 @@
     {{ with .Resources.Match "cover.png" }}
       {{ range . }}
         <img src="{{ .RelPermalink }}"
+          class="hero-img-post"
           alt="Cover image for post, will need ALT TEXT eventually." />
       {{ end }}
     {{ end }}
