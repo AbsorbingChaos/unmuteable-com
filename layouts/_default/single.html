@@ -12,7 +12,9 @@
     <h3 class="subtitle">{{ .Description }}</h3>
     <h4>{{ .Date.Format "January 2, 2006" }}</h4>
     <hr />
-    {{ .Content }}
+    <div class="content">
+      {{ .Content }}
+    </div>
   </div>
 </section>
 
