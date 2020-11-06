@@ -1,26 +1,24 @@
 {{ define "main" }}
 
-<!-- The landing page of a list of posts
- i.e. /blog -->
+<!-- The landing page of an individual taxonomy term
+ i.e. /categories -->
 
-<section class="hero has-background-grey-lighter border-b-1">
+ <section class="hero has-background-grey-lighter border-b-1">
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
-        {{ .Title }}
+        {{ $categoryLen := len .Data.category }}
+        Category: {{ .Title }} 
       </h1>
-      <h2 class="subtitle">
-        <div class="content">
-          {{ .Content }}
-        </div>
-      </h2>
+      <h2 class="subtitle">({{ $categoryLen }} article{{ if gt $categoryLen 1 }}s{{ end }})</h2>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-      {{ range .Pages.ByPublishDate.Reverse }}
+    {{ range $key, $value := .Data.category }}
+      {{ with $value.Page }}
       <div class="columns is-touch is-vcentered border-b-1 py-6">
         <div class="column is-two-fifths">
           {{ with .Resources.Match "cover.png" }}
@@ -51,7 +49,8 @@
         </div>
       </div>
       {{ end }}
+    {{ end }}
   </div>
 </section>
 
-{{ end }}
+ {{ end }}

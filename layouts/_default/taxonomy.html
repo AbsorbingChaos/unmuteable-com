@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+<!-- The landing page of a list of taxonomies
+ i.e. /categories -->
+
+ <section class="hero has-background-grey-lighter border-b-1">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        {{ .Title }}
+      </h1>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {{ range $key, $value := $.Site.Taxonomies.categories }}
+    <a class="button category-button is-large is-uppercase m-2"
+      href="/categories/{{ $key | urlize  }}"
+      title="Category: {{ $key | humanize }}">
+      {{ $key | humanize }}
+    </a>
+    {{ end }}
+  </div>
+</section>
+
+ {{ end }}

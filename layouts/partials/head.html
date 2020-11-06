@@ -6,10 +6,7 @@
 <title>{{ .Site.Params.Title }}</title>
 
 {{ $unmuteableCSS := resources.Get "unmuteable.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
-<link rel="stylesheet" href="{{ $unmuteableCSS.Permalink }}">
-
-<!-- original custom theme
-<link rel="stylesheet" href="/css/main.css"> -->
+<link rel="stylesheet" href="{{ $unmuteableCSS.RelPermalink }}">
 
 <!-- Sendinblue styles (some of them)
 <link rel="stylesheet" href="/css/sib-styles.css"> -->

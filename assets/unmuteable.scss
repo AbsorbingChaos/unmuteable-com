@@ -16,17 +16,17 @@ $navbar-item-hover-color: $primary !important;
 $navbar-dropdown-item-hover-color: $primary;
 $navbar-dropdown-item-hover-background-color: $black;
 
-.hero-img {
-  max-width: 90vw;
+// Some slight CSS adjustments
+.hero-img { max-width: 90vw; }
+.hero-img-post { max-width: 50vw; }
+.hero-img-list { max-width: 100%; }
+.category-button:hover { 
+  color: $primary !important;
+  border-color: $primary !important;
 }
+.footer-img { max-width: 100px; }
+.footer-link:hover { color: white; }
 
-.footer-img {
-  max-width: 100px;
-}
-
-.footer-link:hover {
-  color: white;
-}
 
 // Import bulma files
 @import "bulma/bulma-0.9.1.sass";
