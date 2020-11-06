@@ -5,7 +5,9 @@ description: "This is just the beginning"
 layout: "section"
 ---
 
-This publication represents **The Unmuteable**. A community voice that speaks truth and will not be silenced.
+# This publication represents **The Unmuteable**.
+
+## A community voice that speaks truth and will not be silenced.
 
 ### Let's talk about it
 
