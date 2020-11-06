@@ -10,6 +10,19 @@ languageCode = "en-us"
   posts = "/:year/:month/:slug/"
   page = "/:slug/"
 
+[related]
+  includeNewer = false
+  threshold = 80
+  toLower = false
+
+  [[related.indices]]
+    name = "categories"
+    weight = 100
+
+  [[related.indices]]
+    name = "date"
+    weight = 10
+
 [params]
   company = "Unmuteable"
   title = "UN ✕ MUTE ✕ ABLE"

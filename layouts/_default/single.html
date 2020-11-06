@@ -1,5 +1,50 @@
 {{ define "main" }}
 
+<!-- The landing page of a single blog post
+ i.e. content/blog/article-name/_index.md -->
+
+ <section class="section has-background-grey-lighter border-b-1">
+  <div class="container">
+      <div class="columns is-touch is-vcentered">
+        <div class="column is-two-fifths">
+          {{ with .Resources.Match "cover.png" }}
+            {{ range . }}
+            <img src="{{ .RelPermalink }}"
+              class="hero-img-list"
+              alt="Cover image for post, will need ALT TEXT eventually." />
+            {{ end }}
+         {{ end }}
+        </div>
+        <div class="column">
+          <h1 class="title is-2">
+            <a class="has-text-black"
+              href="{{ .RelPermalink }}"
+              title="{{ .Description }}">
+              {{ .Title }}
+            </a>
+          </h1>
+          <h2 class="subtitle is-3">{{ .Date.Format "January 6, 2006" }}</h2>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="section border-b-1">
+  <div class="container">
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </div>
+</section> 
+
+<section class="section has-background-grey-lighter">
+  <div class="container">
+    {{- partial "related.html" . -}}
+  </div>
+</section>
+
+<!-- old code
+
 <section class="section">
   <div class="container">
     {{ with .Resources.Match "cover.png" }}
@@ -17,6 +62,8 @@
       {{ .Content }}
     </div>
   </div>
-</section>
+</section> 
+
+-->
 
 {{ end }}

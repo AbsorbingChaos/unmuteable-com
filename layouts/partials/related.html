@@ -1,0 +1,31 @@
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+  <h1 class="title">Related Articles:</h1>
+
+  {{ range . }}
+  <div class="columns is-touch is-vcentered py-6">
+    <div class="column is-one-fifth">
+    {{ with .Resources.Match "cover.png" }}
+        {{ range . }}
+        <img src="{{ .RelPermalink }}"
+        class="hero-img-list"
+        alt="Cover image for post, will need ALT TEXT eventually." />
+        {{ end }}
+    {{ end }}
+    </div>
+    <div class="column">
+    <h2 class="title">
+      <a class="has-text-black"
+        href="{{ .RelPermalink }}"
+        title="{{ .Description }}">
+        {{ .Title }}
+      </a>
+    </h2>
+    <h3 class="subtitle">{{ .Date.Format "January 6, 2006" }}</h3>
+    </div>
+  </div>
+  {{ end }}
+{{ end }}
+
+
+

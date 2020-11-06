@@ -1,13 +1,18 @@
 {{ define "main" }}
 
-<section class="hero has-background-white-ter border-b-1">
+<!-- The landing page of a list of posts
+ i.e. /blog or /categories -->
+
+<section class="hero has-background-grey-lighter border-b-1">
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
         {{ .Title }}
       </h1>
       <h2 class="subtitle">
-        {{ .Content }}
+        <div class="content">
+          {{ .Content }}
+        </div>
       </h2>
     </div>
   </div>
@@ -15,11 +20,22 @@
 
 <section class="section">
   <div class="container">
-    <div class="columns is-flex-direction-column">
       {{ range .Pages.ByPublishDate.Reverse }}
-        <div class="column border-b-1 py-6">
+      <div class="columns is-touch is-vcentered border-b-1 py-6">
+        <div class="column is-two-fifths">
+          {{ with .Resources.Match "cover.png" }}
+            {{ range . }}
+            <img src="{{ .RelPermalink }}"
+              class="hero-img-list"
+              alt="Cover image for post, will need ALT TEXT eventually." />
+            {{ end }}
+         {{ end }}
+        </div>
+        <div class="column">
           <h1 class="title is-2">
-            <a class="has-text-black" href="{{ .RelPermalink }}" title="{{ .Description }}">
+            <a class="has-text-black"
+              href="{{ .RelPermalink }}"
+              title="{{ .Description }}">
               {{ .Title }}
             </a>
           </h1>
@@ -27,12 +43,14 @@
           <p class="subtitle">{{ .Summary | truncate 150 }}</p>
           <div class="tags">
           {{ range .Params.categories }}
-              <a class="tag is-primary" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+              <a class="tag is-primary"
+                href="{{ "/categories/" | relLangURL }}{{ . | urlize }}"
+                title="{{ . }}">{{ . }}</a>
           {{ end }}
           </div>
         </div>
+      </div>
       {{ end }}
-    </div>
   </div>
 </section>
 
