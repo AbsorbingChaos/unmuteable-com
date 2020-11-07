@@ -1,0 +1,59 @@
+{{ $cmcAPIKey := getenv "CMC_API" }}
+{{ if ne $cmcAPIKey "" }}
+
+  <!-- API Key Detected! -->
+
+  {{ $cmcURL := newScratch }}
+  {{ $cmcURL.Add "url" "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?CMC_PRO_API_KEY=" }}
+  {{ $cmcURL.Add "url" $cmcAPIKey }}
+  {{ $cmcURL.Add "url" "&id=1" }}
+  {{ $cmcURL.Add "url" ",4847" }}
+  {{ $cmcData := getJSON ($cmcURL.Get "url") }}
+
+  <article class="message is-dark border-1">
+    <div class="message-header has-text-centered">Market Prices</div>
+    <div class="message-body my-2">
+      {{ range $cmcData.data }}
+        <div class="card mb-4">
+          <header class="card-header border-b-1">
+            <p class="card-header-title is-hidden-tablet-only is-justify-content-center">
+              {{ .name }}
+            </p>
+            <p class="card-header-title is-hidden-mobile is-hidden-desktop is-justify-content-center">
+              {{ .symbol }}
+            </p>
+          </header>
+          <div class="card-content is-display-flex">
+            <div class="columns is-mobile">
+              <div class="column is-hidden-tablet-only has-text-right">
+                <p>Price:</p>
+                <p>24hr:</p>
+                <p>7day:</p>
+              </div>
+              {{ $priceChange24h := printf "%.2f" .quote.USD.percent_change_24h }}
+              {{ $priceChange7d := printf "%.2f" .quote.USD.percent_change_7d }}
+              <div class="column">
+                <p>${{ printf "%.2f" .quote.USD.price }}</p>
+                <p>{{ if gt $priceChange24h 0 }}+{{ end }}{{ $priceChange24h }}%</p>
+                <p>{{ if gt $priceChange7d 0 }}+{{ end }}{{ $priceChange7d }}%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </article>
+
+{{ else }}
+
+  <article class="message is-dark">
+    <div class="message-header">
+      <p>Unable to load API</p>
+    </div>
+    <div class="message-body">
+      Unfortunately, we cannot connect to the price API at this time. Please refresh the page or check again later.
+    </div>
+  </article>
+
+{{ end }}
+
