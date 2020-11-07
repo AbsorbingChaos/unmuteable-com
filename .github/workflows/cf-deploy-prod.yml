@@ -22,6 +22,8 @@ jobs:
           extended: true
 
       - name: Build Site
+        env:
+          CMC_API: ${{ secrets.CMC_API }}
         run: hugo
 
       - name: Publish CF
