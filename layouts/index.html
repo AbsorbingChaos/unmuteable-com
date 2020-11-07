@@ -143,8 +143,8 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
           </div>
         </div>
       </div>
-      <div class="column has-background-grey-lighter">
-        Aside content for a featured category, test with zero to testnet series.
+      <div class="column is-flex-desktop is-flex-direction-column is-justify-content-center">
+        {{- partial "cmc_api.html" . -}}
       </div>
     </div>
   </div>
@@ -178,7 +178,8 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
   </div>
 </section>
 
-<!-- section for remaining articles + aside -->
+<!-- section for remaining articles + aside
+  TO BE USED LATER WHEN WE HAVE MORE CONTENT :)
 <section class="section border-b-1">
   <div class="container">
     <div class="columns">
@@ -186,10 +187,11 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
         Space for remaining articles, can be listed as full-row items that will fold above the aside content.
       </div>
       <div class="column has-background-grey-lighter">
-        Aside for prices and whatnot, have coinmarketcap api just need to use it!
+        {{- partial "cmc_api.html" . -}}
       </div>
     </div>
   </div>
 </section>
+-->
 
 {{ end }}

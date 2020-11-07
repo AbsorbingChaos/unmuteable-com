@@ -5,6 +5,7 @@ $black: #191D26;
 $red: #CC0000;
 $yellow: #CCCC00;
 $green: #00CC00;
+$grey-lightest: hsl(0, 0%, 93%);
 $link: $primary;
 $link-visited: $primary;
 $link-hover: $black;
@@ -15,6 +16,8 @@ $family-secondary: Manrope-ExtraBold, Arial, sans-serif;
 $navbar-item-hover-color: $primary !important;
 $navbar-dropdown-item-hover-color: $primary;
 $navbar-dropdown-item-hover-background-color: $black;
+$card-shadow: 5px 5px 0px 0px $black, -5px -5px 0px 0px $primary;
+$card-header-shadow: none;
 
 // Some slight CSS adjustments
 .hero-img { max-width: 90vw; }
