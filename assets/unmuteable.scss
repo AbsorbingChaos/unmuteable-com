@@ -23,6 +23,17 @@ $card-header-shadow: none;
 .hero-img { max-width: 90vw; }
 .hero-img-post { max-width: 50vw; }
 .hero-img-list { max-width: 100%; }
+.header-link,
+.header-link:visited {
+  color: $black;
+}
+.header-link:hover,
+.header-link:active {
+  color: $primary;
+}
+.header-link:hover span {
+  display: inline !important;
+}
 .category-button:hover { 
   color: $primary !important;
   border-color: $primary !important;

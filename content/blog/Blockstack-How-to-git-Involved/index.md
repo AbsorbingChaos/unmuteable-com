@@ -4,6 +4,7 @@ title: "Blockstack: How to -git- Involved"
 date: 2020-03-09
 draft: false
 description: "Working with Blockstack and GitHub"
+img_cover: "cover.png"
 categories:
 - Stacks
 - GitHub

@@ -4,6 +4,7 @@ title: "First Ever STX Mining Competition Experience"
 date: "2020-11-05"
 draft: false
 description: "Mining on Stacks 2.0"
+img_cover: "cover.png"
 categories:
 - Freehold
 - Stacks

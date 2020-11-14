@@ -4,6 +4,7 @@ title: "A Truly Forgettable User Experience"
 date: "2020-02-24"
 draft: false
 description: "Remembering login info is hard." 
+img_cover: "cover.png"
 categories:
 - Stacks 
 - UI/UX

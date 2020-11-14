@@ -1,0 +1,29 @@
+{{ $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
+{{ $mobile := $image.Resize "768x" }}
+{{ $tablet := $image.Resize "1024x" }}
+{{ $desktop := $image.Resize "1216x" }}
+{{ $alt := .PlainText | safeHTML }}
+{{ $caption := "" }}
+{{ with .Title }}
+  {{ $caption = . | safeHTML }}
+{{ end }}
+
+<figure>
+  <a href="{{ $image.RelPermalink }}">
+    <img
+      sizes="100vw"
+      srcset="{{ $mobile.RelPermalink }} 768w,
+        {{ $tablet.RelPermalink }} 1024w,
+        {{ $desktop.RelPermalink }} 1216w"
+      src="{{ $image.RelPermalink }}"
+      width="{{ $image.Width }}"
+      height="{{ $image.Height }}"
+      alt="{{ if $alt }}{{ $alt }}
+        {{ else if $caption }}{{ $caption | markdownify | plainify }}
+        {{ else }}&nbsp;{{ end }}"
+      />
+  </a>
+  {{ with $caption }}
+    <figcaption>{{ . | markdownify }}</figcaption>
+  {{ end }}
+</figure>

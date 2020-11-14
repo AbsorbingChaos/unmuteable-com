@@ -4,6 +4,7 @@ title: "Zero to Testnet: Step 0"
 date: "2020-05-05"
 draft: false
 description: "Step 0: Virtualbox and Ubuntu" 
+img_cover: "cover.png"
 categories:
 - Zero-to-Testnet
 - Stacks

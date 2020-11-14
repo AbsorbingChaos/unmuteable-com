@@ -11,7 +11,9 @@
   {{ $cmcData := getJSON ($cmcURL.Get "url") }}
 
   <article class="message is-dark border-1">
-    <div class="message-header has-text-centered">Market Prices</div>
+    <div class="message-header">
+      <h3 class="">Market Prices</h3>
+    </div>
     <div class="message-body my-2">
       {{ range $cmcData.data }}
         <div class="card mb-4">
@@ -48,7 +50,7 @@
 
   <article class="message is-dark">
     <div class="message-header">
-      <p>Unable to load API</p>
+      <h3>Unable to load API</h3>
     </div>
     <div class="message-body">
       Unfortunately, we cannot connect to the price API at this time. Please refresh the page or check again later.
