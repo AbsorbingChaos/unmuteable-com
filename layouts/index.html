@@ -19,12 +19,11 @@
         </h1>
       </div>
       <div class="column">
-        {{ with .Resources.Match "cover.png" }}
-          {{ range . }}
-            <img src="{{ .RelPermalink }}"
-              alt="Cover image for post, will need ALT TEXT eventually." />
-          {{ end }}
-        {{ end }}
+        {{ $image := .Resources.GetMatch (printf "%s" "cover.png") }}
+        {{ $mobile := $image.Resize "768x" }}
+        {{ $tablet := $image.Resize "1024x" }}
+        {{ $desktop := $image.Resize "1216x" }}
+        {{- partial "cover-image.html" (dict "img" $image.RelPermalink "img_alt" .Description "mobile" $mobile.RelPermalink "tablet" $tablet.RelPermalink "desktop" $desktop.RelPermalink) -}}
       </div>
       {{ end }}
     </div>
@@ -54,12 +53,11 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
           </div>
         </div>
         <div class="column">
-          {{ with .Resources.Match "cover.png" }}
-            {{ range . }}
-              <img src="{{ .RelPermalink }}"
-                alt="Cover image for post, will need ALT TEXT eventually." />
-            {{ end }}
-          {{ end }}
+          {{ $image := .Resources.GetMatch (printf "%s" "cover.png") }}
+        {{ $mobile := $image.Resize "768x" }}
+        {{ $tablet := $image.Resize "1024x" }}
+        {{ $desktop := $image.Resize "1216x" }}
+        {{- partial "cover-image.html" (dict "img" $image.RelPermalink "img_alt" .Description "mobile" $mobile.RelPermalink "tablet" $tablet.RelPermalink "desktop" $desktop.RelPermalink) -}}
         </div>
       {{ end }}
     </div>    
@@ -96,12 +94,11 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
         <div class="columns">
           <div class="column is-two-thirds">
             {{ range ( first 1 (after 1 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
-              {{ with .Resources.Match "cover.png" }}
-                {{ range . }}
-                  <img src="{{ .RelPermalink }}"
-                    alt="Cover image for post, will need ALT TEXT eventually." />
-                {{ end }}
-              {{ end }}
+              {{ $image := .Resources.GetMatch (printf "%s" "cover.png") }}
+              {{ $mobile := $image.Resize "768x" }}
+              {{ $tablet := $image.Resize "1024x" }}
+              {{ $desktop := $image.Resize "1216x" }}
+              {{- partial "cover-image.html" (dict "img" $image.RelPermalink "img_alt" .Description "mobile" $mobile.RelPermalink "tablet" $tablet.RelPermalink "desktop" $desktop.RelPermalink) -}}
               <div class="tags">
                 {{ range .Params.categories }}
                     <a class="tag is-primary is-medium" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
@@ -120,12 +117,11 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
             <div class="columns is-flex-direction-column">
               {{ range ( first 2 (after 1 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
                 <div class="column">
-                  {{ with .Resources.Match "cover.png" }}
-                    {{ range . }}
-                      <img src="{{ .RelPermalink }}"
-                        alt="Cover image for post, will need ALT TEXT eventually." />
-                    {{ end }}
-                  {{ end }}
+                  {{ $image := .Resources.GetMatch (printf "%s" "cover.png") }}
+                  {{ $mobile := $image.Resize "768x" }}
+                  {{ $tablet := $image.Resize "1024x" }}
+                  {{ $desktop := $image.Resize "1216x" }}
+                  {{- partial "cover-image.html" (dict "img" $image.RelPermalink "img_alt" .Description "mobile" $mobile.RelPermalink "tablet" $tablet.RelPermalink "desktop" $desktop.RelPermalink) -}}
                   <div class="tags">
                     {{ range .Params.categories }}
                         <a class="tag is-primary" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
@@ -156,12 +152,11 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
     <div class="columns">
       {{ range ( first 3 (after 1 ( where .Site.Pages "Type" "blog" )).ByPublishDate.Reverse ) }}
         <div class="column">
-          {{ with .Resources.Match "cover.png" }}
-            {{ range . }}
-              <img src="{{ .RelPermalink }}"
-                alt="Cover image for post, will need ALT TEXT eventually." />
-            {{ end }}
-          {{ end }}
+          {{ $image := .Resources.GetMatch (printf "%s" "cover.png") }}
+          {{ $mobile := $image.Resize "768x" }}
+          {{ $tablet := $image.Resize "1024x" }}
+          {{ $desktop := $image.Resize "1216x" }}
+          {{- partial "cover-image.html" (dict "img" $image.RelPermalink "img_alt" .Description "mobile" $mobile.RelPermalink "tablet" $tablet.RelPermalink "desktop" $desktop.RelPermalink) -}}
           <div class="tags">
             {{ range .Params.categories }}
                 <a class="tag is-primary" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
