@@ -4,6 +4,7 @@ title: "Zero to Testnet: Step 1"
 date: "2020-05-12"
 draft: false
 description: "Step 1: Follower Node"
+img_cover: "cover.png"
 categories:
 - Zero-to-Testnet
 - Stacks

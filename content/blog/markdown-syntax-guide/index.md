@@ -4,6 +4,7 @@ title: "Markdown Syntax Guide"
 date: "2020-05-01"
 draft: true
 description: "Markdown syntax examples" 
+img_cover: "cover.png"
 categories:
 - syntax 
 - markdown

@@ -4,6 +4,7 @@ title: "Defining DeFi on BTC with Clarity and Stacks 2.0"
 date: "2020-10-10"
 draft: false
 description: "DeFi backed by Bitcoin"
+img_cover: "cover.png"
 categories:
 - Freehold
 - Stacks
