@@ -31,7 +31,11 @@
 <meta name="application-name" content="{{ .Site.Params.Company }}">
 <meta name="msapplication-TileColor" content="{{ .Site.Params.Palette.Primary }}" />
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="msapplication-tap-highlight" content="no" />
 <meta name="apple-mobile-web-app-title" content="{{ .Site.Params.Title }}">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-touch-fullscreen" content="yes" />
 <meta name="theme-color" content="{{ .Site.Params.Palette.Primary }}" />
 
 <!-- SEARCH -->
@@ -48,8 +52,8 @@
 <!-- Sitemap and RSS -->
 <link rel="sitemap" type="application/xml" title="Sitemap" href='{{ "sitemap.xml" | absURL }}' />
 {{ with .OutputFormats.Get "RSS" }}
-  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
-  <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Params.Title }}" />
+  <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Params.Title }}" />
 {{ end }}
 
 <!-- SEO -->
@@ -58,7 +62,9 @@
 <meta name="url" content="{{ .Permalink }}" />
 <meta name="description" content="{{ .Site.Params.Description }}" />
 <meta itemprop="image" content="{{ .Site.Params.Logo.img | absURL }}" />
-<meta property="og:updated_time" content={{ .Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
+<meta name="coverage" content="Worldwide" />
+<meta name="distribution" content="Global" />
+<meta name="HandheldFriendly" content="True" />
 
 <!-- Facebook Open Graph -->
 <meta property="og:url" content="{{ .Permalink }}" /> 
@@ -73,91 +79,16 @@
 <meta property="og:site_name" content="{{ .Site.Params.Company }}" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="ALL_ALL" />
+<meta property="og:updated_time" content={{ .Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
 
-<!-- Twitter Cards -->
+<!-- Twitter Cards 
+https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@theunmuteable">
+<meta name="twitter:site" content="{{ .Site.Params.author.twitter }}">
 <!-- <meta name="twitter:creator" content="@individual_account"> -->
-<meta name="twitter:url" content="{{ .Permalink }}">
-<meta name="twitter:title" content="{{ .Site.Params.Title }}">
 <meta name="twitter:description" content="{{ .Site.Params.Description }}">
+<meta name="twitter:title" content="{{ .Site.Params.Title }}">
 <meta name="twitter:image" content="{{ .Site.Params.Logo.img | absURL }}">
 <meta name="twitter:image:alt" content="{{ .Site.Params.Logo.alt }}">
 
-<!-- To make sure this renders only in the article page, we check the section -->
-{{ if eq .Section "blog" }}
 
-  <!-- Pagination meta tags for list pages only -->
-  {{ $paginator := .Paginate (where .Pages "Section" "blog") }} 
-  {{ if $paginator }}
-  <link rel="first" href="{{ $paginator.First.URL }}" />
-  <link rel="last" href="{{ $paginator.Last.URL }}" />
-  {{ if $paginator.HasPrev }}
-    <link rel="prev" href="{{ $paginator.Prev.URL }}" />
-  {{end }}
-    {{ if $paginator.HasNext }}
-      <link rel="next" href="{{ $paginator.Next.URL }}" />
-    {{end }}
-  {{end }}
-
-  <meta property="og:type" content="article" />
-  <meta property="og:article:published_time" content={{ .Date.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
-  <meta property="article:published_time" content={{ .Date.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
-
-  {{ with.Params.Author.name }}
-    <meta property="og:article:author" content="{{ humanize . }}" />
-    <meta property="article:author" content="{{ humanize . }}" />
-    <meta name="author" content="{{ humanize . }}" />
-  {{ end }}
-
-  {{ with.Params.category }}
-    <meta name="news_keywords" content="{{ index . 0 }}" />
-    <meta property="article:section" content="{{ index . 0 }}" />
-  {{ end }}
-
-  <script defer type="application/ld+json">
-    {
-      "@context": "http://schema.org",  
-      "@type": "Article",
-      "headline": {{ .Title }},
-      "author": {
-        "@type": "Person",
-        "name": "{{ .Site.Params.author.github }}"
-      },
-      "datePublished": "{{ .Date.Format "2006-01-02" }}",
-      "description": {{ .Description }},
-      "wordCount": {{ .WordCount }},
-      "mainEntityOfPage": "True",
-      "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
-      "image": {
-        "@type": "imageObject",
-        "url": "{{ with .Params.image }}{{ .Permalink }}{{ end }}"
-      },
-      "publisher": {
-        "@type": "{{ .Site.Params.Company }}",
-        "name": "{{ .Site.Title }}",
-        "logo": {
-          "@type": "imageObject",
-          "url": "https://unmuteable.com/favicon-96x96.png"
-        }
-      }
-    }
-  </script>
-{{ end }}
-
-{{ if ne .Section "blog" }}
-  <meta property="og:type" content="website" />
-  <meta name="author" content="{{ .Site.Params.author.name }}" />
-  <script defer type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "WebSite",
-      "url": "{{ .Permalink }}",
-      "sameAs": [
-        "{{ .Site.Params.author.github }}"
-      ],
-      "name": "{{ .Title }}",
-      "url": "https://unmuteable.com/favicon-96x96.png"
-    }
-  </script>
-{{ end }}
