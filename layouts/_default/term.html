@@ -38,7 +38,7 @@
             </a>
           </h1>
           <h2 class="subtitle is-3">{{ .Date.Format "January 6, 2006" }}</h2>
-          <p class="subtitle">{{ .Summary | truncate 150 }}</p>
+          <p class="is-size-5 pb-3">{{ .Summary | truncate 150 }}</p>
           <div class="tags">
           {{ range .Params.categories }}
               <a class="tag is-primary"
