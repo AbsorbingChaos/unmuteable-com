@@ -45,7 +45,7 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
             </a>
           </h1>
           <h2 class="subtitle is-3">{{ .Date.Format "January 2, 2006" }}</h2>
-          <p class="subtitle">{{ .Summary | truncate 150 }}</p>
+          <p class="is-size-5 pb-3">{{ .Summary | truncate 150 }}</p>
           <div class="tags">
           {{ range .Params.categories }}
               <a class="tag is-primary is-medium" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
@@ -54,10 +54,10 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
         </div>
         <div class="column">
           {{ $image := .Resources.GetMatch (printf "%s" "cover.png") }}
-        {{ $mobile := $image.Resize "768x" }}
-        {{ $tablet := $image.Resize "1024x" }}
-        {{ $desktop := $image.Resize "1216x" }}
-        {{- partial "cover-image.html" (dict "img" $image.RelPermalink "img_alt" .Description "mobile" $mobile.RelPermalink "tablet" $tablet.RelPermalink "desktop" $desktop.RelPermalink) -}}
+          {{ $mobile := $image.Resize "768x" }}
+          {{ $tablet := $image.Resize "1024x" }}
+          {{ $desktop := $image.Resize "1216x" }}
+          {{- partial "cover-image.html" (dict "img" $image.RelPermalink "img_alt" .Description "mobile" $mobile.RelPermalink "tablet" $tablet.RelPermalink "desktop" $desktop.RelPermalink) -}}
         </div>
       {{ end }}
     </div>    
@@ -110,7 +110,7 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
                 </a>
               </h1>
               <h2 class="subtitle is-3">{{ .Date.Format "January 2, 2006" }}</h2>
-              <p class="subtitle">{{ .Summary | truncate 150 }}</p>
+              <p class="is-size-5 pb-3">{{ .Summary | truncate 150 }}</p>
             {{ end }}
           </div>
           <div class="column">
@@ -140,7 +140,7 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
         </div>
       </div>
       <div class="column is-flex-desktop is-flex-direction-column is-justify-content-center">
-        {{- partial "cmc_api.html" . -}}
+        {{- partial "api-cmc.html" . -}}
       </div>
     </div>
   </div>
@@ -182,7 +182,7 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
         Space for remaining articles, can be listed as full-row items that will fold above the aside content.
       </div>
       <div class="column has-background-grey-lighter">
-        {{- partial "cmc_api.html" . -}}
+        {{- partial "api-cmc.html" . -}}
       </div>
     </div>
   </div>

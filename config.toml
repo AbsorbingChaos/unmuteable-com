@@ -1,13 +1,18 @@
 baseURL = "https://unmuteable.com"
 languageCode = "en-us"
 
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+canonifyURLs = false
+
 [sitemap]
   changefreq = "weekly"
   filename = "sitemap.xml"
   priority = 0.5
 
 [permalinks]
-  posts = "/:year/:month/:slug/"
+  blog = "/:year/:month/:slug/"
   page = "/:slug/"
 
 [related]
@@ -30,13 +35,19 @@ languageCode = "en-us"
   description = "A publication centered around crypto, privacy, decentralization, and the people making it happen."
   copyright = "© 2020 UNMUTEABLE"
 
-# used for og:image tags in head
+[params.author]
+  name = "Jason Schrader"
+  github = "https://github.com/whoabuddy"
+  sitename = "UNMUTEABLE"
+  twitter = "@theunmuteable"
+
+# used for SEO image tags in head
 [params.logo]
-  img = "img/Unmuteable_Logo_Square_Color.png"
+  img = "img/Unmuteable_Logo_Sticker_Social.png"
   type = "image/png"
-  width = "150"
-  height = "150"
-  alt = "The square unmuteable logo with a large letter U and a small letter X situated at the top-right corner of the letter U."
+  width = "800"
+  height = "400"
+  alt = "A large X covered with three rows of letters that spell UNMUTEABLE"
 
 [params.palette]
   primary = "#00CCCC"
