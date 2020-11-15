@@ -40,13 +40,13 @@ enableRobotsTXT = true
   sitename = "UNMUTEABLE"
   twitter = "@theunmuteable"
 
-# used for og:image tags in head
+# used for SEO image tags in head
 [params.logo]
-  img = "img/Unmuteable_Logo_Square_Color.png"
+  img = "img/Unmuteable_Logo_Sticker_Social.png"
   type = "image/png"
-  width = "150"
-  height = "150"
-  alt = "The square unmuteable logo with a large letter U and a small letter X situated at the top-right corner of the letter U."
+  width = "800"
+  height = "400"
+  alt = "A large X covered with three rows of letters that spell UNMUTEABLE"
 
 [params.palette]
   primary = "#00CCCC"
