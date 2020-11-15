@@ -1,6 +1,10 @@
 baseURL = "https://unmuteable.com"
 languageCode = "en-us"
 
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true 
+
 [sitemap]
   changefreq = "weekly"
   filename = "sitemap.xml"
@@ -29,6 +33,12 @@ languageCode = "en-us"
   tagline = "Measuring the impact of blockchain and decentralization on society and culture"
   description = "A publication centered around crypto, privacy, decentralization, and the people making it happen."
   copyright = "© 2020 UNMUTEABLE"
+
+[params.author]
+  name = "Jason Schrader"
+  github = "https://github.com/whoabuddy"
+  sitename = "UNMUTEABLE"
+  twitter = "@theunmuteable"
 
 # used for og:image tags in head
 [params.logo]
