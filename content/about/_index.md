@@ -27,9 +27,13 @@ We like to tackle hard subjects, share real opinions, and teach as we learn toge
 
 We like to promote good people, interesting projects, and products or services that we would use ourselves.
 
+Would you like to write ~~for~~ with us? [Send us a message!](/contact)
+
 ## New horizons
 
-It all started with Blockstack in January of 2020. As they ramped up to complete the infrastructure for the Stacks 2.0 blockchain, new technologies, opportunities, and concepts emerged, creating a new consensus mechanism and bringing promising new functionality to the world's most secure blockchain: Bitcoin.
+It all started with the Stacks ecosystem in January of 2020.
+
+As they ramped up to complete the infrastructure for the Stacks 2.0 blockchain, new technologies, opportunities, and concepts emerged, including the implementation of a new consensus mechanism that brings promising new functionality to the world's most secure blockchain: Bitcoin.
 
 Fast-forward and there are now [several apps running on Stacks](https://app.co), a friendly and vibrant [community on Discord](https://community.blockstack.org/discord), and several new projects and ideas forming in anticipation of [the mainnet launch](http://whenmainnet.co), including the [Stacks Foundation](https://stacks.org), [Daemon Technologies](http://daemontechnologies.co/), [Freehold](https://joinfreehold.com), and [New Internet Labs](https://newinternetlabs.com).
 
