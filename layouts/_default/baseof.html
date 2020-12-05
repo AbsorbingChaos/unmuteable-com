@@ -2,6 +2,9 @@
 <html lang="en">
     <head>
       {{- partial "base-head.html" . -}}
+      {{- block "base-head" . -}}
+        <!-- area to customize head for specific templates -->
+      {{- end -}}
     </head>
     <body>
       {{- partial "base-header.html" . -}}
@@ -11,7 +14,7 @@
           This is the main block from the baseof template.<br />
           You should not be seeing this!
         </main>
-      {{- end }}
+      {{- end -}}
 
     {{- partial "base-footer.html" . -}}
 
