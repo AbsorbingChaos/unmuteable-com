@@ -61,7 +61,7 @@ async function handleEvent(event) {
    * by configuring the function `mapRequestToAsset`
    */
   // options.mapRequestToAsset = handlePrefix(/^\/docs/)
-  options.mapRequestToAsset = addHeaders(event.request)
+  options.mapRequestToAsset = fixHeaders()
 
   try {
     if (DEBUG) {
@@ -87,38 +87,26 @@ async function handleEvent(event) {
   }
 }
 
-/**
- * Add, modify, and delete headers
- */
-async function addHeaders(req) {
-	let response = await fetch(req)
-	let newHdrs = new Headers(response.headers)
+async function fixHeaders() {
+  return request => {
+    // compute the default (e.g. / -> index.html)
+    request = new Request(request)
+    
+    request.headers.set("Content-Security-Policy", "default-src 'self';")
+    request.headers.set("Strict-Transport-Security", "max-age=31536000")
+    request.headers.set("X-Xss-Protection", "1; mode=block")
+    request.headers.set("X-Frame-Options", "DENY")
+    request.headers.set("X-Content-Type-Options", "nosniff")
+    request.headers.set("Referrer-Policy", "strict-origin-when-cross-origin")
+    request.headers.set("Feature-Policy", "none")
 
-	if (newHdrs.has("Content-Type") && !newHdrs.get("Content-Type").includes("text/html")) {
-    return new Response(response.body , {
-      status: response.status,
-      statusText: response.statusText,
-      headers: newHdrs
-    })
-	}
+    // compute the default (e.g. / -> index.html)
+    let defaultAssetKey = mapRequestToAsset(request)
+    let url = new URL(defaultAssetKey.url)
 
-	Object.keys(securityHeaders).map(function(name, index) {
-		newHdrs.set(name, securityHeaders[name]);
-	})
-
-	Object.keys(sanitiseHeaders).map(function(name, index) {
-		newHdrs.set(name, sanitiseHeaders[name]);
-	})
-
-	removeHeaders.forEach(function(name){
-		newHdrs.delete(name)
-	})
-
-	return new Response(response.body , {
-		status: response.status,
-		statusText: response.statusText,
-		headers: newHdrs
-	})
+    // inherit all other props from the default request
+    return new Request(url.toString(), defaultAssetKey)
+  }
 }
 
 /**
