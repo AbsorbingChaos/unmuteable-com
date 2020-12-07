@@ -30,33 +30,6 @@ async function handleEvent(event) {
   let options = {}
 
   /**
-   * Updated Security Headers, based on the post below and output
-   * from the securityheaders.io website.
-   * https://scotthelme.co.uk/security-headers-cloudflare-worker/
-  */
-
-  let securityHeaders = {
-    "Content-Security-Policy" : "default-src 'self';",
-    "Strict-Transport-Security" : "max-age=31536000",
-    "X-Xss-Protection" : "1; mode=block",
-    "X-Frame-Options" : "DENY",
-    "X-Content-Type-Options" : "nosniff",
-    "Referrer-Policy" : "strict-origin-when-cross-origin",
-    "Feature-Policy" : "none",
-  }
-
-  let sanitiseHeaders = {
-    "Server" : "Outer Space, somewhere near Mars",
-    "Content-Type" : "text/html; charset=utf-8"
-  }
-
-  let removeHeaders = [
-    "Public-Key-Pins",
-    "X-Powered-By",
-    "X-AspNet-Version",
-  ]
-
-  /**
    * You can add custom logic to how we fetch your assets
    * by configuring the function `mapRequestToAsset`
    */
@@ -87,7 +60,7 @@ async function handleEvent(event) {
   }
 }
 
-async function fixHeaders(req) {
+async function fixHeaders() {
   return request => {
     // compute the default (e.g. / -> index.html)
     request = new Request(req)
