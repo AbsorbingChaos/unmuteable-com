@@ -61,7 +61,7 @@ async function handleEvent(event) {
    * by configuring the function `mapRequestToAsset`
    */
   // options.mapRequestToAsset = handlePrefix(/^\/docs/)
-  options.mapRequestToAsset = fixHeaders()
+  options.mapRequestToAsset = fixHeaders(event.request)
 
   try {
     if (DEBUG) {
@@ -87,10 +87,10 @@ async function handleEvent(event) {
   }
 }
 
-async function fixHeaders() {
+async function fixHeaders(req) {
   return request => {
     // compute the default (e.g. / -> index.html)
-    request = new Request(request)
+    request = new Request(req)
     
     request.headers.set("Content-Security-Policy", "default-src 'self';")
     request.headers.set("Strict-Transport-Security", "max-age=31536000")
