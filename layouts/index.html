@@ -48,7 +48,7 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
           <p class="is-size-5 pb-3">{{ .Summary | truncate 150 }}</p>
           <div class="tags">
           {{ range .Params.categories }}
-              <a class="tag is-primary is-medium" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+              <a class="tag um-tag is-black is-medium" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
           {{ end }}
           </div>
         </div>
@@ -72,7 +72,7 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
         <div class="column">
           <div class="tags">
             {{ range .Params.categories }}
-                <a class="tag is-primary" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+                <a class="tag um-tag is-black" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
             {{ end }}
           </div>
           <h1 class="title is-4">
@@ -101,7 +101,7 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
               {{- partial "cover-image.html" (dict "img" $image.RelPermalink "img_alt" .Description "mobile" $mobile.RelPermalink "tablet" $tablet.RelPermalink "desktop" $desktop.RelPermalink) -}}
               <div class="tags">
                 {{ range .Params.categories }}
-                    <a class="tag is-primary is-medium" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+                    <a class="tag um-tag is-black is-medium" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
                 {{ end }}
               </div>
               <h1 class="title is-2">
@@ -124,7 +124,7 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
                   {{- partial "cover-image.html" (dict "img" $image.RelPermalink "img_alt" .Description "mobile" $mobile.RelPermalink "tablet" $tablet.RelPermalink "desktop" $desktop.RelPermalink) -}}
                   <div class="tags">
                     {{ range .Params.categories }}
-                        <a class="tag is-primary" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+                        <a class="tag um-tag is-black" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
                     {{ end }}
                   </div>
                   <h1 class="title is-4">
@@ -159,7 +159,7 @@ https://stackoverflow.com/questions/41709977/bulma-change-stack-order-of-columns
           {{- partial "cover-image.html" (dict "img" $image.RelPermalink "img_alt" .Description "mobile" $mobile.RelPermalink "tablet" $tablet.RelPermalink "desktop" $desktop.RelPermalink) -}}
           <div class="tags">
             {{ range .Params.categories }}
-                <a class="tag is-primary" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
+                <a class="tag um-tag is-black" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">{{ . }}</a>
             {{ end }}
           </div>
           <h1 class="title is-4">

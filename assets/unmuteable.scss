@@ -36,6 +36,15 @@ $card-header-shadow: none;
 .header-link:hover span {
   display: inline !important;
 }
+.um-tag {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+.um-tag:hover {
+  border-top: 3px solid $primary;
+  border-bottom: 3px solid $primary;
+  text-decoration: none !important;
+}
 .category-button:hover { 
   color: $primary !important;
   border-color: $primary !important;
