@@ -16,12 +16,12 @@ const DEBUG = false
  */
 
 let securityHeaders = {
-	"Content-Security-Policy" : "default-src 'self';",
-	"Strict-Transport-Security" : "max-age=31536000",
-	"X-Xss-Protection" : "1; mode=block",
-	"X-Frame-Options" : "DENY",
-	"X-Content-Type-Options" : "nosniff",
-	"Referrer-Policy" : "strict-origin-when-cross-origin",
+  "Content-Security-Policy" : "default-src 'self';",
+  "Strict-Transport-Security" : "max-age=31536000",
+  "X-Xss-Protection" : "1; mode=block",
+  "X-Frame-Options" : "DENY",
+  "X-Content-Type-Options" : "nosniff",
+  "Referrer-Policy" : "strict-origin-when-cross-origin",
   "Feature-Policy" : "none",
 }
 
@@ -31,14 +31,14 @@ let sanitiseHeaders = {
 }
 
 let removeHeaders = [
-	"Public-Key-Pins",
-	"X-Powered-By",
-	"X-AspNet-Version",
+  "Public-Key-Pins",
+  "X-Powered-By",
+  "X-AspNet-Version",
 ]
 
 addEventListener('fetch', event => {
   try {
-    event.respondWith(handleEvent(event))
+    event.respondWith(handleEvent(addHeaders(event)))
   } catch (e) {
     if (DEBUG) {
       return event.respondWith(
@@ -52,6 +52,7 @@ addEventListener('fetch', event => {
 })
 
 async function handleEvent(event) {
+
   const url = new URL(event.request.url)
   let options = {}
 
@@ -60,7 +61,6 @@ async function handleEvent(event) {
    * by configuring the function `mapRequestToAsset`
    */
   // options.mapRequestToAsset = handlePrefix(/^\/docs/)
-  options.mapRequestToAsset = addHeaders(event.request)
 
   try {
     if (DEBUG) {
