@@ -61,7 +61,7 @@ async function handleEvent(event) {
    * by configuring the function `mapRequestToAsset`
    */
   // options.mapRequestToAsset = handlePrefix(/^\/docs/)
-  options.mapRequestToAsset = fixHeaders(event.request)
+  // options.mapRequestToAsset = fixHeaders(event.request)
 
   try {
     if (DEBUG) {
