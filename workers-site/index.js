@@ -87,7 +87,7 @@ async function updateHeaders(req) {
     request = new Request(req)
     const URL = req.URL
 
-    let response = await fetch(URL, request)
+    let response = fetch(URL, request)
     response = new Response(response.body, response)
     
     response.headers.set("Content-Security-Policy", "default-src 'self';")
