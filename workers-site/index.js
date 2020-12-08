@@ -47,7 +47,7 @@ async function handleEvent(event) {
     const resp = await getAssetFromKV(event, options)
     // set custom headers
     resp.headers.set("Content-Security-Policy", "default-src 'self';")
-    resp.headers.set("Feature-Policy", "none")
+    resp.headers.set("Permissions-Policy", "none")
     resp.headers.set("Referrer-Policy", "strict-origin-when-cross-origin")
     resp.headers.set("Strict-Transport-Security", "max-age=31536000")
     resp.headers.set("X-Xss-Protection", "1; mode=block")
