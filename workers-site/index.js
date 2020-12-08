@@ -46,6 +46,7 @@ async function handleEvent(event) {
     // set as const to modify headers
     const resp = await getAssetFromKV(event, options)
     // set custom headers
+    resp.headers.set("Content-Type", "text/html; charset=utf-8")
     resp.headers.set("Content-Security-Policy", "default-src 'self';")
     resp.headers.set("Permissions-Policy", "none")
     resp.headers.set("Referrer-Policy", "strict-origin-when-cross-origin")
