@@ -11,7 +11,7 @@ const DEBUG = false
 
 addEventListener('fetch', event => {
   try {
-    event.respondWith(handleEvent())
+    event.respondWith(handleEvent(event))
   } catch (e) {
     if (DEBUG) {
       return event.respondWith(
@@ -25,7 +25,6 @@ addEventListener('fetch', event => {
 })
 
 async function handleEvent(event) {
-
   const url = new URL(event.request.url)
   let options = {}
 
@@ -34,7 +33,6 @@ async function handleEvent(event) {
    * by configuring the function `mapRequestToAsset`
    */
   // options.mapRequestToAsset = handlePrefix(/^\/docs/)
-  // options.mapRequestToAsset = fixHeaders(event.request)
 
   try {
     if (DEBUG) {
@@ -57,28 +55,6 @@ async function handleEvent(event) {
     }
 
     return new Response(e.message || e.toString(), { status: 500 })
-  }
-}
-
-async function fixHeaders() {
-  return request => {
-    // compute the default (e.g. / -> index.html)
-    request = new Request(req)
-    
-    request.headers.set("Content-Security-Policy", "default-src 'self';")
-    request.headers.set("Strict-Transport-Security", "max-age=31536000")
-    request.headers.set("X-Xss-Protection", "1; mode=block")
-    request.headers.set("X-Frame-Options", "DENY")
-    request.headers.set("X-Content-Type-Options", "nosniff")
-    request.headers.set("Referrer-Policy", "strict-origin-when-cross-origin")
-    request.headers.set("Feature-Policy", "none")
-
-    // compute the default (e.g. / -> index.html)
-    let defaultAssetKey = mapRequestToAsset(request)
-    let url = new URL(defaultAssetKey.url)
-
-    // inherit all other props from the default request
-    return new Request(url.toString(), defaultAssetKey)
   }
 }
 
