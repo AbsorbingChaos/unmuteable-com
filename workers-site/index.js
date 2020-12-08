@@ -25,6 +25,8 @@ addEventListener('fetch', event => {
 })
 
 async function handleEvent(event) {
+  
+
   const url = new URL(event.request.url)
   let options = {}
 
@@ -76,5 +78,26 @@ function handlePrefix(prefix) {
 
     // inherit all other props from the default request
     return new Request(url.toString(), defaultAssetKey)
+  }
+}
+
+async function updateHeaders(req) {
+  return request => {
+    
+    request = new Request(req)
+    const URL = req.URL
+
+    let response = await fetch(URL, request)
+    response = new Response(response.body, response)
+    
+    response.headers.set("Content-Security-Policy", "default-src 'self';")
+    response.headers.set("Strict-Transport-Security", "max-age=31536000")
+    response.headers.set("X-Xss-Protection", "1; mode=block")
+    response.headers.set("X-Frame-Options", "DENY")
+    response.headers.set("X-Content-Type-Options", "nosniff")
+    response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin")
+    response.headers.set("Feature-Policy", "none")
+
+    return response
   }
 }
