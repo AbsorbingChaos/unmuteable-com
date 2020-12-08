@@ -99,8 +99,3 @@ canonifyURLs = false
     identifier = "contact"
     url = "/contact/"
     weight = 50
-  [[menu.main]]
-    name = "Login"
-    identifier = "admin"
-    url = "/admin/"
-    weight = 60

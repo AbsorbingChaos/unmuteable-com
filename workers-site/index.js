@@ -46,10 +46,21 @@ async function handleEvent(event) {
     // set as const to modify headers
     const resp = await getAssetFromKV(event, options)
     // set custom headers
+    if (url.pathname.includes(".css")) {
+      resp.headers.set("Content-Type", "text/css; charset=utf-8")
+    } else if (url.pathname.includes(".js")) {
+      resp.headers.set("Content-Type", "text/javascript; charset=utf-8")
+    } else if (url.pathname.includes(".svg")) {
+      resp.headers.set("Content-Type", "image/svg+xml" )
+    } else {
+      // default html
+      resp.headers.set("Content-Type", "text/html; charset=utf-8")
+    }
+    
     resp.headers.set("Content-Security-Policy", "default-src 'self';")
-    resp.headers.set("Permissions-Policy", "none")
+    resp.headers.set("Permissions-Policy", "fullscreen(self)")
     resp.headers.set("Referrer-Policy", "strict-origin-when-cross-origin")
-    resp.headers.set("Strict-Transport-Security", "max-age=31536000")
+    resp.headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload")
     resp.headers.set("X-Xss-Protection", "1; mode=block")
     resp.headers.set("X-Frame-Options", "DENY")
     resp.headers.set("X-Content-Type-Options", "nosniff")
