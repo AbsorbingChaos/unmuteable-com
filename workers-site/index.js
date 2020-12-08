@@ -70,39 +70,3 @@ async function handleEvent(event) {
     return new Response(e.message || e.toString(), { status: 500 })
   }
 }
-
-/**
- * Here's one example of how to modify a request to
- * remove a specific prefix, in this case `/docs` from
- * the url. This can be useful if you are deploying to a
- * route on a zone, or if you only want your static content
- * to exist at a specific path.
- */
-function handlePrefix(prefix) {
-  return request => {
-    // compute the default (e.g. / -> index.html)
-    let defaultAssetKey = mapRequestToAsset(request)
-    let url = new URL(defaultAssetKey.url)
-
-    // strip the prefix from the path for lookup
-    url.pathname = url.pathname.replace(prefix, '/')
-
-    // inherit all other props from the default request
-    return new Request(url.toString(), defaultAssetKey)
-  }
-}
-
-async function updateHeaders(req) {
-  return request => {
-    
-    request = new Request(req)
-    const URL = req.url
-
-    let response = fetch(URL, request)
-    response = new Response(response.body, response)
-    
-    
-
-    return response
-  }
-}
