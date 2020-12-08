@@ -43,7 +43,7 @@
           <p class="is-size-5 pb-3">{{ .Summary | truncate 150 }}</p>
           <div class="tags">
           {{ range .Params.categories }}
-              <a class="tag is-primary"
+              <a class="tag um-tag is-black"
                 href="{{ "/categories/" | relLangURL }}{{ . | urlize }}"
                 title="{{ . }}">{{ . }}</a>
           {{ end }}

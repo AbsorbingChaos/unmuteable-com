@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+      <!-- defaults on all pages -->
       {{- partial "base-head.html" . -}}
+
       {{- block "base-head" . -}}
-        <!-- area to customize head for specific templates -->
+        <!-- default json-ld data -->
+        {{- partial "base-head-json.html" . -}}
+        <!-- default search data -->
+        {{- partial "base-head-search.html" . -}}
+        <!-- default seo data -->
+        {{- partial "base-head-seo.html" . -}}
       {{- end -}}
     </head>
     <body>
