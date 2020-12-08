@@ -50,6 +50,8 @@ async function handleEvent(event) {
       resp.headers.set("Content-Type", "text/css; charset=utf-8")
     } else if (url.pathname.includes(".js")) {
       resp.headers.set("Content-Type", "text/javascript; charset=utf-8")
+    } else if (url.pathname.includes(".svg")) {
+      resp.headers.set("Content-Type", "image/svg+xml" )
     } else {
       // default html
       resp.headers.set("Content-Type", "text/html; charset=utf-8")
