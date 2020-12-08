@@ -43,7 +43,9 @@ async function handleEvent(event) {
         bypassCache: true,
       }
     }
-    return await getAssetFromKV(event, options)
+    const resp = await getAssetFromKV(event, options)
+    resp.headers.set("X-Frame-Options", "DENY")
+    return resp
   } catch (e) {
     // if an error is thrown try to serve the asset at 404.html
     if (!DEBUG) {
@@ -85,7 +87,7 @@ async function updateHeaders(req) {
   return request => {
     
     request = new Request(req)
-    const URL = req.URL
+    const URL = req.url
 
     let response = fetch(URL, request)
     response = new Response(response.body, response)
