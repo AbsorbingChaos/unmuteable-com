@@ -43,8 +43,17 @@ async function handleEvent(event) {
         bypassCache: true,
       }
     }
+    // set as const to modify headers
     const resp = await getAssetFromKV(event, options)
+    // set custom headers
+    resp.headers.set("Content-Security-Policy", "default-src 'self';")
+    resp.headers.set("Feature-Policy", "none")
+    resp.headers.set("Referrer-Policy", "strict-origin-when-cross-origin")
+    resp.headers.set("Strict-Transport-Security", "max-age=31536000")
+    resp.headers.set("X-Xss-Protection", "1; mode=block")
     resp.headers.set("X-Frame-Options", "DENY")
+    resp.headers.set("X-Content-Type-Options", "nosniff")
+    // return response
     return resp
   } catch (e) {
     // if an error is thrown try to serve the asset at 404.html
@@ -92,13 +101,7 @@ async function updateHeaders(req) {
     let response = fetch(URL, request)
     response = new Response(response.body, response)
     
-    response.headers.set("Content-Security-Policy", "default-src 'self';")
-    response.headers.set("Strict-Transport-Security", "max-age=31536000")
-    response.headers.set("X-Xss-Protection", "1; mode=block")
-    response.headers.set("X-Frame-Options", "DENY")
-    response.headers.set("X-Content-Type-Options", "nosniff")
-    response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin")
-    response.headers.set("Feature-Policy", "none")
+    
 
     return response
   }
