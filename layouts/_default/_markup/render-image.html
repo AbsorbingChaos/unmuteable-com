@@ -3,7 +3,7 @@
 {{ $tablet := $image.Resize "1024x" }}
 {{ $desktop := $image.Resize "1216x" }}
 {{ $alt := .PlainText | safeHTML }}
-{{ $caption := "" }}
+{{ $caption := .PlainText | safeHTML }}
 {{ with .Title }}
   {{ $caption = . | safeHTML }}
 {{ end }}
