@@ -1,13 +1,11 @@
 ---
 author: "Jason Schrader"
-title: "Unmuteable: The Origin Story"
+title: "Unmuteable: An Origin Story"
 date: "2021-01-14"
 draft: false
 description: "How it started and where it's headed."
 img_cover: "cover.png"
 ---
-
-## Intro
 
 > Words are but a means to meaning, and for those who will listen, the enunciation of truth.
 > V for Vendetta (2005)
@@ -61,4 +59,6 @@ Last one will be valid website code, respecting the HTML at the core and adding 
 
 ## Vision for the future
 
-Where can we go from here? The goal is to have difficult conversations, honest analysis, and dive deep into the philosophy and ethics behind crypto, decentralization, and what it can provide to the world.
+Where can we go from here? The goal is to have difficult conversations, honest analyses, and dive deep into the philosophy and ethics behind crypto, decentralization, and what it can provide to the world.
+
+Would you like to write ~~for~~ with us? [Send us a message!](/contact)
