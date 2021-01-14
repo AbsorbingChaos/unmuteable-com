@@ -1,7 +1,7 @@
 ---
 author: "Jason Schrader"
-title: "Unmuteable: the origin story"
-date: "2020-01-14"
+title: "Unmuteable: The Origin Story"
+date: "2021-01-14"
 draft: false
 description: "How it started and where it's headed."
 img_cover: "cover.png"
