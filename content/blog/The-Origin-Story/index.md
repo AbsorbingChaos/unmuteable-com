@@ -14,7 +14,7 @@ img_cover: "cover.png"
 
 When presented with an opportunity to share my words via this publication, and while initially it came as an unexpected surprise, the concept quickly became an inner responsibility to represent a collection of voices via educational content, encouraging others to join in and do the same.
 
-It all started with the name UN x MUTE x ABLE. A subtle play on the immutability of a blockchain, and the opportunity to express an independent fact-focused opinion about crytpocurrency, decentralization, user privacy, and sovereign identity.
+It all started with the name **UN x MUTE x ABLE**. A subtle play on the immutability of a blockchain, and the opportunity to express an independent fact-focused opinion about crytpocurrency, decentralization, user privacy, and sovereign identity.
 
 ## The road less traveled
 
