@@ -49,9 +49,7 @@ async function handleEvent(event) {
     // set content type based on extension
     // full list of options at link below
     // https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
-    if (url.pathname.endsWith(".html") || url.pathname.endsWith(".htm")) {
-      resp.headers.set("Content-Type", "text/html; charset=utf-8")
-    } else if (url.pathname.endsWith(".css")) {
+    if (url.pathname.endsWith(".css")) {
       resp.headers.set("Content-Type", "text/css; charset=utf-8")
     } else if (url.pathname.endsWith(".csv")) {
       resp.headers.set("Content-Type", "text/csv")
@@ -86,8 +84,8 @@ async function handleEvent(event) {
     } else if (url.pathname.endsWith(".zip")) {
       resp.headers.set("Content-Type", "application/zip")
     } else {
-      // default plain text if no match
-      resp.headers.set("Content-Type", "text/plain")
+      // default text/html if no match
+      resp.headers.set("Content-Type", "text/html; charset=utf-8")
     }
 
     // set security headers
