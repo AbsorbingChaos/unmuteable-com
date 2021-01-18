@@ -25,7 +25,6 @@ addEventListener('fetch', event => {
 })
 
 async function handleEvent(event) {
-  
 
   const url = new URL(event.request.url)
   let options = {}
@@ -43,20 +42,55 @@ async function handleEvent(event) {
         bypassCache: true,
       }
     }
-    // set as const to modify headers
+
+    // fetch response to modify headers
     const resp = await getAssetFromKV(event, options)
-    // set custom headers
-    if (url.pathname.includes(".css")) {
-      resp.headers.set("Content-Type", "text/css; charset=utf-8")
-    } else if (url.pathname.includes(".js")) {
-      resp.headers.set("Content-Type", "text/javascript; charset=utf-8")
-    } else if (url.pathname.includes(".svg")) {
-      resp.headers.set("Content-Type", "image/svg+xml" )
-    } else {
-      // default html
+
+    // set content type based on extension
+    // full list of options at link below
+    // https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+    if (url.pathname.endsWith(".html") || url.pathname.endsWith(".htm")) {
       resp.headers.set("Content-Type", "text/html; charset=utf-8")
+    } else if (url.pathname.endsWith(".css")) {
+      resp.headers.set("Content-Type", "text/css; charset=utf-8")
+    } else if (url.pathname.endsWith(".csv")) {
+      resp.headers.set("Content-Type", "text/csv")
+    } else if (url.pathname.endsWith(".eot")) {
+      resp.headers.set("Content-Type", "application/vnd.ms-fontobject")
+    } else if (url.pathname.endsWith(".gif")) {
+      resp.headers.set("Content-Type", "image/gif")
+    } else if (url.pathname.endsWith(".ico")) {
+      resp.headers.set("Content-Type", "application/vnd.microsoft.icon")
+    } else if (url.pathname.endsWith(".jpg") || url.pathname.endsWith(".jpeg")) {
+      resp.headers.set("Content-Type", "image/jpeg")
+    } else if (url.pathname.endsWith(".js")) {
+      resp.headers.set("Content-Type", "text/javascript; charset=utf-8")
+    } else if (url.pathname.endsWith(".json")) {
+      resp.headers.set("Content-Type", "application/json")
+    } else if (url.pathname.endsWith(".jsonld")) {
+      resp.headers.set("Content-Type", "application/ld+json")
+    } else if (url.pathname.endsWith(".png")) {
+      resp.headers.set("Content-Type", "image/png")
+    } else if (url.pathname.endsWith(".pdf")) {
+      resp.headers.set("Content-Type", "application/pdf")
+    } else if (url.pathname.endsWith(".svg")) {
+      resp.headers.set("Content-Type", "image/svg+xml" )
+    } else if (url.pathname.endsWith(".ttf")) {
+      resp.headers.set("Content-Type", "font/ttf")
+    } else if (url.pathname.endsWith(".woff")) {
+      resp.headers.set("Content-Type", "font/woff")
+    } else if (url.pathname.endsWith(".woff2")) {
+      resp.headers.set("Content-Type", "font/woff2")
+    } else if (url.pathname.endsWith(".xml")) {
+      resp.headers.set("Content-Type", "text/xml")
+    } else if (url.pathname.endsWith(".zip")) {
+      resp.headers.set("Content-Type", "application/zip")
+    } else {
+      // default plain text if no match
+      resp.headers.set("Content-Type", "text/plain")
     }
-    
+
+    // set security headers
     resp.headers.set("Content-Security-Policy", "default-src 'self';")
     resp.headers.set("Permissions-Policy", "fullscreen(self)")
     resp.headers.set("Referrer-Policy", "strict-origin-when-cross-origin")
@@ -64,6 +98,7 @@ async function handleEvent(event) {
     resp.headers.set("X-Xss-Protection", "1; mode=block")
     resp.headers.set("X-Frame-Options", "DENY")
     resp.headers.set("X-Content-Type-Options", "nosniff")
+
     // return response
     return resp
   } catch (e) {
